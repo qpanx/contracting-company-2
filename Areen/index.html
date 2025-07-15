@@ -8,29 +8,37 @@
     <link rel="icon" href="imgs/logo.white.png" type="images/png"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
     <section class="header">
+        <a href="index.html" class="logo-link"><img src="imgs/logo.white.png"></a>
         <nav>
-            <a href="index.html"><img src="imgs/logo.white.png"></a>
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" class="nav-home">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
+            </div>
+            <div class="language-switcher">
+                <button class="lang-btn" id="langToggleBtn">عربي</button>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
 
 
         <div class="text-box">
-            <h1>LION’S DEN REAL ESTATE</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus cumque officiis culpa placeat, beatae, obcaecati rem commodi ipsam <br>doloremque magni quia maxime veritatis inventore perferendis, repellendus facilis ea sunt saepe.</p>
+            <h1 class="bilingual-title">
+              <span class="ar-title">عرين الأسد الأبيض العقارية</span>
+              <span class="en-title">LION'S DEN REAL ESTATE</span>
+            </h1>
+            <div class="subtitle-en"></div>
+            <p>Comfort .. security .. and a bright future.</p>
             <a href="" class="hero-btn">Visit Us To Know More</a>
     </section>
 
@@ -104,10 +112,11 @@
         <h4>About US</h4>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae exercitationem eveniet dolorem amet a, quam <br>repellat pariatur sunt voluptatibus adipisci odio tempore totam velit nostrum ipsum voluptatum nisi veniam!</p>
     <div class="icons">
-        <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <!----<a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+        
         <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>--->
+        <a href="https://www.instagram.com/arren_alasad/"><i class="fab fa-instagram"></i></a>
 
     </div>
     </section>
@@ -118,13 +127,141 @@
 
 var navLinks = document.getElementById("navLinks");
 function showMenu() {
-    navLinks.style.right = "0";
+    navLinks.classList.add('open');
 }
 function hideMenu() {
-    navLinks.style.right = "-200px";
+    navLinks.classList.remove('open');
 }
 
+// Translation object containing all text content
+const translations = {
+    en: {
+        // Navigation
+        home: "Home",
+        about: "About",
+        projects: "Projects",
+        contact: "Contact",
+        
+        // Hero section
+        heroTitle: "LION'S DEN REAL ESTATE",
+        heroSubtitle: "Comfort .. security .. and a bright future.",
+        heroButton: "Visit Us To Know More",
+        
+        // Services section
+        servicesTitle: "Our Services",
+        servicesSubtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus cumque officiis culpa placeat, beatae, obcaecati rem commodi ipsam doloremque magni quia maxime veritatis inventore perferendis, repellendus facilis ea sunt saepe.",
+        webDesign: "Web Design",
+        webDevelopment: "Web Development",
+        seo: "SEO",
+        serviceDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus cumque officiis culpa placeat, beatae, obcaecati rem commodi ipsam.",
+        
+        // Projects section
+        projectsTitle: "Our Projects",
+        projectsSubtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus cumque officiis culpa placeat, beatae, obcaecati rem commodi ipsam doloremque magni quia maxime veritatis inventore perferendis, repellendus facilis ea sunt saepe.",
+        
+        // CTA section
+        ctaTitle: "Enroll for our projects in Saudi Arabia",
+        ctaButton: "CONTACT US",
+        
+        // Footer
+        footerTitle: "About US",
+        footerDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae exercitationem eveniet dolorem amet a, quam repellat pariatur sunt voluptatibus adipisci odio tempore totam velit nostrum ipsum voluptatum nisi veniam!"
+    },
+    ar: {
+        // Navigation
+        home: "الرئيسية",
+        about: "من نحن",
+        projects: "المشاريع",
+        contact: "تواصل معنا",
+        
+        // Hero section
+        heroTitle: "عرين الأسد للعقارات",
+        heroSubtitle: "راحة .. أمان .. لمستقبل مشرق ",
+        heroButton: "تعرف علينا أكثر",
+        
+        // Services section
+        servicesTitle: "خدماتنا",
+        servicesSubtitle: "نقدم مجموعة شاملة من الخدمات العقارية المتخصصة لتلبية جميع احتياجات عملائنا في المملكة العربية السعودية وخارجها.",
+        webDesign: "تصميم المواقع",
+        webDevelopment: "تطوير المواقع",
+        seo: "تحسين محركات البحث",
+        serviceDescription: "نقدم حلول تقنية متكاملة لتعزيز وجودك الرقمي وتحسين تجربة المستخدمين.",
+        
+        // Projects section
+        projectsTitle: "مشاريعنا",
+        projectsSubtitle: "اكتشف مجموعة متنوعة من مشاريعنا العقارية المتميزة في مختلف مدن المملكة العربية السعودية.",
+        
+        // CTA section
+        ctaTitle: "انضم إلى مشاريعنا في المملكة العربية السعودية",
+        ctaButton: "اتصل بنا",
+        
+        // Footer
+        footerTitle: "من نحن",
+        footerDescription: "عرين الأسد للعقارات هي شركة رائدة في مجال العقارات، متخصصة في تطوير وإدارة المشاريع العقارية المتميزة. نسعى لتقديم أفضل الخدمات لعملائنا الكرام."
+    }
+};
 
+// Remove the old changeLanguage and replace with toggle logic
+const langToggleBtn = document.getElementById('langToggleBtn');
+
+function setLanguage(lang) {
+    const t = translations[lang];
+    // Update navigation links
+    document.querySelector('.nav-home').textContent = t.home;
+    document.querySelector('a[href="about.html"]').textContent = t.about;
+    document.querySelector('a[href="projects.html"]').textContent = t.projects;
+    document.querySelector('a[href="contact.html"]').textContent = t.contact;
+    // Update hero section
+    document.querySelector('.text-box p').textContent = t.heroSubtitle;
+    document.querySelector('.hero-btn').textContent = t.heroButton;
+    // Update services section
+    document.querySelector('.services h1').textContent = t.servicesTitle;
+    document.querySelector('.services p').textContent = t.servicesSubtitle;
+    // Update service items
+    const serviceItems = document.querySelectorAll('.services-col h3');
+    serviceItems[0].textContent = t.webDesign;
+    serviceItems[1].textContent = t.webDevelopment;
+    serviceItems[2].textContent = t.seo;
+    const serviceDescriptions = document.querySelectorAll('.services-col p');
+    serviceDescriptions.forEach(desc => {
+        desc.textContent = t.serviceDescription;
+    });
+    // Update projects section
+    document.querySelector('.projects h1').textContent = t.projectsTitle;
+    document.querySelector('.projects p').textContent = t.projectsSubtitle;
+    // Update CTA section
+    document.querySelector('.cta h1').textContent = t.ctaTitle;
+    document.querySelector('.cta .hero-btn').textContent = t.ctaButton;
+    // Update footer
+    document.querySelector('.footer h4').textContent = t.footerTitle;
+    document.querySelector('.footer p').textContent = t.footerDescription;
+    // Update page direction and text alignment
+    if (lang === 'ar') {
+        document.body.style.direction = 'rtl';
+        document.body.style.textAlign = 'right';
+        document.documentElement.lang = 'ar';
+        langToggleBtn.textContent = 'EN';
+    } else {
+        document.body.style.direction = 'ltr';
+        document.body.style.textAlign = 'left';
+        document.documentElement.lang = 'en';
+        langToggleBtn.textContent = 'عربي';
+    }
+    // Store language preference
+    localStorage.setItem('selectedLanguage', lang);
+}
+
+langToggleBtn.addEventListener('click', function() {
+    const currentLang = document.documentElement.lang || 'en';
+    const newLang = currentLang === 'en' ? 'ar' : 'en';
+    setLanguage(newLang);
+});
+
+// Load saved language preference on page load
+window.addEventListener('DOMContentLoaded', function() {
+    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+    setLanguage(savedLang);
+});
 
 </script>
 
