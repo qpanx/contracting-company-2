@@ -13,8 +13,8 @@
 </head>
 <body>
     <section class="sub-header">
+        <a href="index.html" class="logo-link"><img src="imgs/logo.white.png"></a>
         <nav>
-            <a href="index.html"><img src="imgs/logo.white.png"></a>
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
@@ -24,7 +24,15 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
+            <!-- Desktop language switcher -->
+            <div class="language-switcher">
+                <button class="lang-btn" id="langToggleBtn">عربي</button>
+            </div>
+            <!-- Mobile nav controls container -->
+            <div class="nav-controls">
+                <button class="lang-btn" id="langToggleBtn2">عربي</button>
+                <i class="fa fa-bars hamburger-menu" onclick="showMenu()"></i>
+            </div>
         </nav>
         <h1>About Us</h1>
         
@@ -77,13 +85,107 @@
 
 var navLinks = document.getElementById("navLinks");
 function showMenu() {
-    navLinks.style.right = "0";
+    navLinks.classList.add('open');
 }
 function hideMenu() {
-    navLinks.style.right = "-200px";
+    navLinks.classList.remove('open');
 }
 
+// Translation object containing all text content
+const translations = {
+    en: {
+        // Navigation
+        home: "Home",
+        about: "About",
+        projects: "Projects",
+        contact: "Contact",
+        
+        // About page
+        aboutTitle: "About Us",
+        aboutMainTitle: "We are the Best Company in Saudi.",
+        aboutDescription: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio eaque voluptates voluptas fugiat aliquid iusto, error deserunt architecto, doloremque quasi enim voluptatem eligendi, sint quia consequatur.",
+        aboutButton: "Visit Us To Know More",
+        
+        // Footer
+        footerTitle: "About US",
+        footerDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae exercitationem eveniet dolorem amet a, quam repellat pariatur sunt voluptatibus adipisci odio tempore totam velit nostrum ipsum voluptatum nisi veniam!"
+    },
+    ar: {
+        // Navigation
+        home: "الرئيسية",
+        about: "من نحن",
+        projects: "المشاريع",
+        contact: "تواصل معنا",
+        
+        // About page
+        aboutTitle: "من نحن",
+        aboutMainTitle: "نحن أفضل شركة في المملكة العربية السعودية",
+        aboutDescription: "عرين الأسد للعقارات هي شركة رائدة في مجال العقارات، متخصصة في تطوير وإدارة المشاريع العقارية المتميزة. نسعى لتقديم أفضل الخدمات لعملائنا الكرام.",
+        aboutButton: "تعرف علينا أكثر",
+        
+        // Footer
+        footerTitle: "من نحن",
+        footerDescription: "عرين الأسد للعقارات هي شركة رائدة في مجال العقارات، متخصصة في تطوير وإدارة المشاريع العقارية المتميزة. نسعى لتقديم أفضل الخدمات لعملائنا الكرام."
+    }
+};
 
+const langToggleBtn = document.getElementById('langToggleBtn');
+const langToggleBtn2 = document.getElementById('langToggleBtn2');
+
+function setLanguage(lang) {
+    const t = translations[lang];
+    // Update navigation links
+    document.querySelector('a[href="index.html"]').textContent = t.home;
+    document.querySelector('a[href="about.html"]').textContent = t.about;
+    document.querySelector('a[href="projects.html"]').textContent = t.projects;
+    document.querySelector('a[href="contact.html"]').textContent = t.contact;
+    
+    // Update about page content
+    document.querySelector('.sub-header h1').textContent = t.aboutTitle;
+    document.querySelector('.about-col h1').textContent = t.aboutMainTitle;
+    document.querySelector('.about-col p').textContent = t.aboutDescription;
+    document.querySelector('.red-btn').textContent = t.aboutButton;
+    
+    // Update footer
+    document.querySelector('.footer h4').textContent = t.footerTitle;
+    document.querySelector('.footer p').textContent = t.footerDescription;
+    
+    // Update page direction and text alignment
+    if (lang === 'ar') {
+        document.body.style.direction = 'rtl';
+        document.body.style.textAlign = 'right';
+        document.documentElement.lang = 'ar';
+        langToggleBtn.textContent = 'EN';
+        langToggleBtn2.textContent = 'EN';
+    } else {
+        document.body.style.direction = 'ltr';
+        document.body.style.textAlign = 'left';
+        document.documentElement.lang = 'en';
+        langToggleBtn.textContent = 'عربي';
+        langToggleBtn2.textContent = 'عربي';
+    }
+    
+    // Store language preference
+    localStorage.setItem('selectedLanguage', lang);
+}
+
+langToggleBtn.addEventListener('click', function() {
+    const currentLang = document.documentElement.lang || 'en';
+    const newLang = currentLang === 'en' ? 'ar' : 'en';
+    setLanguage(newLang);
+});
+
+langToggleBtn2.addEventListener('click', function() {
+    const currentLang = document.documentElement.lang || 'en';
+    const newLang = currentLang === 'en' ? 'ar' : 'en';
+    setLanguage(newLang);
+});
+
+// Load saved language preference on page load
+window.addEventListener('DOMContentLoaded', function() {
+    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+    setLanguage(savedLang);
+});
 
 </script>
 
