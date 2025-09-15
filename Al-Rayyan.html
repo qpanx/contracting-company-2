@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشروع الريان</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #FCFBF8;
+        }
+        .active-filter {
+            background-color: #8A7F7C !important;
+            color: white !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+ <section class="sub-header">
+        <a href="index.html" class="logo-link"><img src="imgs/logo.white.png"></a>
+        <nav>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html" id="nav-home">الرئيسية</a></li>
+                    <li><a href="about.html" id="nav-about">من نحن</a></li>
+                    <li><a href="projects.html" id="nav-projects">المشاريع</a></li>
+                    <li><a href="contact.html" id="nav-contact">تواصل معنا</a></li>
+                </ul>
+            </div>
+            <!-- Desktop language switcher -->
+            <div class="language-switcher">
+                <button class="lang-btn" id="langToggleBtn">عربي</button>
+            </div>
+            <!-- Mobile nav controls container -->
+            <div class="nav-controls">
+                <button class="lang-btn" id="langToggleBtn2">عربي</button>
+                <i class="fa fa-bars hamburger-menu" onclick="showMenu()"></i>
+            </div>
+        </nav>
+        <h1>مرحبا بكم في مشروع الريان</h1>
+
+    </section>
+
+    <div class="container mx-auto p-4 md:p-8">
+        
+        <!-- Header Section -->
+        <header class="flex justify-between items-center mb-8">
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <h1 class="text-2xl md:text-3xl font-bold text-gray-800">جدول الوحدات</h1>
+                <div class="w-16 h-1 bg-amber-800/50 rounded-full"></div>
+            </div>
+            <div class="flex space-x-2 space-x-reverse" id="filter-buttons">
+                <button data-filter="all" class="filter-btn active-filter text-sm md:text-base font-medium px-4 py-2 rounded-lg bg-gray-200 text-gray-700 transition-colors duration-300">الجميع</button>
+                <button data-filter="available" class="filter-btn text-sm md:text-base font-medium px-4 py-2 rounded-lg bg-gray-200 text-gray-700 transition-colors duration-300">متاح</button>
+                <button data-filter="sold" class="filter-btn text-sm md:text-base font-medium px-4 py-2 rounded-lg bg-gray-200 text-gray-700 transition-colors duration-300">مباع</button>
+                <button data-filter="reserved" class="filter-btn text-sm md:text-base font-medium px-4 py-2 rounded-lg bg-gray-200 text-gray-700 transition-colors duration-300">محجوز</button>
+            </div>
+        </header>
+
+        <!-- Property Cards Grid -->
+        <main id="property-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Property cards will be injected here by JavaScript -->
+        </main>
+
+    </div>
+
+    <script>
+        const propertyData = [
+            { id: 'طابق الملاحق', status: 'available', price: '750,000', floor: 'الأرضي', area: 127, bedrooms: 2, bathrooms: 3, images: ['imgs/الريان2/127m.jpg', 'https://placehold.co/400x300/CBD5E1/1E293B?text=Project+G2-B', 'https://placehold.co/400x300/94A3B8/0F172A?text=Project+G2-C'], currentImageIndex: 0, description: 'شقة واسعة بإطلالة مميزة على الحديقة. تصميم عصري وتشطيبات عالية الجودة.' },
+            { id: 'الطوابق المتكررة', status: 'available', price: '1,263,000', floor: 'الأرضي', area: 95, bedrooms: 2, bathrooms: 2, images: ['imgs/الريان2/95.jpg', 'https://placehold.co/400x300/CBD5E1/1E293B?text=Project+G3-B'], currentImageIndex: 0, description: 'وحدة سكنية مثالية للعائلات الصغيرة، تتميز بالهدوء والقرب من الخدمات.' },
+            { id: 'G4#', status: 'available', price: '1,288,000', floor: 'الأرضي', area: 117.12, bedrooms: 2, bathrooms: 2, images: ['https://placehold.co/400x300/E2E8F0/334155?text=Project+G4-A'], currentImageIndex: 0, description: 'استمتع بالراحة والفخامة في هذه الشقة ذات التصميم الفريد والمساحات المفتوحة.' },
+            { id: 'G5#', status: 'available', price: '1,283,000', floor: 'الأرضي', area: 110.11, bedrooms: 2, bathrooms: 2, images: ['https://placehold.co/400x300/E2E8F0/334155?text=Project+G5-A', 'https://placehold.co/400x300/CBD5E1/1E293B?text=Project+G5-B'], currentImageIndex: 0, description: 'شقة أنيقة وعملية، توفر كل سبل الراحة والرفاهية لسكانها.' },
+            { id: 'F9#', status: 'available', price: '1,350,000', floor: 'الأول', area: 135.50, bedrooms: 3, bathrooms: 2, images: ['https://placehold.co/400x300/E2E8F0/334155?text=Project+F9-A', 'https://placehold.co/400x300/CBD5E1/1E293B?text=Project+F9-B'], currentImageIndex: 0, description: 'وحدة فاخرة في الدور الأول مع شرفة واسعة وإضاءة طبيعية ممتازة.' },
+            { id: 'F8#', status: 'sold', price: '1,320,000', floor: 'الأول', area: 130.00, bedrooms: 3, bathrooms: 2, images: ['https://placehold.co/400x300/E2E8F0/334155?text=Project+F8-A'], currentImageIndex: 0, description: 'تم بيع هذه الوحدة الرائعة التي تجمع بين الموقع المتميز والتصميم الجذاب.' },
+            { id: 'F7#', status: 'reserved', price: '1,400,000', floor: 'الثاني', area: 140.15, bedrooms: 3, bathrooms: 3, images: ['https://placehold.co/400x300/E2E8F0/334155?text=Project+F7-A', 'https://placehold.co/400x300/CBD5E1/1E293B?text=Project+F7-B'], currentImageIndex: 0, description: 'وحدة محجوزة تتميز بإطلالة بانورامية ومساحة داخلية رحبة.' },
+            { id: 'G6#', status: 'available', price: '1,295,000', floor: 'الأرضي', area: 115.80, bedrooms: 2, bathrooms: 2, images: ['https://placehold.co/400x300/E2E8F0/334155?text=Project+G6-A'], currentImageIndex: 0, description: 'فرصة استثمارية مميزة في وحدة سكنية عصرية ومتكاملة الخدمات.' },
+        ];
+
+        const statusStyles = {
+            available: { text: 'متاحة', color: 'text-green-600', bg: 'bg-green-100' },
+            sold: { text: 'مباعة', color: 'text-red-600', bg: 'bg-red-100' },
+            reserved: { text: 'محجوزة', color: 'text-yellow-600', bg: 'bg-yellow-100' },
+        };
+        
+        const propertyGrid = document.getElementById('property-grid');
+        const filterButtonsContainer = document.getElementById('filter-buttons');
+
+        // Function to create and render property cards
+        function renderCards(filter = 'all') {
+            propertyGrid.innerHTML = ''; // Clear existing cards
+            const filteredData = propertyData.filter(prop => filter === 'all' || prop.status === filter);
+
+            filteredData.forEach(prop => {
+                const style = statusStyles[prop.status];
+                const card = document.createElement('div');
+                card.className = 'bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden flex flex-col transition-all duration-300 transform hover:scale-105';
+                card.dataset.status = prop.status;
+
+                card.innerHTML = `
+                    <div class="p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xl font-bold text-gray-800">${prop.id}</span>
+                            <span class="text-sm font-medium px-3 py-1 rounded-full ${style.bg} ${style.color}">${style.text}</span>
+                        </div>
+                    </div>
+                    <div class="px-4 pb-4 relative">
+                        <img src="${prop.images[prop.currentImageIndex]}" alt="صورة المشروع ${prop.id}" class="w-full h-40 object-cover rounded-md shadow-inner" id="img-${prop.id}">
+                        <button data-project-id="${prop.id}" class="change-photo-btn absolute top-2 right-2 bg-white/70 backdrop-blur-sm hover:bg-white rounded-full p-1.5 transition-colors duration-200" title="تغيير الصورة">
+                            <svg class="w-5 h-5 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0011.667 0l3.181-3.183m-4.991-2.691V5.006h-4.992v4.992h4.992z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="px-4 pb-4 text-gray-600 text-sm">
+                        <p>${prop.description}</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 border-t border-gray-200">
+                        <div class="grid grid-cols-4 gap-2 text-center text-gray-600">
+                            <!-- Floor Icon and Text -->
+                            <div class="flex flex-col items-center">
+                                <svg class="w-6 h-6 mb-1 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                                <span class="text-xs font-medium">الدور: ${prop.floor}</span>
+                            </div>
+                            <!-- Area Icon and Text -->
+                            <div class="flex flex-col items-center">
+                                <svg class="w-6 h-6 mb-1 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5v-4m0 0h-4m4 0l-5-5"></path></svg>
+                                <span class="text-xs font-medium">${prop.area} م²</span>
+                            </div>
+                            <!-- Bedrooms Icon and Text -->
+                            <div class="flex flex-col items-center">
+                                <svg class="w-6 h-6 mb-1 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path></svg>
+                                <span class="text-xs font-medium">${prop.bedrooms}</span>
+                            </div>
+                            <!-- Bathrooms Icon and Text -->
+                            <div class="flex flex-col items-center">
+                                <svg class="w-6 h-6 mb-1 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
+                                <span class="text-xs font-medium">${prop.bathrooms}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-auto p-4 grid grid-cols-2 gap-2">
+                        <button class="w-full bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-4 rounded-lg transition-colors duration-300">
+                            الحجز
+                        </button>
+                        <button class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-4 rounded-lg transition-colors duration-300">
+                            لوكيشن
+                        </button>
+                    </div>
+                `;
+                propertyGrid.appendChild(card);
+            });
+        }
+
+        // Event listener for filter buttons
+        filterButtonsContainer.addEventListener('click', (e) => {
+            if (e.target.classList.contains('filter-btn')) {
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active-filter'));
+                // Add active class to the clicked button
+                e.target.classList.add('active-filter');
+                
+                const filterValue = e.target.dataset.filter;
+                renderCards(filterValue);
+            }
+        });
+
+        // Event listener for changing photos and button clicks
+        propertyGrid.addEventListener('click', (e) => {
+            const changeBtn = e.target.closest('.change-photo-btn');
+            if (changeBtn) {
+                const projectId = changeBtn.dataset.projectId;
+                const project = propertyData.find(p => p.id === projectId);
+                if (project && project.images.length > 1) {
+                    project.currentImageIndex = (project.currentImageIndex + 1) % project.images.length;
+                    const newImageSrc = project.images[project.currentImageIndex];
+                    const imgElement = document.getElementById(`img-${projectId}`);
+                    imgElement.src = newImageSrc;
+                }
+            }
+            
+            // Handle location button clicks
+            if (e.target.textContent.trim() === 'لوكيشن') {
+                // Al-Rayyan project location coordinates in Jeddah
+                const latitude = 21.6042;
+                const longitude = 39.1542;
+                const mapUrl = `https://www.google.com/maps?q=${latitude},${longitude}`;
+                window.open(mapUrl, '_blank');
+            }
+            
+            // Handle booking button clicks
+            if (e.target.textContent.trim() === 'الحجز') {
+                // You can add booking functionality here
+                alert('سيتم توجيهك إلى صفحة الحجز قريباً');
+            }
+        });
+
+        // Initial render of all cards on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCards();
+        });
+
+        // Translation functionality
+        const translations = {
+            ar: {
+                // Navigation
+                home: "الرئيسية",
+                about: "من نحن", 
+                projects: "المشاريع",
+                contact: "تواصل معنا",
+                // Page content
+                pageTitle: "مرحبا بكم في مشروع الريان",
+                unitsTable: "جدول الوحدات",
+                all: "الجميع",
+                available: "متاح",
+                sold: "مباع",
+                reserved: "محجوز",
+                booking: "الحجز",
+                location: "لوكيشن",
+                floor: "الدور",
+                // Status translations
+                availableStatus: "متاحة",
+                soldStatus: "مباعة", 
+                reservedStatus: "محجوزة"
+            },
+            en: {
+                // Navigation
+                home: "Home",
+                about: "About",
+                projects: "Projects", 
+                contact: "Contact",
+                // Page content
+                pageTitle: "Welcome to Al-Rayyan Project",
+                unitsTable: "Units Table",
+                all: "All",
+                available: "Available",
+                sold: "Sold",
+                reserved: "Reserved",
+                booking: "Booking",
+                location: "Location",
+                floor: "Floor",
+                // Status translations
+                availableStatus: "Available",
+                soldStatus: "Sold",
+                reservedStatus: "Reserved"
+            }
+        };
+
+        const langToggleBtn = document.getElementById('langToggleBtn');
+        const langToggleBtn2 = document.getElementById('langToggleBtn2');
+
+        function setLanguage(lang) {
+            const t = translations[lang];
+            
+            // Update navigation
+            document.getElementById('nav-home').textContent = t.home;
+            document.getElementById('nav-about').textContent = t.about;
+            document.getElementById('nav-projects').textContent = t.projects;
+            document.getElementById('nav-contact').textContent = t.contact;
+            
+            // Update page content
+            document.querySelector('.sub-header h1').textContent = t.pageTitle;
+            document.querySelector('header h1').textContent = t.unitsTable;
+            
+            // Update filter buttons
+            document.querySelector('[data-filter="all"]').textContent = t.all;
+            document.querySelector('[data-filter="available"]').textContent = t.available;
+            document.querySelector('[data-filter="sold"]').textContent = t.sold;
+            document.querySelector('[data-filter="reserved"]').textContent = t.reserved;
+            
+            // Update status styles for translation
+            statusStyles.available.text = t.availableStatus;
+            statusStyles.sold.text = t.soldStatus;
+            statusStyles.reserved.text = t.reservedStatus;
+            
+            // Re-render cards with new translations
+            const activeFilter = document.querySelector('.filter-btn.active-filter').dataset.filter;
+            renderCards(activeFilter);
+            
+            // Update page direction and language
+            if (lang === 'ar') {
+                document.body.style.direction = 'rtl';
+                document.documentElement.lang = 'ar';
+                langToggleBtn.textContent = 'EN';
+                langToggleBtn2.textContent = 'EN';
+            } else {
+                document.body.style.direction = 'ltr';
+                document.documentElement.lang = 'en';
+                langToggleBtn.textContent = 'عربي';
+                langToggleBtn2.textContent = 'عربي';
+            }
+            
+            // Store language preference
+            localStorage.setItem('selectedLanguage', lang);
+        }
+
+        // Language toggle event listeners
+        langToggleBtn.addEventListener('click', function() {
+            const currentLang = document.documentElement.lang || 'ar';
+            const newLang = currentLang === 'ar' ? 'en' : 'ar';
+            setLanguage(newLang);
+        });
+
+        langToggleBtn2.addEventListener('click', function() {
+            const currentLang = document.documentElement.lang || 'ar';
+            const newLang = currentLang === 'ar' ? 'en' : 'ar';
+            setLanguage(newLang);
+        });
+
+        // Load saved language preference on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('selectedLanguage') || 'ar';
+            setLanguage(savedLang);
+        });
+
+        // Mobile menu functionality
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.classList.add('open');
+        }
+        function hideMenu() {
+            navLinks.classList.remove('open');
+        }
+
+    </script>
+</body>
+</html>

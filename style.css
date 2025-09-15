@@ -503,13 +503,26 @@ h3{
 .sub-header{
     width: 100%;
     height: 50vh;
-    background-image: linear-gradient(rgba(4,9,30,0.8), rgba(4,90,30,0.8)), url(imgs/aboutus2.jpeg);
+    background-image: linear-gradient(rgba(4,9,30,0.8), rgba(138, 84, 8, 0.8)), url(imgs/الريان2/SHOT\ 2\ -\ مشروع\ الريان\ -\ 16\ -\ 8\ -\ 2025\ M\ -\ شوت\ نهاري.jpg);
     background-position: center;
     background-size: cover;
     text-align: center;
     color: #fff;
 }
 .sub-header h1{
+    margin-top: 100px;
+}
+
+.sub-header1{
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(rgba(4,9,30,0.8), rgba(138, 84, 8, 0.8)), url(imgs/الصفا/SHOT\ 2\ -\ ALSAFA\ -\ 3D\ -\ 23\ -\ 7\ -\ 2025\ M.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub-header1 h1{
     margin-top: 100px;
 }
 
@@ -894,4 +907,184 @@ footer a {
         padding: 0 15px;
         line-height: 1.4;
     }
+}
+
+
+
+/* Property Listings Section */
+.property-listings {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.property-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.property-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.property-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.property-card:hover .property-image img {
+    transform: scale(1.05);
+}
+
+.heart-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.heart-icon:hover {
+    background: #fff;
+    color: #e74c3c;
+}
+
+.property-content {
+    padding: 25px;
+    text-align: left;
+}
+
+.property-content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #77543b;
+    margin-bottom: 15px;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.location i {
+    margin-right: 8px;
+    color: #77543b;
+}
+
+.property-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.stats-left {
+    display: flex;
+    gap: 20px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #666;
+    font-size: 14px;
+}
+
+.stat-item i {
+    color: #999;
+}
+
+.property-type {
+    font-size: 12px;
+    color: #999;
+    font-weight: 500;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 700px) {
+    .property-listings {
+        width: 90%;
+        padding-top: 50px;
+    }
+    
+    .property-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 30px;
+    }
+    
+    .property-content {
+        padding: 20px;
+    }
+    
+    .stats-left {
+        gap: 15px;
+    }
+    
+    .property-stats {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+.show-details-btn {
+  display: block;
+  width: fit-content;
+  margin: 16px auto 0;
+  background-color: #fff;
+  color: #7a5c27;
+  border: 2px solid #7a5c27;
+  border-radius: 6px;
+  padding: 10px 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.show-details-btn:hover {
+  background-color: #7a5c27;
+  color: #fff;
 }
