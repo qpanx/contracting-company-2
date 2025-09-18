@@ -20,10 +20,10 @@
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="index.html" class="nav-home">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html" id="nav-home">Home</a></li>
+                    <li><a href="About.html" id="nav-about">About</a></li>
+                    <li><a href="projects.html" id="nav-projects">Projects</a></li>
+                    <li><a href="contact.html" id="nav-contact">Contact</a></li>
                 </ul>
             </div>
             <!-- Desktop language switcher -->
@@ -55,11 +55,6 @@
         <i class="fab fa-whatsapp"></i>
     </a>
     </section>
-
-
-
-
-
 
 
     <section class="services">
@@ -229,7 +224,7 @@
 
     <section class="cta">
         <h1>Enroll for our projects in Saudi Arabia</h1>
-        <a href="" class="hero-btn">CONTACT US</a>
+        <a href="contact.html" class="hero-btn">CONTACT US</a>
     </section>
 
 
@@ -254,7 +249,7 @@
 
     <footer>
       <div class="footer-content">
-        <span id="copyrightText">Copyright © 2024 All Rights Reserved - LION'S DEN REAL ESTATE</span>
+        <span id="copyrightText">Copyright © 2025 All Rights Reserved - LION'S DEN REAL ESTATE</span>
       </div>
     </footer>
 
@@ -281,8 +276,13 @@ const translations = {
         
         // Hero section
         heroTitle: "LION'S DEN REAL ESTATE",
-        heroSubtitle: "Comfort .. security .. and a bright future.",
+        heroSubtitle: "Comfort .. security .. and a bright future.",
         heroButton: "Visit Us To Know More",
+        
+        // Featured Properties
+        featuredTitle: "Featured Properties",
+        featuredSubtitle: "Discover our premium real estate offerings with modern amenities and prime locations",
+        showMoreDetails: "Show more details",
         
         // Services section
         servicesTitle: "Our Services",
@@ -291,10 +291,6 @@ const translations = {
         webDevelopment: "Web Development",
         seo: "SEO",
         serviceDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus cumque officiis culpa placeat, beatae, obcaecati rem commodi ipsam.",
-        
-        // Projects section
-        projectsTitle: "Our Projects",
-        projectsSubtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus cumque officiis culpa placeat, beatae, obcaecati rem commodi ipsam doloremque magni quia maxime veritatis inventore perferendis, repellendus facilis ea sunt saepe.",
         
         // CTA section
         ctaTitle: "Enroll for our projects in Saudi Arabia",
@@ -313,9 +309,14 @@ const translations = {
         contact: "تواصل معنا",
         
         // Hero section
-        heroTitle: "عرين الأسد للعقارات",
-        heroSubtitle: "راحة .. أمان .. لمستقبل مشرق ",
+        heroTitle: "عرين الأسد الأبيض العقارية",
+        heroSubtitle: "راحة .. أمان .. ومستقبل مشرق",
         heroButton: "تعرف علينا أكثر",
+        
+        // Featured Properties
+        featuredTitle: "العقارات المميزة",
+        featuredSubtitle: "اكتشف عروضنا العقارية المتميزة مع وسائل الراحة الحديثة والمواقع المتميزة",
+        showMoreDetails: "عرض المزيد من التفاصيل",
         
         // Services section
         servicesTitle: "خدماتنا",
@@ -325,10 +326,6 @@ const translations = {
         seo: "تحسين محركات البحث",
         serviceDescription: "نقدم حلول تقنية متكاملة لتعزيز وجودك الرقمي وتحسين تجربة المستخدمين.",
         
-        // Projects section
-        projectsTitle: "مشاريعنا",
-        projectsSubtitle: "اكتشف مجموعة متنوعة من مشاريعنا العقارية المتميزة في مختلف مدن المملكة العربية السعودية.",
-        
         // CTA section
         ctaTitle: "انضم إلى مشاريعنا في المملكة العربية السعودية",
         ctaButton: "اتصل بنا",
@@ -336,75 +333,100 @@ const translations = {
         // Footer
         footerTitle: "من نحن",
         footerDescription: "عرين الأسد للعقارات هي شركة رائدة في مجال العقارات، متخصصة في تطوير وإدارة المشاريع العقارية المتميزة. نسعى لتقديم أفضل الخدمات لعملائنا الكرام.",
-        copyright: "جميع الحقوق محفوظة لعرين الاسد الابيض العقارية © 2025"
+        copyright: "جميع الحقوق محفوظة لعرين الأسد الأبيض العقارية © 2025"
     }
 };
 
-// Remove the old changeLanguage and replace with toggle logic
-const langToggleBtn = document.getElementById('langToggleBtn');
-const langToggleBtn2 = document.getElementById('langToggleBtn2');
+let currentLang = 'en';
 
 function setLanguage(lang) {
+    currentLang = lang;
     const t = translations[lang];
-    // Update navigation links
-    document.querySelector('.nav-home').textContent = t.home;
-    document.querySelector('a[href="about.html"]').textContent = t.about;
-    document.querySelector('a[href="projects.html"]').textContent = t.projects;
-    document.querySelector('a[href="contact.html"]').textContent = t.contact;
+    
+    // Update navigation links using IDs
+    document.getElementById('nav-home').textContent = t.home;
+    document.getElementById('nav-about').textContent = t.about;
+    document.getElementById('nav-projects').textContent = t.projects;
+    document.getElementById('nav-contact').textContent = t.contact;
+    
+    // Update bilingual title
+    if (lang === 'ar') {
+        document.querySelector('.ar-title').style.display = 'block';
+        document.querySelector('.en-title').style.display = 'none';
+    } else {
+        document.querySelector('.ar-title').style.display = 'none';
+        document.querySelector('.en-title').style.display = 'block';
+    }
+    
     // Update hero section
     document.querySelector('.text-box p').textContent = t.heroSubtitle;
-    document.querySelector('.hero-btn').textContent = t.heroButton;
+    document.querySelector('.text-box .hero-btn').textContent = t.heroButton;
+    
+    // Update featured properties section
+    document.querySelector('.property-listings h1').textContent = t.featuredTitle;
+    document.querySelector('.property-listings p').textContent = t.featuredSubtitle;
+    
+    // Update "Show more details" buttons
+    const detailButtons = document.querySelectorAll('.show-details-btn');
+    detailButtons.forEach(btn => {
+        btn.textContent = t.showMoreDetails;
+    });
+    
     // Update services section
     document.querySelector('.services h1').textContent = t.servicesTitle;
     document.querySelector('.services p').textContent = t.servicesSubtitle;
+    
     // Update service items
     const serviceItems = document.querySelectorAll('.services-col h3');
     serviceItems[0].textContent = t.webDesign;
     serviceItems[1].textContent = t.webDevelopment;
     serviceItems[2].textContent = t.seo;
+    
     const serviceDescriptions = document.querySelectorAll('.services-col p');
     serviceDescriptions.forEach(desc => {
         desc.textContent = t.serviceDescription;
     });
-    // Update projects section
-    document.querySelector('.projects h1').textContent = t.projectsTitle;
-    document.querySelector('.projects p').textContent = t.projectsSubtitle;
+    
     // Update CTA section
     document.querySelector('.cta h1').textContent = t.ctaTitle;
     document.querySelector('.cta .hero-btn').textContent = t.ctaButton;
+    
     // Update footer
     document.querySelector('.footer h4').textContent = t.footerTitle;
     document.querySelector('.footer p').textContent = t.footerDescription;
+    
     // Update copyright
     document.getElementById('copyrightText').textContent = t.copyright;
-    // Update page direction and text alignment
+    
+    // Update page direction and language
     if (lang === 'ar') {
         document.body.style.direction = 'rtl';
         document.body.style.textAlign = 'right';
         document.documentElement.lang = 'ar';
-        langToggleBtn.textContent = 'EN';
-        langToggleBtn2.textContent = 'EN';
+        document.getElementById('langToggleBtn').textContent = 'EN';
+        document.getElementById('langToggleBtn2').textContent = 'EN';
     } else {
         document.body.style.direction = 'ltr';
         document.body.style.textAlign = 'left';
         document.documentElement.lang = 'en';
-        langToggleBtn.textContent = 'عربي';
-        langToggleBtn2.textContent = 'عربي';
+        document.getElementById('langToggleBtn').textContent = 'عربي';
+        document.getElementById('langToggleBtn2').textContent = 'عربي';
     }
+    
     // Store language preference
     localStorage.setItem('selectedLanguage', lang);
 }
 
+// Event listeners for language toggle buttons
+const langToggleBtn = document.getElementById('langToggleBtn');
+const langToggleBtn2 = document.getElementById('langToggleBtn2');
+
 langToggleBtn.addEventListener('click', function() {
-    const currentLang = document.documentElement.lang || 'en';
-    const newLang = currentLang === 'en' ? 'ar' : 'en';
-    setLanguage(newLang);
+    setLanguage(currentLang === 'en' ? 'ar' : 'en');
 });
 
 langToggleBtn2.addEventListener('click', function() {
-    const currentLang = document.documentElement.lang || 'en';
-    const newLang = currentLang === 'en' ? 'ar' : 'en';
-    setLanguage(newLang);
+    setLanguage(currentLang === 'en' ? 'ar' : 'en');
 });
 
 // Load saved language preference on page load

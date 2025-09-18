@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LION’S DEN REAL ESTATE</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="icon" href="imgs/logo2.png" type="images/png"/>
+    <!-- Google Fonts for Arabic typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        /* Apply the Tajawal font to the whole page */
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #FCFBF8;
+        }
+        /* Style for the active filter button */
+        .filter-btn.active {
+            color: black;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <section class="sub-header">
+        <a href="index.html" class="logo-link"><img src="imgs/logo.white.png"></a>
+        <nav>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html" id="nav-home">الرئيسية</a></li>
+                    <li><a href="About.html" id="nav-about">من نحن</a></li>
+                    <li><a href="projects.html" id="nav-projects">المشاريع</a></li>
+                    <li><a href="contact.html" id="nav-contact">تواصل معنا</a></li>
+                </ul>
+            </div>
+            <!-- Desktop language switcher -->
+            <div class="language-switcher">
+                <button class="lang-btn" id="langToggleBtn">EN</button>
+            </div>
+            <!-- Mobile nav controls container -->
+            <div class="nav-controls">
+                <button class="lang-btn" id="langToggleBtn2">EN</button>
+                <i class="fa fa-bars hamburger-menu" onclick="showMenu()"></i>
+            </div>
+        </nav>
+        <h1 id="page-title">المشاريع</h1>
+    </section>
+
+    <!-- Header and Navigation -->
+    <header class="w-full bg-white">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-center md:justify-start h-16">
+                <div class="flex items-center">
+                    <div>
+                        <div id="filter-nav" class="flex flex-wrap justify-center items-baseline space-x-4 space-x-reverse">
+                            <!-- Navigation Links -->
+                            <a href="#" class="filter-btn active text-gray-600 hover:text-black px-3 py-2 rounded-md text-sm font-medium" data-key="all">الكل</a>
+                            <a href="#" class="filter-btn text-gray-600 hover:text-black px-3 py-2 rounded-md text-sm font-medium" data-key="jeddah">جدة</a>
+                            <a href="#" class="filter-btn text-gray-600 hover:text-black px-3 py-2 rounded-md text-sm font-medium" data-key="riyadh">الرياض</a>
+                            <a href="#" class="filter-btn text-gray-600 hover:text-black px-3 py-2 rounded-md text-sm font-medium" data-key="mecca">مكة</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <div class="px-4 py-6 sm:px-0">
+            <!-- Grid for Content Cards -->
+            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Card 1: Data-city attribute added -->
+                <article class="project-card bg-white overflow-hidden" data-city="جدة">
+                    <img class="w-full h-80 object-cover" src="imgs/الريان2/SHOT 2 - مشروع الريان - 16 - 8 - 2025 M - شوت ليلي.jpg" alt="Modern terrace with outdoor furniture at sunset">
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-3" data-key="project1-title">مشروع الريان</h2>
+                        <p class="text-gray-600 leading-relaxed" data-key="project1-desc">
+                            المساكن الأولى من نوعها في مجتمع فريد من نوعه لأول مرة في المملكة. الأيقوني المصمم العالمي إيلي صعب وأناقة تصاميمه الداخلية تجتمع في سدرة؛ مجتمع متكامل يجمع الخدمات والمرافق، وهو مجتمع متكامل. الرياض، المملكة العربية السعودية.
+                        </p>
+                        <a href="#" class="inline-block mt-4 text-sm font-bold text-gray-800 border-b-2 border-gray-300 pb-1 hover:border-gray-500" data-key="learn-more">إعرف أكثر</a>
+                    </div>
+                </article>
+
+                <!-- Card 2: Data-city attribute added -->
+                <article class="project-card bg-white overflow-hidden" data-city="جدة">
+                    <img class="w-full h-80 object-cover" src="imgs/الصفا/SHOT 2 - ALSAFA - 3D - 23 - 7 - 2025 M.jpg" alt="Cityscape of Buraydah with a prominent water tower">
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-3" data-key="project2-title">مشروع الصفا</h2>
+                        <p class="text-gray-600 leading-relaxed" data-key="project2-desc">
+                             من الأصالة التي تتفرد بها مدن مملكتنا، عادت دار الأركان لتقدم تُحفة مشاريعها في "بريدة، القصيم" لتبتكر بيئة سكنية مستوحاة من أساليب الحياة الراقية الأصيلة التي تحمل أرفع المعايير.
+                        </p>
+                         <a href="#" class="inline-block mt-4 text-sm font-bold text-gray-800 border-b-2 border-gray-300 pb-1 hover:border-gray-500" data-key="learn-more">إعرف أكثر</a>
+                    </div>
+                </article>
+
+                <!-- Separator -->
+                <hr class="project-card col-span-1 md:col-span-2 my-4 border-gray-200" data-city="الكل">
+
+                <!-- Card 3: Data-city attribute added -->
+                <article class="project-card bg-white overflow-hidden" data-city="الرياض">
+                    <div class="relative">
+                        <img class="w-full h-80 object-cover" src="https://images.pexels.com/photos/2089698/pexels-photo-2089698.jpeg?auto=compress&cs=tinysrgb&w=1200&h=750&dpr=1" alt="Modern villa with a swimming pool and waterfall feature">
+                        <span class="absolute bottom-4 right-4 bg-gray-900 bg-opacity-70 text-white text-xs font-semibold py-1.5 px-3" data-key="shams-riyadh">شمس الرياض</span>
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-3" data-key="project3-title">فلل UPSIDE LIVING بتصاميم داخلية من غوستافو هورم</h2>
+                        <p class="text-gray-600 leading-relaxed" data-key="project3-desc">
+                            يعتبر مشروع "شمس الرياض" أول مجتمع سكني على مساحة تزيد عن 5 مليون متر مربع. الأول من نوعه في المملكة العربية السعودية، والذي يقدم "مدينة" متكاملة ضمن مدينة الرياض...
+                        </p>
+                        <a href="#" class="inline-block mt-4 text-sm font-bold text-gray-800 border-b-2 border-gray-300 pb-1 hover:border-gray-500" data-key="learn-more">إعرف أكثر</a>
+                    </div>
+                </article>
+
+                <!-- Card 4: Data-city attribute added -->
+                <article class="project-card bg-white overflow-hidden" data-city="الرياض">
+                     <div class="relative">
+                        <img class="w-full h-80 object-cover" src="https://images.pexels.com/photos/2251247/pexels-photo-2251247.jpeg?auto=compress&cs=tinysrgb&w=1200&h=750&dpr=1" alt="Street view of modern residential homes">
+                        <span class="absolute bottom-4 right-4 bg-gray-900 bg-opacity-70 text-white text-xs font-semibold py-1.5 px-3" data-key="sold-out">تباع بالكامل</span>
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-3" data-key="project4-title">شمس الرياض</h2>
+                        <p class="text-gray-600 leading-relaxed" data-key="project4-desc">
+                            من المساكن الأعلى من نوعها في العالم، مشروع رائد لمجمع دار الأركان، وبأسلوب هوى دار الأزياء الإيطالية الأكثر شهرة، ليقدم لكم فلل هي الأولى من نوعها في العالم بتصاميم داخلية أنيقة من فيرساتشي.
+                        </p>
+                        <a href="#" class="inline-block mt-4 text-sm font-bold text-gray-800 border-b-2 border-gray-300 pb-1 hover:border-gray-500" data-key="learn-more">إعرف أكثر</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Translation object
+        const translations = {
+            ar: {
+                'nav-home': 'الرئيسية',
+                'nav-about': 'من نحن',
+                'nav-projects': 'المشاريع',
+                'nav-contact': 'تواصل معنا',
+                'page-title': 'المشاريع',
+                'all': 'الكل',
+                'riyadh': 'الرياض',
+                'jeddah': 'جدة',
+                'mecca': 'مكة',
+                'medina': 'المدينة',
+                'qassim': 'القصيم',
+                'bosta': 'البوستة',
+                'learn-more': 'إعرف أكثر',
+                'project1-title': 'الريان',
+                'project1-desc': 'المساكن الأولى من نوعها في مجتمع فريد من نوعه لأول مرة في المملكة. الأيقوني المصمم العالمي إيلي صعب وأناقة تصاميمه الداخلية تجتمع في سدرة؛ مجتمع متكامل يجمع الخدمات والمرافق، وهو مجتمع متكامل. الرياض، المملكة العربية السعودية.',
+                'project2-title': 'الصفا',
+                'project2-desc': 'من الأصالة التي تتفرد بها مدن مملكتنا، عادت دار الأركان لتقدم تُحفة مشاريعها في "بريدة، القصيم" لتبتكر بيئة سكنية مستوحاة من أساليب الحياة الراقية الأصيلة التي تحمل أرفع المعايير.',
+                'project3-title': 'فلل UPSIDE LIVING بتصاميم داخلية من غوستافو هورم',
+                'project3-desc': 'يعتبر مشروع "شمس الرياض" أول مجتمع سكني على مساحة تزيد عن 5 مليون متر مربع. الأول من نوعه في المملكة العربية السعودية، والذي يقدم "مدينة" متكاملة ضمن مدينة الرياض...',
+                'project4-title': 'شمس الرياض',
+                'project4-desc': 'من المساكن الأعلى من نوعها في العالم، مشروع رائد لمجمع دار الأركان، وبأسلوب هوى دار الأزياء الإيطالية الأكثر شهرة، ليقدم لكم فلل هي الأولى من نوعها في العالم بتصاميم داخلية أنيقة من فيرساتشي.',
+                'shams-riyadh': 'شمس الرياض',
+                'sold-out': 'تباع بالكامل'
+            },
+            en: {
+                'nav-home': 'Home',
+                'nav-about': 'About',
+                'nav-projects': 'Projects',
+                'nav-contact': 'Contact',
+                'page-title': 'Projects',
+                'all': 'All',
+                'riyadh': 'Riyadh',
+                'jeddah': 'Jeddah',
+                'mecca': 'Mecca',
+                'medina': 'Medina',
+                'qassim': 'Qassim',
+                'bosta': 'Bosta',
+                'learn-more': 'Learn More',
+                'project1-title': 'Anwal by ELIE SAAB',
+                'project1-desc': 'The first homes of their kind in a unique community for the first time in the Kingdom. The iconic international designer Elie Saab and the elegance of his interior designs come together in Sidra; an integrated community that brings together services and facilities. Riyadh, Saudi Arabia.',
+                'project2-title': 'Buraydah Hills, Qassim',
+                'project2-desc': 'From the authenticity that distinguishes the cities of our kingdom, Dar Al Arkan returns to present the masterpiece of its projects in "Buraydah, Qassim" to create a residential environment inspired by authentic refined lifestyles that carry the highest standards.',
+                'project3-title': 'UPSIDE LIVING Villas with Interior Design by Gustavo Horm',
+                'project3-desc': 'The "Shams Al Riyadh" project is considered the first residential community on an area of more than 5 million square meters. The first of its kind in Saudi Arabia, which offers a complete "city" within the city of Riyadh...',
+                'project4-title': 'Shams Al Riyadh',
+                'project4-desc': 'Among the highest homes of their kind in the world, a pioneering project of Dar Al Arkan Group, and in the style of the most famous Italian fashion house, to present to you villas that are the first of their kind in the world with elegant interior designs from Versace.',
+                'shams-riyadh': 'Shams Al Riyadh',
+                'sold-out': 'Sold Out'
+            }
+        };
+
+        let currentLang = 'ar';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            const html = document.documentElement;
+            
+            if (lang === 'ar') {
+                html.setAttribute('lang', 'ar');
+                html.setAttribute('dir', 'rtl');
+                document.getElementById('langToggleBtn').textContent = 'EN';
+                document.getElementById('langToggleBtn2').textContent = 'EN';
+            } else {
+                html.setAttribute('lang', 'en');
+                html.setAttribute('dir', 'ltr');
+                document.getElementById('langToggleBtn').textContent = 'عربي';
+                document.getElementById('langToggleBtn2').textContent = 'عربي';
+            }
+
+            // Update all text content
+            Object.keys(translations[lang]).forEach(key => {
+                const elements = document.querySelectorAll(`[data-key="${key}"], #${key}`);
+                elements.forEach(element => {
+                    element.textContent = translations[lang][key];
+                });
+            });
+
+            // Save language preference
+            localStorage.setItem('language', lang);
+        }
+
+        // Mobile menu functions
+        function showMenu() {
+            document.getElementById('navLinks').style.right = '0';
+        }
+
+        function hideMenu() {
+            document.getElementById('navLinks').style.right = '-200px';
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Language toggle functionality
+            const langToggleBtn = document.getElementById('langToggleBtn');
+            const langToggleBtn2 = document.getElementById('langToggleBtn2');
+
+            langToggleBtn.addEventListener('click', () => {
+                setLanguage(currentLang === 'ar' ? 'en' : 'ar');
+            });
+
+            langToggleBtn2.addEventListener('click', () => {
+                setLanguage(currentLang === 'ar' ? 'en' : 'ar');
+            });
+
+            // Load saved language
+            const savedLang = localStorage.getItem('language') || 'ar';
+            setLanguage(savedLang);
+
+            // Filter functionality
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    // Update active button style
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const filterCity = this.textContent.trim();
+
+                    projectCards.forEach(card => {
+                        // Handle the separator line separately
+                        if (card.tagName === 'HR') {
+                            // Hide separator if a specific city is selected
+                            card.style.display = (filterCity === 'الكل' || filterCity === 'All') ? 'block' : 'none';
+                            return;
+                        }
+
+                        const cardCity = card.dataset.city;
+
+                        // Show/hide cards based on filter
+                        if (filterCity === 'الكل' || filterCity === 'All' || cardCity === filterCity) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+
