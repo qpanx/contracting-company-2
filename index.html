@@ -40,10 +40,10 @@
 
 
         <div class="text-box">
-            <h1 class="bilingual-title">
-              <span class="ar-title">عرين الأسد الأبيض العقارية</span>
-              <span class="en-title">LION'S DEN REAL ESTATE</span>
-            </h1>
+            <h1 class="bilingual-title" style="text-align:center;">
+  <span class="ar-title" style="display:block; font-family:'Cairo',sans-serif; font-size:2.1rem;">عرين الأسد الأبيض العقارية</span>
+  <span class="en-title" style="display:block; font-family:'Cairo',sans-serif; font-size:2.1rem; margin-top:0.3em;">LION'S DEN REAL ESTATE</span>
+</h1>
             <div class="subtitle-en"></div>
             <p>Comfort .. security .. and a bright future.</p>
             <a href="" class="hero-btn">Visit Us To Know More</a>
@@ -58,23 +58,20 @@
 
 
     <section class="services">
-        <h1>Our Services</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus cumque officiis culpa placeat, beatae, obcaecati rem commodi ipsam <br>doloremque magni quia maxime veritatis inventore perferendis, repellendus facilis ea sunt saepe.</p>
+        <h1 id="servicesTitle">Our Services</h1>
+        <p id="servicesSubtitle">"At Lion's Den Real Estate, we believe that property is not just a building, but the foundation of a secure future and a smart investment. Our mission is to be your most trusted partner on your real estate journey, offering extensive experience and keen insight to achieve your ambitions."</p>
         <div class="row">
             <div class="services-col">
-                
-                <h3>Web Design</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus cumque officiis culpa placeat, beatae, obcaecati rem commodi ipsam.</p>
+                <h3 id="service1Title">Real Estate Brokerage</h3>
+                <p id="service1Desc">We provide an extensive network and deep expertise to ensure your buying and selling transactions are completed at the best prices and in record time. Our professional team is with you every step of the way.</p>
             </div>
             <div class="services-col">
-                
-                <h3>Web Development</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus cumque officiis culpa placeat, beatae, obcaecati rem commodi ipsam.</p>
+                <h3 id="service2Title">Property Management</h3>
+                <p id="service2Desc">We manage your assets with efficiency and professionalism—from leasing and maintenance to revenue collection—ensuring your peace of mind and a continuous return on investment.</p>
             </div>
             <div class="services-col">
-                
-                <h3>SEO</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus cumque officiis culpa placeat, beatae, obcaecati rem commodi ipsam.</p>
+                <h3 id="service3Title">Real Estate Consulting</h3>
+                <p id="service3Desc">We offer comprehensive feasibility studies and strategic consulting for investors and developers, helping you make precise decisions to maximize the potential of your investment</p>
             </div>
         </div>
     </section>
@@ -234,8 +231,10 @@
             <img src="imgs/Spon.png" alt="FAL and REGA - Real Estate General Authority Logos" class="partner-logo-combined">
         </div>
         
-        <h4>About US</h4>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae exercitationem eveniet dolorem amet a, quam <br>repellat pariatur sunt voluptatibus adipisci odio tempore totam velit nostrum ipsum voluptatum nisi veniam!</p>
+        <h4 id="footerTitle">About US</h4>
+        <p id="footerDescription">
+            Welcome to Lion's Den Real Estate, where strength meets strategy in the world of property. Our name is our promise: to be your powerful and protective guide through the complexities of the real estate market. We were founded on a vision to lead with integrity and deliver exceptional results, understanding that a property is more than a transaction—it's a cornerstone for your future. Our expert team is dedicated to fiercely protecting your interests, whether you are buying your dream home or securing a high-value investment. At Lion's Den, we don't just find properties; we secure your legacy.
+        </p>
     <div class="icons">
         <!----<a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
         
@@ -286,11 +285,13 @@ const translations = {
         
         // Services section
         servicesTitle: "Our Services",
-        servicesSubtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus cumque officiis culpa placeat, beatae, obcaecati rem commodi ipsam doloremque magni quia maxime veritatis inventore perferendis, repellendus facilis ea sunt saepe.",
-        webDesign: "Web Design",
-        webDevelopment: "Web Development",
-        seo: "SEO",
-        serviceDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus cumque officiis culpa placeat, beatae, obcaecati rem commodi ipsam.",
+        servicesSubtitle: "At Lion's Den Real Estate, we believe that property is not just a building, but the foundation of a secure future and a smart investment. Our mission is to be your most trusted partner on your real estate journey, offering extensive experience and keen insight to achieve your ambitions.",
+        service1Title: "Real Estate Brokerage",
+        service1Desc: "We provide an extensive network and deep expertise to ensure your buying and selling transactions are completed at the best prices and in record time. Our professional team is with you every step of the way.",
+        service2Title: "Property Management",
+        service2Desc: "We manage your assets with efficiency and professionalism—from leasing and maintenance to revenue collection—ensuring your peace of mind and a continuous return on investment.",
+        service3Title: "Real Estate Consulting",
+        service3Desc: "We offer comprehensive feasibility studies and strategic consulting for investors and developers, helping you make precise decisions to maximize the potential of your investment",
         
         // CTA section
         ctaTitle: "Enroll for our projects in Saudi Arabia",
@@ -298,7 +299,7 @@ const translations = {
         
         // Footer
         footerTitle: "About US",
-        footerDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae exercitationem eveniet dolorem amet a, quam repellat pariatur sunt voluptatibus adipisci odio tempore totam velit nostrum ipsum voluptatum nisi veniam!",
+        footerDescription: "Welcome to Lion's Den Real Estate, where strength meets strategy in the world of property. Our name is our promise: to be your powerful and protective guide through the complexities of the real estate market. We were founded on a vision to lead with integrity and deliver exceptional results, understanding that a property is more than a transaction—it's a cornerstone for your future. Our expert team is dedicated to fiercely protecting your interests, whether you are buying your dream home or securing a high-value investment. At Lion's Den, we don't just find properties; we secure your legacy.",
         copyright: "Copyright © 2025 All Rights Reserved - LION'S DEN REAL ESTATE"
     },
     ar: {
@@ -320,11 +321,13 @@ const translations = {
         
         // Services section
         servicesTitle: "خدماتنا",
-        servicesSubtitle: "نقدم مجموعة شاملة من الخدمات العقارية المتخصصة لتلبية جميع احتياجات عملائنا في المملكة العربية السعودية وخارجها.",
-        webDesign: "تصميم المواقع",
-        webDevelopment: "تطوير المواقع",
-        seo: "تحسين محركات البحث",
-        serviceDescription: "نقدم حلول تقنية متكاملة لتعزيز وجودك الرقمي وتحسين تجربة المستخدمين.",
+        servicesSubtitle: "في عرين الأسد الأبيض العقارية، نؤمن أن العقار ليس مجرد مبنى، بل هو أساس لمستقبل آمن واستثمار ذكي. مهمتنا أن نكون شريكك الأكثر ثقة في رحلتك العقارية، ونقدم لك خبرة واسعة ورؤية دقيقة لتحقيق طموحاتك.",
+        service1Title: "الوساطة العقارية",
+        service1Desc: "نقدم شبكة واسعة وخبرة عميقة لضمان إتمام عمليات البيع والشراء بأفضل الأسعار وفي وقت قياسي. فريقنا المحترف معك في كل خطوة.",
+        service2Title: "إدارة الممتلكات",
+        service2Desc: "ندير أصولك بكفاءة واحترافية من التأجير والصيانة إلى تحصيل الإيرادات، لنضمن لك راحة البال وعائد استثماري مستمر.",
+        service3Title: "الاستشارات العقارية",
+        service3Desc: "نوفر دراسات جدوى شاملة واستشارات استراتيجية للمستثمرين والمطورين، لمساعدتك في اتخاذ قرارات دقيقة وتعظيم إمكانيات استثمارك.",
         
         // CTA section
         ctaTitle: "انضم إلى مشاريعنا في المملكة العربية السعودية",
@@ -332,7 +335,7 @@ const translations = {
         
         // Footer
         footerTitle: "من نحن",
-        footerDescription: "عرين الأسد للعقارات هي شركة رائدة في مجال العقارات، متخصصة في تطوير وإدارة المشاريع العقارية المتميزة. نسعى لتقديم أفضل الخدمات لعملائنا الكرام.",
+        footerDescription: "مرحبًا بكم في عرين الأسد الأبيض العقارية، حيث تلتقي القوة مع الاستراتيجية في عالم العقار. اسمنا هو وعدنا: أن نكون دليلك القوي والواقي في تعقيدات سوق العقارات. تأسسنا برؤية للقيادة بالنزاهة وتقديم نتائج استثنائية، مدركين أن العقار أكثر من مجرد صفقة—بل هو حجر الأساس لمستقبلك. فريقنا الخبير ملتزم بحماية مصالحك بكل قوة، سواء كنت تشتري منزل أحلامك أو تستثمر في عقار عالي القيمة. في عرين الأسد، لا نبحث فقط عن العقارات؛ بل نؤمن مستقبلك.",
         copyright: "جميع الحقوق محفوظة لعرين الأسد الأبيض العقارية © 2025"
     }
 };
@@ -350,13 +353,13 @@ function setLanguage(lang) {
     document.getElementById('nav-contact').textContent = t.contact;
     
     // Update bilingual title
-    if (lang === 'ar') {
-        document.querySelector('.ar-title').style.display = 'block';
-        document.querySelector('.en-title').style.display = 'none';
-    } else {
-        document.querySelector('.ar-title').style.display = 'none';
-        document.querySelector('.en-title').style.display = 'block';
-    }
+    // if (lang === 'ar') {
+    //     document.querySelector('.ar-title').style.display = 'block';
+    //     document.querySelector('.en-title').style.display = 'none';
+    // } else {
+    //     document.querySelector('.ar-title').style.display = 'none';
+    //     document.querySelector('.en-title').style.display = 'block';
+    // }
     
     // Update hero section
     document.querySelector('.text-box p').textContent = t.heroSubtitle;
@@ -373,27 +376,22 @@ function setLanguage(lang) {
     });
     
     // Update services section
-    document.querySelector('.services h1').textContent = t.servicesTitle;
-    document.querySelector('.services p').textContent = t.servicesSubtitle;
-    
-    // Update service items
-    const serviceItems = document.querySelectorAll('.services-col h3');
-    serviceItems[0].textContent = t.webDesign;
-    serviceItems[1].textContent = t.webDevelopment;
-    serviceItems[2].textContent = t.seo;
-    
-    const serviceDescriptions = document.querySelectorAll('.services-col p');
-    serviceDescriptions.forEach(desc => {
-        desc.textContent = t.serviceDescription;
-    });
+    document.getElementById('servicesTitle').textContent = t.servicesTitle;
+document.getElementById('servicesSubtitle').textContent = t.servicesSubtitle;
+document.getElementById('service1Title').textContent = t.service1Title;
+document.getElementById('service1Desc').textContent = t.service1Desc;
+document.getElementById('service2Title').textContent = t.service2Title;
+document.getElementById('service2Desc').textContent = t.service2Desc;
+document.getElementById('service3Title').textContent = t.service3Title;
+document.getElementById('service3Desc').textContent = t.service3Desc;
     
     // Update CTA section
     document.querySelector('.cta h1').textContent = t.ctaTitle;
     document.querySelector('.cta .hero-btn').textContent = t.ctaButton;
     
     // Update footer
-    document.querySelector('.footer h4').textContent = t.footerTitle;
-    document.querySelector('.footer p').textContent = t.footerDescription;
+    document.getElementById('footerTitle').textContent = t.footerTitle;
+document.getElementById('footerDescription').textContent = t.footerDescription;
     
     // Update copyright
     document.getElementById('copyrightText').textContent = t.copyright;
