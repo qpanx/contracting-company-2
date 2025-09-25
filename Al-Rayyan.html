@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -29,10 +28,10 @@
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
-                     <li><a href="index.html">Home</a></li>
-                    <li><a href="About.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html" id="nav-home">Home</a></li>
+                    <li><a href="About.html" id="nav-about">About</a></li>
+                    <li><a href="projects.html" id="nav-projects">Projects</a></li>
+                    <li><a href="contact.html" id="nav-contact">Contact</a></li>
                 </ul>
             </div>
             <!-- Desktop language switcher -->
@@ -73,30 +72,48 @@
     </div>
 
     <script>
+        // keep translations and data as before
         const propertyData = [
-            { id: 'طابق الملاحق', status: 'available', price: '750,000', floor: 'الأرضي', area: 127, bedrooms: 2, bathrooms: 3, images: ['imgs/الريان2/127m.jpg', 'https://placehold.co/400x300/CBD5E1/1E293B?text=Project+G2-B', 'https://placehold.co/400x300/94A3B8/0F172A?text=Project+G2-C'], currentImageIndex: 0, description: 'شقة واسعة بإطلالة مميزة على الحديقة. تصميم عصري وتشطيبات عالية الجودة.' },
-            { id: 'الطوابق المتكررة', status: 'available', price: '1,263,000', floor: 'الأرضي', area: 95, bedrooms: 2, bathrooms: 2, images: ['imgs/الريان2/95.jpg', 'https://placehold.co/400x300/CBD5E1/1E293B?text=Project+G3-B'], currentImageIndex: 0, description: 'وحدة سكنية مثالية للعائلات الصغيرة، تتميز بالهدوء والقرب من الخدمات.' },
-            { id: 'G4#', status: 'available', price: '1,288,000', floor: 'الأرضي', area: 117.12, bedrooms: 2, bathrooms: 2, images: ['https://placehold.co/400x300/E2E8F0/334155?text=Project+G4-A'], currentImageIndex: 0, description: 'استمتع بالراحة والفخامة في هذه الشقة ذات التصميم الفريد والمساحات المفتوحة.' },
-            { id: 'G5#', status: 'available', price: '1,283,000', floor: 'الأرضي', area: 110.11, bedrooms: 2, bathrooms: 2, images: ['https://placehold.co/400x300/E2E8F0/334155?text=Project+G5-A', 'https://placehold.co/400x300/CBD5E1/1E293B?text=Project+G5-B'], currentImageIndex: 0, description: 'شقة أنيقة وعملية، توفر كل سبل الراحة والرفاهية لسكانها.' },
-            { id: 'F9#', status: 'available', price: '1,350,000', floor: 'الأول', area: 135.50, bedrooms: 3, bathrooms: 2, images: ['https://placehold.co/400x300/E2E8F0/334155?text=Project+F9-A', 'https://placehold.co/400x300/CBD5E1/1E293B?text=Project+F9-B'], currentImageIndex: 0, description: 'وحدة فاخرة في الدور الأول مع شرفة واسعة وإضاءة طبيعية ممتازة.' },
-            { id: 'F8#', status: 'sold', price: '1,320,000', floor: 'الأول', area: 130.00, bedrooms: 3, bathrooms: 2, images: ['https://placehold.co/400x300/E2E8F0/334155?text=Project+F8-A'], currentImageIndex: 0, description: 'تم بيع هذه الوحدة الرائعة التي تجمع بين الموقع المتميز والتصميم الجذاب.' },
-            { id: 'F7#', status: 'reserved', price: '1,400,000', floor: 'الثاني', area: 140.15, bedrooms: 3, bathrooms: 3, images: ['https://placehold.co/400x300/E2E8F0/334155?text=Project+F7-A', 'https://placehold.co/400x300/CBD5E1/1E293B?text=Project+F7-B'], currentImageIndex: 0, description: 'وحدة محجوزة تتميز بإطلالة بانورامية ومساحة داخلية رحبة.' },
-            { id: 'G6#', status: 'available', price: '1,295,000', floor: 'الأرضي', area: 115.80, bedrooms: 2, bathrooms: 2, images: ['https://placehold.co/400x300/E2E8F0/334155?text=Project+G6-A'], currentImageIndex: 0, description: 'فرصة استثمارية مميزة في وحدة سكنية عصرية ومتكاملة الخدمات.' },
+            { id: 'طابق الملاحق', titleEn: 'Annex Floor', titleAr: 'طابق الملاحق', status: 'available', price: '750,000', floor: 'علوي', floorEn: 'Upper', floorAr: 'علوي', area: 127, bedrooms: 2, bathrooms: 3, images: ['imgs/App-AlRay/ملحق/ALRYAAN - TOPVIEW1 -.jpeg'], currentImageIndex: 0, description: 'شقة واسعة بإطلالة مميزة على الحديقة. تصميم عصري وتشطيبات عالية الجودة.' },
+            { id: 'أمامية', titleEn: 'Front', titleAr: 'أمامية', status: 'available', price: '1,263,000', floor: 'الأرضي', floorEn: 'Ground', floorAr: 'الأرضي', area: 95, bedrooms: 2, bathrooms: 2, images: ['imgs/App-AlRay/أمامية/ALRYAAN - TOP VIEW -.jpeg'], currentImageIndex: 0, description: 'وحدة سكنية مثالية للعائلات الصغيرة، تتميز بالهدوء والقرب من الخدمات.' },
+            { id: 'خلفية', titleEn: 'Rear', titleAr: 'خلفية', status: 'available', price: '1,288,000', floor: 'الأرضي', floorEn: 'Ground', floorAr: 'الأرضي', area: 117.12, bedrooms: 2, bathrooms: 2, images: ['imgs/App-AlRay/خلفية/TOP VIEW - ALRYAAN -.jpeg'], currentImageIndex: 0, description: 'استمتع بالراحة والفخامة في هذه الشقة ذات التصميم الفريد والمساحات المفتوحة.' }
         ];
 
         const statusStyles = {
             available: { text: 'متاحة', color: 'text-green-600', bg: 'bg-green-100' },
             sold: { text: 'مباعة', color: 'text-red-600', bg: 'bg-red-100' },
-            reserved: { text: 'محجوزة', color: 'text-yellow-600', bg: 'bg-yellow-100' },
+            reserved: { text: 'محجوزة', color: 'text-yellow-600', bg: 'bg-yellow-100' }
         };
-        
+
+        const translations = {
+            ar: {
+                home: "الرئيسية", about: "من نحن", projects: "المشاريع", contact: "تواصل معنا",
+                pageTitle: "مرحبا بكم في مشروع الريان", unitsTable: "جدول الوحدات",
+                all: "الجميع", available: "متاح", sold: "مباع", reserved: "محجوز",
+                booking: "الحجز", location: "لوكيشن", floor: "الدور",
+                availableStatus: "متاحة", soldStatus: "مباعة", reservedStatus: "محجوزة"
+            },
+            en: {
+                home: "Home", about: "About", projects: "Projects", contact: "Contact",
+                pageTitle: "Welcome to Al-Rayyan Project", unitsTable: "Units Table",
+                all: "All", available: "Available", sold: "Sold", reserved: "Reserved",
+                booking: "Booking", location: "Location", floor: "Floor",
+                availableStatus: "Available", soldStatus: "Sold", reservedStatus: "Reserved"
+            }
+        };
+
         const propertyGrid = document.getElementById('property-grid');
         const filterButtonsContainer = document.getElementById('filter-buttons');
+        const langToggleBtn = document.getElementById('langToggleBtn');
+        const langToggleBtn2 = document.getElementById('langToggleBtn2');
 
-        // Function to create and render property cards
+        // Use a single currentLang variable to avoid mismatch
+        let currentLang = document.documentElement.lang || 'ar';
+
         function renderCards(filter = 'all') {
-            propertyGrid.innerHTML = ''; // Clear existing cards
+            propertyGrid.innerHTML = '';
             const filteredData = propertyData.filter(prop => filter === 'all' || prop.status === filter);
+            const t = translations[currentLang] || translations['ar'];
 
             filteredData.forEach(prop => {
                 const style = statusStyles[prop.status];
@@ -104,15 +121,24 @@
                 card.className = 'bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden flex flex-col transition-all duration-300 transform hover:scale-105';
                 card.dataset.status = prop.status;
 
+                const title = (currentLang === 'ar') ? (prop.titleAr || prop.id) : (prop.titleEn || prop.id);
+                const floorText = (currentLang === 'ar') ? (prop.floorAr || prop.floor) : (prop.floorEn || prop.floor);
+                const floorLabel = `${t.floor || (currentLang === 'ar' ? 'الدور' : 'Floor')}: ${floorText}`;
+                const bookingText = t.booking || (currentLang === 'ar' ? 'الحجز' : 'Booking');
+                const locationText = t.location || (currentLang === 'ar' ? 'لوكيشن' : 'Location');
+
+                // ensure status text comes from current translations
+                const statusText = (prop.status === 'available') ? t.availableStatus : (prop.status === 'sold' ? t.soldStatus : t.reservedStatus);
+
                 card.innerHTML = `
                     <div class="p-4">
                         <div class="flex justify-between items-center mb-2">
-                            <span class="text-xl font-bold text-gray-800">${prop.id}</span>
-                            <span class="text-sm font-medium px-3 py-1 rounded-full ${style.bg} ${style.color}">${style.text}</span>
+                            <span class="text-xl font-bold text-gray-800">${title}</span>
+                            <span class="text-sm font-medium px-3 py-1 rounded-full ${style.bg} ${style.color}">${statusText}</span>
                         </div>
                     </div>
                     <div class="px-4 pb-4 relative">
-                        <img src="${prop.images[prop.currentImageIndex]}" alt="صورة المشروع ${prop.id}" class="w-full h-40 object-cover rounded-md shadow-inner" id="img-${prop.id}">
+                        <img src="${prop.images[prop.currentImageIndex]}" alt="صورة المشروع ${prop.id}" class="w-full h-64 md:h-72 lg:h-80 object-cover rounded-md shadow-inner transform scale-105" id="img-${prop.id}">
                         <button data-project-id="${prop.id}" class="change-photo-btn absolute top-2 right-2 bg-white/70 backdrop-blur-sm hover:bg-white rounded-full p-1.5 transition-colors duration-200" title="تغيير الصورة">
                             <svg class="w-5 h-5 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0011.667 0l3.181-3.183m-4.991-2.691V5.006h-4.992v4.992h4.992z" />
@@ -124,22 +150,18 @@
                     </div>
                     <div class="p-4 bg-gray-50 border-t border-gray-200">
                         <div class="grid grid-cols-4 gap-2 text-center text-gray-600">
-                            <!-- Floor Icon and Text -->
                             <div class="flex flex-col items-center">
                                 <svg class="w-6 h-6 mb-1 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
-                                <span class="text-xs font-medium">الدور: ${prop.floor}</span>
+                                <span class="text-xs font-medium">${floorLabel}</span>
                             </div>
-                            <!-- Area Icon and Text -->
                             <div class="flex flex-col items-center">
                                 <svg class="w-6 h-6 mb-1 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5v-4m0 0h-4m4 0l-5-5"></path></svg>
                                 <span class="text-xs font-medium">${prop.area} م²</span>
                             </div>
-                            <!-- Bedrooms Icon and Text -->
                             <div class="flex flex-col items-center">
                                 <svg class="w-6 h-6 mb-1 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path></svg>
                                 <span class="text-xs font-medium">${prop.bedrooms}</span>
                             </div>
-                            <!-- Bathrooms Icon and Text -->
                             <div class="flex flex-col items-center">
                                 <svg class="w-6 h-6 mb-1 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
                                 <span class="text-xs font-medium">${prop.bathrooms}</span>
@@ -147,11 +169,11 @@
                         </div>
                     </div>
                     <div class="mt-auto p-4 grid grid-cols-2 gap-2">
-                        <button class="w-full bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-4 rounded-lg transition-colors duration-300">
-                            الحجز
+                        <button data-action="booking" class="w-full bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-4 rounded-lg transition-colors duration-300">
+                            ${bookingText}
                         </button>
-                        <button class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-4 rounded-lg transition-colors duration-300">
-                            لوكيشن
+                        <button data-action="location" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-4 rounded-lg transition-colors duration-300">
+                            ${locationText}
                         </button>
                     </div>
                 `;
@@ -159,20 +181,17 @@
             });
         }
 
-        // Event listener for filter buttons
+        // filters
         filterButtonsContainer.addEventListener('click', (e) => {
             if (e.target.classList.contains('filter-btn')) {
-                // Remove active class from all buttons
                 document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active-filter'));
-                // Add active class to the clicked button
                 e.target.classList.add('active-filter');
-                
                 const filterValue = e.target.dataset.filter;
                 renderCards(filterValue);
             }
         });
 
-        // Event listener for changing photos and button clicks
+        // card clicks (photo change, booking, location)
         propertyGrid.addEventListener('click', (e) => {
             const changeBtn = e.target.closest('.change-photo-btn');
             if (changeBtn) {
@@ -182,153 +201,100 @@
                     project.currentImageIndex = (project.currentImageIndex + 1) % project.images.length;
                     const newImageSrc = project.images[project.currentImageIndex];
                     const imgElement = document.getElementById(`img-${projectId}`);
-                    imgElement.src = newImageSrc;
+                    if (imgElement) imgElement.src = newImageSrc;
                 }
+                return;
             }
-            
-            // Handle location button clicks
-            if (e.target.textContent.trim() === 'لوكيشن') {
-                // Al-Rayyan project location coordinates in Jeddah
+
+            const btn = e.target.closest('button[data-action]');
+            if (!btn) return;
+
+            if (btn.dataset.action === 'location') {
                 const latitude = 21.6042;
                 const longitude = 39.1542;
                 const mapUrl = `https://www.google.com/maps?q=${latitude},${longitude}`;
                 window.open(mapUrl, '_blank');
-            }
-            
-            // Handle booking button clicks
-            if (e.target.textContent.trim() === 'الحجز') {
-                // You can add booking functionality here
-                alert('سيتم توجيهك إلى صفحة الحجز قريباً');
+            } else if (btn.dataset.action === 'booking') {
+                alert(currentLang === 'ar' ? 'سيتم توجيهك إلى صفحة الحجز قريباً' : 'You will be redirected to the booking page soon');
             }
         });
 
-        // Initial render of all cards on page load
+        // initial render
         document.addEventListener('DOMContentLoaded', () => {
             renderCards();
         });
 
-        // Translation functionality
-        const translations = {
-            ar: {
-                // Navigation
-                home: "الرئيسية",
-                about: "من نحن", 
-                projects: "المشاريع",
-                contact: "تواصل معنا",
-                // Page content
-                pageTitle: "مرحبا بكم في مشروع الريان",
-                unitsTable: "جدول الوحدات",
-                all: "الجميع",
-                available: "متاح",
-                sold: "مباع",
-                reserved: "محجوز",
-                booking: "الحجز",
-                location: "لوكيشن",
-                floor: "الدور",
-                // Status translations
-                availableStatus: "متاحة",
-                soldStatus: "مباعة", 
-                reservedStatus: "محجوزة"
-            },
-            en: {
-                // Navigation
-                home: "Home",
-                about: "About",
-                projects: "Projects", 
-                contact: "Contact",
-                // Page content
-                pageTitle: "Welcome to Al-Rayyan Project",
-                unitsTable: "Units Table",
-                all: "All",
-                available: "Available",
-                sold: "Sold",
-                reserved: "Reserved",
-                booking: "Booking",
-                location: "Location",
-                floor: "Floor",
-                // Status translations
-                availableStatus: "Available",
-                soldStatus: "Sold",
-                reservedStatus: "Reserved"
-            }
-        };
-
-        const langToggleBtn = document.getElementById('langToggleBtn');
-        const langToggleBtn2 = document.getElementById('langToggleBtn2');
-
+        // set language and update UI
         function setLanguage(lang) {
-            const t = translations[lang];
-            
-            // Update navigation
-            document.getElementById('nav-home').textContent = t.home;
-            document.getElementById('nav-about').textContent = t.about;
-            document.getElementById('nav-projects').textContent = t.projects;
-            document.getElementById('nav-contact').textContent = t.contact;
-            
-            // Update page content
-            document.querySelector('.sub-header h1').textContent = t.pageTitle;
-            document.querySelector('header h1').textContent = t.unitsTable;
-            
-            // Update filter buttons
-            document.querySelector('[data-filter="all"]').textContent = t.all;
-            document.querySelector('[data-filter="available"]').textContent = t.available;
-            document.querySelector('[data-filter="sold"]').textContent = t.sold;
-            document.querySelector('[data-filter="reserved"]').textContent = t.reserved;
-            
-            // Update status styles for translation
+            currentLang = lang;
+            const t = translations[lang] || translations['ar'];
+
+            // nav (guard for missing ids)
+            const navHome = document.getElementById('nav-home');
+            if (navHome) navHome.textContent = t.home;
+            const navAbout = document.getElementById('nav-about');
+            if (navAbout) navAbout.textContent = t.about;
+            const navProjects = document.getElementById('nav-projects');
+            if (navProjects) navProjects.textContent = t.projects;
+            const navContact = document.getElementById('nav-contact');
+            if (navContact) navContact.textContent = t.contact;
+
+            // page headings
+            const subHeaderH1 = document.querySelector('.sub-header h1');
+            if (subHeaderH1) subHeaderH1.textContent = t.pageTitle;
+            const headerH1 = document.querySelector('header h1');
+            if (headerH1) headerH1.textContent = t.unitsTable;
+
+            // filter buttons
+            const allBtn = document.querySelector('[data-filter="all"]');
+            const avBtn = document.querySelector('[data-filter="available"]');
+            const soldBtn = document.querySelector('[data-filter="sold"]');
+            const resBtn = document.querySelector('[data-filter="reserved"]');
+            if (allBtn) allBtn.textContent = t.all;
+            if (avBtn) avBtn.textContent = t.available;
+            if (soldBtn) soldBtn.textContent = t.sold;
+            if (resBtn) resBtn.textContent = t.reserved;
+
+            // update status styles text
             statusStyles.available.text = t.availableStatus;
             statusStyles.sold.text = t.soldStatus;
             statusStyles.reserved.text = t.reservedStatus;
-            
-            // Re-render cards with new translations
-            const activeFilter = document.querySelector('.filter-btn.active-filter').dataset.filter;
-            renderCards(activeFilter);
-            
-            // Update page direction and language
+
+            // update page direction / lang attribute
             if (lang === 'ar') {
                 document.body.style.direction = 'rtl';
                 document.documentElement.lang = 'ar';
-                langToggleBtn.textContent = 'EN';
-                langToggleBtn2.textContent = 'EN';
+                if (langToggleBtn) langToggleBtn.textContent = 'EN';
+                if (langToggleBtn2) langToggleBtn2.textContent = 'EN';
             } else {
                 document.body.style.direction = 'ltr';
                 document.documentElement.lang = 'en';
-                langToggleBtn.textContent = 'عربي';
-                langToggleBtn2.textContent = 'عربي';
+                if (langToggleBtn) langToggleBtn.textContent = 'عربي';
+                if (langToggleBtn2) langToggleBtn2.textContent = 'عربي';
             }
-            
-            // Store language preference
+
+            // re-render cards preserving active filter
+            const activeFilterBtn = document.querySelector('.filter-btn.active-filter') || document.querySelector('[data-filter="all"]');
+            const activeFilter = activeFilterBtn ? activeFilterBtn.dataset.filter : 'all';
+            renderCards(activeFilter);
+
             localStorage.setItem('selectedLanguage', lang);
         }
 
-        // Language toggle event listeners
-        langToggleBtn.addEventListener('click', function() {
-            const currentLang = document.documentElement.lang || 'ar';
-            const newLang = currentLang === 'ar' ? 'en' : 'ar';
-            setLanguage(newLang);
-        });
+        // toggle handlers
+        if (langToggleBtn) langToggleBtn.addEventListener('click', () => setLanguage(currentLang === 'ar' ? 'en' : 'ar'));
+        if (langToggleBtn2) langToggleBtn2.addEventListener('click', () => setLanguage(currentLang === 'ar' ? 'en' : 'ar'));
 
-        langToggleBtn2.addEventListener('click', function() {
-            const currentLang = document.documentElement.lang || 'ar';
-            const newLang = currentLang === 'ar' ? 'en' : 'ar';
-            setLanguage(newLang);
-        });
-
-        // Load saved language preference on page load
+        // load saved language
         window.addEventListener('DOMContentLoaded', function() {
             const savedLang = localStorage.getItem('selectedLanguage') || 'ar';
             setLanguage(savedLang);
         });
 
-        // Mobile menu functionality
+        // mobile menu functions
         var navLinks = document.getElementById("navLinks");
-        function showMenu() {
-            navLinks.classList.add('open');
-        }
-        function hideMenu() {
-            navLinks.classList.remove('open');
-        }
-
+        function showMenu() { if (navLinks) navLinks.classList.add('open'); }
+        function hideMenu() { if (navLinks) navLinks.classList.remove('open'); }
     </script>
 </body>
 </html>
