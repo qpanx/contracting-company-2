@@ -16,34 +16,31 @@
         <a href="index.html" class="logo-link"><img src="imgs/logo.white.png"></a>
         <nav>
             <div class="nav-links" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="index.html" id="nav-home">Home</a></li>
-                    <li><a href="About.html" id="nav-about">About</a></li>
-                    <li><a href="projects.html" id="nav-projects">Projects</a></li>
-                    <li><a href="contact.html" id="nav-contact">Contact</a></li>
-                </ul>
-            </div>
-            <!-- Desktop language switcher -->
-            <div class="language-switcher">
-                <button class="lang-btn" id="langToggleBtn">عربي</button>
-            </div>
-            <!-- Mobile nav controls container -->
-            <div class="nav-controls">
-                <button class="lang-btn" id="langToggleBtn2">عربي</button>
-                <i class="fa fa-bars hamburger-menu" onclick="showMenu()"></i>
-            </div>
+  <i class="fa-solid fa-xmark nav-close" onclick="hideMenu()" aria-label="Close menu"></i>
+  <ul>
+    <li><a href="index.html" id="nav-home">Home</a></li>
+    <li><a href="About.html" id="nav-about">About</a></li>
+    <li><a href="projects.html" id="nav-projects">Projects</a></li>
+    <li><a href="contact.html" id="nav-contact">Contact</a></li>
+  </ul>
+</div>
+<div class="language-switcher">
+  <button class="lang-btn" id="langToggleBtn">عربي</button>
+</div>
+<div class="nav-controls">
+  <button class="lang-btn" id="langToggleBtn2">عربي</button>
+  <i class="fa-solid fa-bars hamburger-menu" onclick="showMenu()" aria-label="Open menu"></i>
+</div>
             <a href="https://wa.me/+966550901995" class="whatsapp-button" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+            <i class="fab fa-whatsapp"></i>
+        </a>
         </nav>
-        <h1>Contact Us</h1>
+        <h1 id="pageTitle">Contact Us</h1>
         
     </section>
     <!----->
     <section class="location">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d747645.0090325478!2d39.21114919999999!3d21.450122950000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3d01fb1137e59%3A0xe059579737b118db!2sJeddah!5e1!3m2!1sen!2ssa!4v1757974723187!5m2!1sen!2ssa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2917.109839628424!2d39.174721374088826!3d21.618190080182735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3d0caceb53d37%3A0xf01754d95d34658a!2sAl%20Makarunah%20Street%2C%20Jeddah!5e1!3m2!1sen!2ssa!4v1759009249864!5m2!1sen!2ssa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    </section>
 
     <section class="contact-us">
        <div class="row">
@@ -51,35 +48,35 @@
             <div>
                 <i class="fa fa-home">
                     <span>
-                        <h5>Jeddah, Saudi Arabia</h5>
-                        <p>123 King Abdulaziz St.</p>
+                        <h5 id="addressTitle">Jeddah, Saudi Arabia</h5>
+                        <p id="addressDetails">Al Makarunah Street, Ar Rabwah.</p>
                     </span>
                 </i>
             </div>
             <div>
                 <i class="fa fa-phone">
                     <span>
-                        <h5>+966 55 090 1995</h5>
-                        <p>Monday to Saturday, 10am to 6pm</p>
+                        <h5 id="phoneNumber">+966 55 090 1995</h5>
+                        <p id="workingHours">Saturday to Thursday, 2PM to 9PM</p>
                     </span>
                 </i>
             </div>
             <div>
                 <i class="fa fa-envelope">
                     <span>
-                        <h5>info@example.com</h5>
-                        <p>Email us for inquiries</p>
+                        <h5 id="emailAddress">info@example.com</h5>
+                        <p id="emailText">Email us for inquiries</p>
                     </span>
                 </i>
             </div>
         </div>
                 <div class="contact-col">
             <form action="" method="post">
-                <input type="text" name="name" placeholder="Enter your name" required>
-                <input type="email" name="email" placeholder="Enter your email" required>
-                <input type="text" name="subject" placeholder="Enter your subject" required>
-                <textarea rows="8" name="message" placeholder="Enter your message" required></textarea>
-                <button type="submit" class="hero-btn red-btn">Send Message</button>
+                <input type="text" name="name" id="nameInput" placeholder="Enter your name" required>
+                <input type="email" name="email" id="emailInput" placeholder="Enter your email" required>
+                <input type="text" name="subject" id="subjectInput" placeholder="Enter your subject" required>
+                <textarea rows="8" name="message" id="messageInput" placeholder="Enter your message" required></textarea>
+                <button type="submit" class="hero-btn red-btn" id="sendBtn">Send Message</button>
 
             </form>
         </div>
@@ -88,8 +85,8 @@
 
     <!-- Contact Section -->
     <section class="footer">
-        <h4>About US</h4>
-        <p>Welcome to Lion's Den Real Estate, where strength meets strategy in the world of property. Our name is our promise: to be your powerful and protective guide through the complexities of the real estate market. We were founded on a vision to lead with integrity and deliver exceptional results, understanding that a property is more than a transaction—it's a cornerstone for your future. Our expert team is dedicated to fiercely protecting your interests, whether you are buying your dream home or securing a high-value investment. At Lion's Den, we don't just find properties; we secure your legacy.</p>
+        <h4 id="footerTitle">About US</h4>
+        <p id="footerDescription">Welcome to Lion's Den Real Estate, where strength meets strategy in the world of property. Our name is our promise: to be your powerful and protective guide through the complexities of the real estate market. We were founded on a vision to lead with integrity and deliver exceptional results, understanding that a property is more than a transaction—it's a cornerstone for your future. Our expert team is dedicated to fiercely protecting your interests, whether you are buying your dream home or securing a high-value investment. At Lion's Den, we don't just find properties; we secure your legacy.</p>
     <div class="icons">
         <!-- <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
         <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>--->
@@ -106,111 +103,128 @@
 
 
 <script>
-
 var navLinks = document.getElementById("navLinks");
-function showMenu() {
-    navLinks.classList.add('open');
-}
-function hideMenu() {
-    navLinks.classList.remove('open');
-}
+function showMenu() { navLinks.classList.add('open'); }
+function hideMenu() { navLinks.classList.remove('open'); }
 
-// Translation object containing all text content
 const translations = {
-    en: {
-        // Navigation
-        home: "Home",
+  en: {
+    home: "Home",
         about: "About",
         projects: "Projects",
         contact: "Contact",
         
-        // About page
-        aboutTitle: "Contact Us",
-        aboutMainTitle: "We are the Best Company in Saudi.",
-        aboutDescription: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio eaque voluptates voluptas fugiat aliquid iusto, error deserunt architecto, doloremque quasi enim voluptatem eligendi, sint quia consequatur.",
-        aboutButton: "Visit Us To Know More",
-        
-        // Footer
-        footerTitle: "About US",
-        footerDescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae exercitationem eveniet dolorem amet a, quam repellat pariatur sunt voluptatibus adipisci odio tempore totam velit nostrum ipsum voluptatum nisi veniam!"
-    },
-    ar: {
-        // Navigation
-        home: "الرئيسية",
+    pageTitle: "Contact Us",
+    addressTitle: "Jeddah, Saudi Arabia",
+    addressDetails: "Al Makarunah Street, Ar Rabwah.",
+    phoneNumber: "+966 55 090 1995",
+    workingHours: "Saturday to Thursday, 2PM to 9PM",
+    emailAddress: "info@example.com",
+    emailText: "Email us for inquiries",
+    nameInput: "Enter your name",
+    emailInput: "Enter your email",
+    subjectInput: "Enter your subject",
+    messageInput: "Enter your message",
+    sendBtn: "Send Message",
+    footerTitle: "About US",
+    footerDescription: "Welcome to Lion's Den Real Estate, where strength meets strategy in the world of property. Our name is our promise: to be your powerful and protective guide through the complexities of the real estate market. We were founded on a vision to lead with integrity and deliver exceptional results, understanding that a property is more than a transaction—it's a cornerstone for your future. Our expert team is dedicated to fiercely protecting your interests, whether you are buying your dream home or securing a high-value investment. At Lion's Den, we don't just find properties; we secure your legacy."
+  },
+  ar: {
+      home: "الرئيسية",
         about: "من نحن",
         projects: "المشاريع",
         contact: "تواصل معنا",
         
-        // About page
-        aboutTitle: "من نحن",
-        aboutMainTitle: "نحن أفضل شركة في المملكة العربية السعودية",
-        aboutDescription: "عرين الأسد للعقارات هي شركة رائدة في مجال العقارات، متخصصة في تطوير وإدارة المشاريع العقارية المتميزة. نسعى لتقديم أفضل الخدمات لعملائنا الكرام.",
-        aboutButton: "تعرف علينا أكثر",
-        
-        // Footer
-        footerTitle: "من نحن",
-        footerDescription: "عرين الأسد للعقارات هي شركة رائدة في مجال العقارات، متخصصة في تطوير وإدارة المشاريع العقارية المتميزة. نسعى لتقديم أفضل الخدمات لعملائنا الكرام."
-    }
+    pageTitle: "تواصل معنا",
+    addressTitle: "جدة، المملكة العربية السعودية",
+    addressDetails: "شارع المكرونة، حي الربوة.",
+    phoneNumber: "+966 55 090 1995",
+    workingHours: "من السبت إلى الخميس، 2 ظهرًا حتى 9 مساءً",
+    emailAddress: "info@example.com",
+    emailText: "راسلنا للاستفسارات",
+    nameInput: "أدخل اسمك",
+    emailInput: "أدخل بريدك الإلكتروني",
+    subjectInput: "أدخل الموضوع",
+    messageInput: "أدخل رسالتك",
+    sendBtn: "إرسال الرسالة",
+    footerTitle: "من نحن",
+    footerDescription: "مرحبًا بكم في عرين الأسد الأبيض العقارية، حيث تلتقي القوة مع الاستراتيجية في عالم العقار... نؤمن مستقبلك."
+  }
 };
 
 const langToggleBtn = document.getElementById('langToggleBtn');
 const langToggleBtn2 = document.getElementById('langToggleBtn2');
 
 function setLanguage(lang) {
-    const t = translations[lang];
-    // Update navigation links
-    document.getElementById('nav-home').textContent = t.home;
-document.getElementById('nav-about').textContent = t.about;
-document.getElementById('nav-projects').textContent = t.projects;
-document.getElementById('nav-contact').textContent = t.contact;
-    
-    // Update about page content
-    document.querySelector('.sub-header h1').textContent = t.aboutTitle;
-    document.querySelector('.about-col h1').textContent = t.aboutMainTitle;
-    document.querySelector('.about-col p').textContent = t.aboutDescription;
-    document.querySelector('.red-btn').textContent = t.aboutButton;
-    
-    // Update footer
-    document.querySelector('.footer h4').textContent = t.footerTitle;
-    document.querySelector('.footer p').textContent = t.footerDescription;
-    
-    // Update page direction and text alignment
-    if (lang === 'ar') {
-        document.body.style.direction = 'rtl';
-        document.body.style.textAlign = 'right';
-        document.documentElement.lang = 'ar';
-        langToggleBtn.textContent = 'EN';
-        langToggleBtn2.textContent = 'EN';
-    } else {
-        document.body.style.direction = 'ltr';
-        document.body.style.textAlign = 'left';
-        document.documentElement.lang = 'en';
-        langToggleBtn.textContent = 'عربي';
-        langToggleBtn2.textContent = 'عربي';
-    }
-    
-    // Store language preference
-    localStorage.setItem('selectedLanguage', lang);
+  const t = translations[lang];
+
+  // Map DOM ids -> translation keys
+  const map = {
+    'nav-home': 'home',
+    'nav-about': 'about',
+    'nav-projects': 'projects',
+    'nav-contact': 'contact',
+    'pageTitle': 'pageTitle',
+    'addressTitle': 'addressTitle',
+    'addressDetails': 'addressDetails',
+    'phoneNumber': 'phoneNumber',
+    'workingHours': 'workingHours',
+    'emailAddress': 'emailAddress',
+    'emailText': 'emailText',
+    'footerTitle': 'footerTitle',
+    'footerDescription': 'footerDescription',
+    'sendBtn': 'sendBtn'
+  };
+
+  Object.entries(map).forEach(([id, key]) => {
+    const el = document.getElementById(id);
+    if (!el || t[key] == null) return;
+    // Button vs text nodes
+    if (id === 'sendBtn') el.textContent = t[key];
+    else el.textContent = t[key];
+  });
+
+  // Placeholders
+  const ph = [
+    ['nameInput','nameInput'],
+    ['emailInput','emailInput'],
+    ['subjectInput','subjectInput'],
+    ['messageInput','messageInput']
+  ];
+  ph.forEach(([id,key]) => {
+    const el = document.getElementById(id);
+    if (el && t[key] != null) el.placeholder = t[key];
+  });
+
+  // Direction + toggle text
+  if (lang === 'ar') {
+    document.body.style.direction = 'rtl';
+    document.documentElement.lang = 'ar';
+    if (langToggleBtn) langToggleBtn.textContent = 'EN';
+    if (langToggleBtn2) langToggleBtn2.textContent = 'EN';
+  } else {
+    document.body.style.direction = 'ltr';
+    document.documentElement.lang = 'en';
+    if (langToggleBtn) langToggleBtn.textContent = 'عربي';
+    if (langToggleBtn2) langToggleBtn2.textContent = 'عربي';
+  }
+
+  localStorage.setItem('selectedLanguage', lang);
 }
 
-langToggleBtn.addEventListener('click', function() {
-    const currentLang = document.documentElement.lang || 'en';
-    const newLang = currentLang === 'en' ? 'ar' : 'en';
-    setLanguage(newLang);
+langToggleBtn.addEventListener('click', () => {
+  const current = localStorage.getItem('selectedLanguage') || (document.documentElement.lang || 'en');
+  setLanguage(current === 'en' ? 'ar' : 'en');
+});
+langToggleBtn2.addEventListener('click', () => {
+  const current = localStorage.getItem('selectedLanguage') || (document.documentElement.lang || 'en');
+  setLanguage(current === 'en' ? 'ar' : 'en');
 });
 
-langToggleBtn2.addEventListener('click', function() {
-    const currentLang = document.documentElement.lang || 'en';
-    const newLang = currentLang === 'en' ? 'ar' : 'en';
-    setLanguage(newLang);
+window.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('selectedLanguage') || 'en';
+  setLanguage(saved);
 });
-
-// Load saved language preference on page load
-window.addEventListener('DOMContentLoaded', function() {
-    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
-    setLanguage(savedLang);
-});
-
 </script>
 
 

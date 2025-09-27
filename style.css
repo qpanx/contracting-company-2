@@ -122,6 +122,12 @@ nav img{
     border-color: #77543b;
 }
 
+/* Close icon (Font Awesome 6) */
+.nav-links .fa-xmark,
+.nav-links .nav-close {
+  display: none; /* hidden on desktop */
+}
+
 /* Hide close button on desktop */
 .nav-links .fa-times {
     display: none;
@@ -1142,4 +1148,330 @@ footer a {
     font-family: 'Poppins', sans-serif;
     margin-bottom: 20px;
     box-sizing: border-box;
+}
+
+/* Dark Theme Styles */
+.theme-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.theme-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Dark theme variables */
+body.dark-theme {
+    --bg-color: #121212;
+    --surface-color: #1e1e1e;
+    --text-color: #ffffff;
+    --text-secondary: #b3b3b3;
+    --border-color: #333333;
+    --accent-color: #bb86fc;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Dark theme for sections */
+body.dark-theme .header {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(imgs/Front-AlRayan/ALRYAAN\ -\ SHOOT9jpg.jpg);
+    background-position: center ;
+    background-size: cover;
+    position: relative;
+    
+}
+
+body.dark-theme .services {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+}
+
+body.dark-theme .services h1 {
+    color: var(--text-color);
+}
+
+body.dark-theme .services p {
+    color: var(--text-secondary);
+}
+
+body.dark-theme .services-col {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+body.dark-theme .services-col:hover {
+    background-color: var(--surface-color);
+    box-shadow: 0 4px 15px rgba(187, 134, 252, 0.1);
+}
+
+body.dark-theme .services-col h3 {
+    color: var(--accent-color);
+}
+
+body.dark-theme .services-col p {
+    color: var(--text-secondary);
+}
+
+/* Dark theme for property listings */
+body.dark-theme .property-listings {
+    background-color: var(--bg-color);
+}
+
+body.dark-theme .property-listings h1 {
+    color: var(--text-color);
+}
+
+body.dark-theme .property-listings p {
+    color: var(--text-secondary);
+}
+
+body.dark-theme .property-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+}
+
+body.dark-theme .property-card h3 {
+    color: var(--text-color);
+}
+
+body.dark-theme .property-card .price {
+    color: var(--accent-color);
+}
+
+body.dark-theme .property-card .location span {
+    color: var(--text-secondary);
+}
+
+body.dark-theme .show-details-btn {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+body.dark-theme .show-details-btn:hover {
+    background-color: #9965f4;
+}
+
+/* Dark theme for CTA section */
+body.dark-theme .cta {
+     margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(imgs/contactus.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+body.dark-theme .cta h1 {
+    color: var(--text-color);
+}
+
+/* Dark theme for footer */
+body.dark-theme .footer {
+    background-color: var(--surface-color);
+}
+
+body.dark-theme .footer h4 {
+    color: var(--text-color);
+}
+
+body.dark-theme .footer p {
+    color: var(--text-secondary);
+}
+
+body.dark-theme footer {
+    background-color: var(--bg-color);
+    border-top: 1px solid var(--border-color);
+}
+
+body.dark-theme #copyrightText {
+    color: var(--text-secondary);
+}
+
+/* Dark theme for WhatsApp button */
+body.dark-theme .whatsapp-button {
+    background-color: #25D366;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+/* Dark theme for contact section */
+body.dark-theme .location iframe {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+body.dark-theme .contact-us {
+    background-color: var(--bg-color);
+}
+
+body.dark-theme .contact-col div h5 {
+    color: var(--text-color);
+}
+
+body.dark-theme .contact-col div p {
+    color: var(--text-secondary);
+}
+
+body.dark-theme .contact-col div .fa {
+    color: var(--accent-color);
+}
+
+body.dark-theme .contact-col input,
+body.dark-theme .contact-col textarea {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+body.dark-theme .contact-col input::placeholder,
+body.dark-theme .contact-col textarea::placeholder {
+    color: var(--text-secondary);
+}
+
+body.dark-theme .contact-col input:focus,
+body.dark-theme .contact-col textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(187, 134, 252, 0.2);
+}
+
+/* Dark theme for sub-headers */
+body.dark-theme .sub-header {
+   width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(rgba(4,9,30,0.8), rgba(138, 84, 8, 0.8)), url(imgs/Front-AlRayan/ALRYAAN\ -\ SHOOT9jpg.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+
+body.dark-theme .sub-header1 {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(imgs/الصفا/SHOT\ 2\ -\ ALSAFA\ -\ 3D\ -\ 23\ -\ 7\ -\ 2025\ M.jpg);
+}
+
+body.dark-theme .sub-header h1,
+body.dark-theme .sub-header1 h1 {
+    color: var(--text-color);
+}
+
+/* Dark theme for about section */
+body.dark-theme .about-us {
+    background-color: var(--bg-color);
+}
+
+body.dark-theme .about-col h1 {
+    color: var(--text-color);
+}
+
+body.dark-theme .about-col p {
+    color: var(--text-secondary);
+}
+
+body.dark-theme .red-btn {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+body.dark-theme .red-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+/* Dark theme for projects section */
+body.dark-theme .projects {
+    background-color: var(--bg-color);
+}
+
+body.dark-theme .projects h1 {
+    color: var(--text-color);
+}
+
+body.dark-theme .projects p {
+    color: var(--text-secondary);
+}
+
+body.dark-theme .projects-col {
+    border: 1px solid var(--border-color);
+}
+
+body.dark-theme .layer:hover {
+    background: rgba(187, 134, 252, 0.4);
+}
+
+/* Dark theme for property cards heart icon */
+body.dark-theme .heart-icon {
+    background: rgba(30, 30, 30, 0.9);
+    color: var(--text-secondary);
+}
+
+body.dark-theme .heart-icon:hover {
+    background: var(--surface-color);
+    color: var(--accent-color);
+}
+
+/* Dark theme for property stats */
+body.dark-theme .property-stats {
+    border-top: 1px solid var(--border-color);
+}
+
+body.dark-theme .stat-item {
+    color: var(--text-secondary);
+}
+
+body.dark-theme .stat-item i {
+    color: var(--text-secondary);
+}
+
+body.dark-theme .property-type {
+    color: var(--text-secondary);
+}
+
+body.dark-theme .location {
+    color: var(--text-secondary);
+}
+
+body.dark-theme .location i {
+    color: var(--accent-color);
+}
+
+/* Mobile: show close icon and position it */
+@media (max-width: 700px){
+  .nav-links .fa-xmark,
+  .nav-links .nav-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    background: rgba(119, 84, 59, 0.8);
+    padding: 8px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    border: 2px solid #fff;
+    z-index: 1003;
+  }
+
+  body[dir="rtl"] .nav-links .fa-xmark,
+  body[dir="rtl"] .nav-links .nav-close {
+    right: auto;
+    left: 20px;
+  }
 }

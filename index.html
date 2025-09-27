@@ -29,10 +29,12 @@
             <!-- Desktop language switcher -->
             <div class="language-switcher">
                 <button class="lang-btn" id="langToggleBtn">عربي</button>
+                <button class="theme-btn" id="themeToggleBtn">🌙</button>
             </div>
             <!-- Mobile nav controls container -->
             <div class="nav-controls">
                 <button class="lang-btn" id="langToggleBtn2">عربي</button>
+                <button class="theme-btn" id="themeToggleBtn2">🌙</button>
                 <i class="fa fa-bars hamburger-menu" onclick="showMenu()"></i>
             </div>
         </nav>
@@ -415,6 +417,26 @@ document.getElementById('footerDescription').textContent = t.footerDescription;
     localStorage.setItem('selectedLanguage', lang);
 }
 
+// Theme toggle functionality
+let currentTheme = 'light';
+
+function setTheme(theme) {
+    currentTheme = theme;
+    
+    if (theme === 'dark') {
+        document.body.classList.add('dark-theme');
+        document.getElementById('themeToggleBtn').textContent = '☀️';
+        document.getElementById('themeToggleBtn2').textContent = '☀️';
+    } else {
+        document.body.classList.remove('dark-theme');
+        document.getElementById('themeToggleBtn').textContent = '🌙';
+        document.getElementById('themeToggleBtn2').textContent = '🌙';
+    }
+    
+    // Store theme preference
+    localStorage.setItem('selectedTheme', theme);
+}
+
 // Event listeners for language toggle buttons
 const langToggleBtn = document.getElementById('langToggleBtn');
 const langToggleBtn2 = document.getElementById('langToggleBtn2');
@@ -427,10 +449,24 @@ langToggleBtn2.addEventListener('click', function() {
     setLanguage(currentLang === 'en' ? 'ar' : 'en');
 });
 
-// Load saved language preference on page load
+// Event listeners for theme toggle buttons
+const themeToggleBtn = document.getElementById('themeToggleBtn');
+const themeToggleBtn2 = document.getElementById('themeToggleBtn2');
+
+themeToggleBtn.addEventListener('click', function() {
+    setTheme(currentTheme === 'light' ? 'dark' : 'light');
+});
+
+themeToggleBtn2.addEventListener('click', function() {
+    setTheme(currentTheme === 'light' ? 'dark' : 'light');
+});
+
+// Load saved language and theme preference on page load
 window.addEventListener('DOMContentLoaded', function() {
     const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+    const savedTheme = localStorage.getItem('selectedTheme') || 'light';
     setLanguage(savedLang);
+    setTheme(savedTheme);
 });
 
 </script>
