@@ -119,11 +119,11 @@
                     </div>
                 </div>
                 <div class="property-content">
-                    <h3>Al-Rayyan</h3>
-                    <p class="price">Start From 360,000 SAR</p>
+                    <h3 id="property1Name">Al-Rayyan</h3>
+                    <p class="price" id="property1Price">Start From 360,000 SAR</p>
                     <div class="location">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>Jeddah - Al Rayyan District</span>
+                        <span id="property1Location">Jeddah - Al Rayyan District</span>
                     </div>
                     <div class="property-stats">
                         <div class="stats-left">
@@ -140,7 +140,7 @@
                                 <span>95-127 m²</span>
                             </div>
                         </div>
-                        <div class="property-type">furnished</div>
+                        <div class="property-type" id="property1Type">furnished</div>
                     </div>
                     <a href="Al-Rayyan.html" class="show-details-btn">Show more details</a>
                 </div>
@@ -155,11 +155,11 @@
                     </div>
                 </div>
                 <div class="property-content">
-                    <h3>Al-Safa</h3>
-                    <p class="price">$55,000 / Year</p>
+                    <h3 id="property2Name">Al-Safa</h3>
+                    <p class="price" id="property2Price">$55,000 / Year</p>
                     <div class="location">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>Jeddah, Al-Safa district</span>
+                        <span id="property2Location">Jeddah, Al-Safa district</span>
                     </div>
                     <div class="property-stats">
                         <div class="stats-left">
@@ -176,7 +176,7 @@
                                 <span>435 m²</span>
                             </div>
                         </div>
-                        <div class="property-type">furnished</div>
+                        <div class="property-type" id="property2Type">furnished</div>
                     </div>
                     <a href="Al-Safa.html" class="show-details-btn">Show more details</a>
                 </div>
@@ -302,7 +302,18 @@ const translations = {
         // Footer
         footerTitle: "About US",
         footerDescription: "Welcome to Lion's Den Real Estate, where strength meets strategy in the world of property. Our name is our promise: to be your powerful and protective guide through the complexities of the real estate market. We were founded on a vision to lead with integrity and deliver exceptional results, understanding that a property is more than a transaction—it's a cornerstone for your future. Our expert team is dedicated to fiercely protecting your interests, whether you are buying your dream home or securing a high-value investment. At Lion's Den, we don't just find properties; we secure your legacy.",
-        copyright: "Copyright © 2025 All Rights Reserved - LION'S DEN REAL ESTATE"
+        copyright: "Copyright © 2025 All Rights Reserved - LION'S DEN REAL ESTATE",
+
+        // Property Cards
+        property1Name: "Al-Rayyan",
+        property1Price: "Start From 360,000 SAR",
+        property1Location: "Jeddah - Al Rayyan District",
+        property1Type: "furnished",
+        
+        property2Name: "Al-Safa",
+        property2Price: "$55,000 / Year",
+        property2Location: "Jeddah, Al-Safa district",
+        property2Type: "furnished"
     },
     ar: {
         // Navigation
@@ -338,7 +349,18 @@ const translations = {
         // Footer
         footerTitle: "من نحن",
         footerDescription: "مرحبًا بكم في عرين الأسد الأبيض العقارية، حيث تلتقي القوة مع الاستراتيجية في عالم العقار. اسمنا هو وعدنا: أن نكون دليلك القوي والواقي في تعقيدات سوق العقارات. تأسسنا برؤية للقيادة بالنزاهة وتقديم نتائج استثنائية، مدركين أن العقار أكثر من مجرد صفقة—بل هو حجر الأساس لمستقبلك. فريقنا الخبير ملتزم بحماية مصالحك بكل قوة، سواء كنت تشتري منزل أحلامك أو تستثمر في عقار عالي القيمة. في عرين الأسد، لا نبحث فقط عن العقارات؛ بل نؤمن مستقبلك.",
-        copyright: "جميع الحقوق محفوظة لعرين الأسد الأبيض العقارية © 2025"
+        copyright: "جميع الحقوق محفوظة لعرين الأسد الأبيض العقارية © 2025",
+
+        // Property Cards
+        property1Name: "الريان",
+        property1Price: "يبدأ من 360,000 ريال سعودي",
+        property1Location: "جدة - حي الريان",
+        property1Type: "مفروش",
+        
+        property2Name: "الصفا",
+        property2Price: "55,000$ / سنة",
+        property2Location: "جدة، حي الصفا",
+        property2Type: "مفروش"
     }
 };
 
@@ -386,6 +408,17 @@ document.getElementById('service2Title').textContent = t.service2Title;
 document.getElementById('service2Desc').textContent = t.service2Desc;
 document.getElementById('service3Title').textContent = t.service3Title;
 document.getElementById('service3Desc').textContent = t.service3Desc;
+    
+    // Update property cards
+    document.getElementById('property1Name').textContent = t.property1Name;
+    document.getElementById('property1Price').textContent = t.property1Price;
+    document.getElementById('property1Location').textContent = t.property1Location;
+    document.getElementById('property1Type').textContent = t.property1Type;
+    
+    document.getElementById('property2Name').textContent = t.property2Name;
+    document.getElementById('property2Price').textContent = t.property2Price;
+    document.getElementById('property2Location').textContent = t.property2Location;
+    document.getElementById('property2Type').textContent = t.property2Type;
     
     // Update CTA section
     document.querySelector('.cta h1').textContent = t.ctaTitle;
