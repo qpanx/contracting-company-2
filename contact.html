@@ -10,6 +10,39 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<style>
+/* Add this to your existing styles or in the <head> section */
+
+/* Keep numbers, emails, and phone numbers in LTR format */
+#phoneNumber,
+#emailAddress,
+.phone-number,
+.email-address {
+    direction: ltr !important;
+    text-align: left;
+    unicode-bidi: embed;
+}
+
+/* For RTL languages, align phone/email to the right but keep LTR direction */
+body[dir="rtl"] #phoneNumber,
+body[dir="rtl"] #emailAddress,
+body[dir="rtl"] .phone-number,
+body[dir="rtl"] .email-address {
+    text-align: right;
+    direction: ltr;
+    unicode-bidi: embed;
+}
+
+/* Ensure the container still flows RTL but content stays LTR */
+body[dir="rtl"] .contact-col div span {
+    text-align: right;
+}
+
+body[dir="rtl"] .contact-col div span h5 {
+    direction: ltr;
+    text-align: right;
+}
+</style>
 </head>
 <body>
     <section class="sub-header">
@@ -40,7 +73,7 @@
     </section>
     <!----->
     <section class="location">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2917.109839628424!2d39.174721374088826!3d21.618190080182735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3d0caceb53d37%3A0xf01754d95d34658a!2sAl%20Makarunah%20Street%2C%20Jeddah!5e1!3m2!1sen!2ssa!4v1759009249864!5m2!1sen!2ssa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    </section>
+<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2917.4125587858225!2d39.17991887527266!3d21.60318168019385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDM2JzExLjUiTiAzOcKwMTAnNTcuMCJF!5e1!3m2!1sen!2ssa!4v1759068237458!5m2!1sen!2ssa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    </section>
 
     <section class="contact-us">
        <div class="row">
@@ -64,7 +97,7 @@
             <div>
                 <i class="fa fa-envelope">
                     <span>
-                        <h5 id="emailAddress">info@example.com</h5>
+                        <h5 id="emailAddress">ash@arren.sa</h5>
                         <p id="emailText">Email us for inquiries</p>
                     </span>
                 </i>
@@ -119,7 +152,7 @@ const translations = {
     addressDetails: "Al Makarunah Street, Ar Rabwah.",
     phoneNumber: "+966 55 090 1995",
     workingHours: "Saturday to Thursday, 2PM to 9PM",
-    emailAddress: "info@example.com",
+    emailAddress: "ash@arren.sa",
     emailText: "Email us for inquiries",
     nameInput: "Enter your name",
     emailInput: "Enter your email",
@@ -127,7 +160,8 @@ const translations = {
     messageInput: "Enter your message",
     sendBtn: "Send Message",
     footerTitle: "About US",
-    footerDescription: "Welcome to Lion's Den Real Estate, where strength meets strategy in the world of property. Our name is our promise: to be your powerful and protective guide through the complexities of the real estate market. We were founded on a vision to lead with integrity and deliver exceptional results, understanding that a property is more than a transaction—it's a cornerstone for your future. Our expert team is dedicated to fiercely protecting your interests, whether you are buying your dream home or securing a high-value investment. At Lion's Den, we don't just find properties; we secure your legacy."
+    footerDescription: "Welcome to Lion's Den Real Estate, where strength meets strategy in the world of property. Our name is our promise: to be your powerful and protective guide through the complexities of the real estate market. We were founded on a vision to lead with integrity and deliver exceptional results, understanding that a property is more than a transaction—it's a cornerstone for your future. Our expert team is dedicated to fiercely protecting your interests, whether you are buying your dream home or securing a high-value investment. At Lion's Den, we don't just find properties; we secure your legacy.",
+    copyright: "Copyright © 2025 All Rights Reserved - LION'S DEN REAL ESTATE"
   },
   ar: {
       home: "الرئيسية",
@@ -140,7 +174,7 @@ const translations = {
     addressDetails: "شارع المكرونة، حي الربوة.",
     phoneNumber: "+966 55 090 1995",
     workingHours: "من السبت إلى الخميس، 2 ظهرًا حتى 9 مساءً",
-    emailAddress: "info@example.com",
+    emailAddress: "ash@arren.sa",
     emailText: "راسلنا للاستفسارات",
     nameInput: "أدخل اسمك",
     emailInput: "أدخل بريدك الإلكتروني",
@@ -148,7 +182,9 @@ const translations = {
     messageInput: "أدخل رسالتك",
     sendBtn: "إرسال الرسالة",
     footerTitle: "من نحن",
-    footerDescription: "مرحبًا بكم في عرين الأسد الأبيض العقارية، حيث تلتقي القوة مع الاستراتيجية في عالم العقار... نؤمن مستقبلك."
+    footerDescription: "مرحبًا بكم في عرين الأسد الأبيض العقارية، حيث تلتقي القوة مع الاستراتيجية في عالم العقار... نؤمن مستقبلك.",
+    copyright: "جميع الحقوق محفوظة لعرين الأسد الأبيض العقارية © 2025"
+
   }
 };
 
@@ -173,7 +209,8 @@ function setLanguage(lang) {
     'emailText': 'emailText',
     'footerTitle': 'footerTitle',
     'footerDescription': 'footerDescription',
-    'sendBtn': 'sendBtn'
+    'sendBtn': 'sendBtn',
+    'copyrightText': 'copyright'  // <-- Add this line
   };
 
   Object.entries(map).forEach(([id, key]) => {
@@ -183,6 +220,22 @@ function setLanguage(lang) {
     if (id === 'sendBtn') el.textContent = t[key];
     else el.textContent = t[key];
   });
+
+  // Handle phone and email separately to maintain LTR format
+  const phoneEl = document.getElementById('phoneNumber');
+  const emailEl = document.getElementById('emailAddress');
+  
+  if (phoneEl) {
+    phoneEl.textContent = '+966 55 090 1995'; // Always keep the same
+    phoneEl.style.direction = 'ltr';
+    phoneEl.style.textAlign = lang === 'ar' ? 'right' : 'left';
+  }
+  
+  if (emailEl) {
+    emailEl.textContent = 'ash@arren.sa'; // Always keep the same
+    emailEl.style.direction = 'ltr';
+    emailEl.style.textAlign = lang === 'ar' ? 'right' : 'left';
+  }
 
   // Placeholders
   const ph = [

@@ -20,6 +20,18 @@
             background-color: #8A7F7C !important;
             color: white !important;
         }
+        
+        /* Make project title bold */
+        #projectTitle {
+            font-weight: bold !important;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        #projectLocation {
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -45,25 +57,28 @@
                 <i class="fa fa-bars hamburger-menu" onclick="showMenu()"></i>
             </div>
         </nav>
-        <h1>مرحبا بكم في مشروع الريان</h1>
+
+        <h1 id="projectTitle">مشروع الريان</h1>
+        <h2 id="projectLocation">جدة/حي الريان</h2>
+
 
     </section>
 
     <div class="container mx-auto p-4 md:p-8">
         
         <!-- Header Section -->
-        <header class="flex justify-between items-center mb-8">
-            <div class="flex items-center space-x-4 space-x-reverse">
-                <h1 class="text-2xl md:text-3xl font-bold text-gray-800">جدول الوحدات</h1>
-                <div class="w-16 h-1 bg-amber-800/50 rounded-full"></div>
-            </div>
-            <div class="flex space-x-2 space-x-reverse" id="filter-buttons">
-                <button data-filter="all" class="filter-btn active-filter text-sm md:text-base font-medium px-4 py-2 rounded-lg bg-gray-200 text-gray-700 transition-colors duration-300">الجميع</button>
-                <button data-filter="available" class="filter-btn text-sm md:text-base font-medium px-4 py-2 rounded-lg bg-gray-200 text-gray-700 transition-colors duration-300">متاح</button>
-                <button data-filter="sold" class="filter-btn text-sm md:text-base font-medium px-4 py-2 rounded-lg bg-gray-200 text-gray-700 transition-colors duration-300">مباع</button>
-                <button data-filter="reserved" class="filter-btn text-sm md:text-base font-medium px-4 py-2 rounded-lg bg-gray-200 text-gray-700 transition-colors duration-300">محجوز</button>
-            </div>
-        </header>
+       <header class="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
+    <div class="flex items-center space-x-4 space-x-reverse">
+        <h1 class="text-2xl md:text-3xl font-bold text-gray-800">جدول الوحدات</h1>
+        <div class="w-16 h-1 bg-amber-800/50 rounded-full"></div>
+    </div>
+    <div class="flex flex-wrap justify-center gap-2" id="filter-buttons">
+        <button data-filter="all" class="filter-btn active-filter text-sm md:text-base font-medium px-4 py-2 rounded-lg bg-gray-200 text-gray-700 transition-colors duration-300">الجميع</button>
+        <button data-filter="available" class="filter-btn text-sm md:text-base font-medium px-4 py-2 rounded-lg bg-gray-200 text-gray-700 transition-colors duration-300">متاح</button>
+        <button data-filter="sold" class="filter-btn text-sm md:text-base font-medium px-4 py-2 rounded-lg bg-gray-200 text-gray-700 transition-colors duration-300">مباع</button>
+        <button data-filter="reserved" class="filter-btn text-sm md:text-base font-medium px-4 py-2 rounded-lg bg-gray-200 text-gray-700 transition-colors duration-300">محجوز</button>
+    </div>
+</header>
 
         <!-- Property Cards Grid -->
         <main id="property-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -166,18 +181,42 @@ const propertyData = [
 
         const translations = {
             ar: {
-                home: "الرئيسية", about: "من نحن", projects: "المشاريع", contact: "تواصل معنا",
-                pageTitle: "مرحبا بكم في مشروع الريان", unitsTable: "جدول الوحدات",
-                all: "الجميع", available: "متاح", sold: "مباع", reserved: "محجوز",
-                booking: "الحجز", location: "لوكيشن", floor: "الدور",
-                availableStatus: "متاحة", soldStatus: "مباعة", reservedStatus: "محجوزة"
+                home: "الرئيسية", 
+                about: "من نحن", 
+                projects: "المشاريع", 
+                contact: "تواصل معنا",
+                pageTitle: " مشروع الريان", 
+                projectLocation: "جدة/حي الريان",
+                unitsTable: "جدول الوحدات",
+                all: "الجميع", 
+                available: "متاح", 
+                sold: "مباع", 
+                reserved: "محجوز",
+                booking: "الحجز", 
+                location: "لوكيشن", 
+                floor: "الدور",
+                availableStatus: "متاحة", 
+                soldStatus: "مباعة", 
+                reservedStatus: "محجوزة"
             },
             en: {
-                home: "Home", about: "About", projects: "Projects", contact: "Contact",
-                pageTitle: "Welcome to Al-Rayyan Project", unitsTable: "Units Table",
-                all: "All", available: "Available", sold: "Sold", reserved: "Reserved",
-                booking: "Booking", location: "Location", floor: "Floor",
-                availableStatus: "Available", soldStatus: "Sold", reservedStatus: "Reserved"
+                home: "Home", 
+                about: "About", 
+                projects: "Projects", 
+                contact: "Contact",
+                pageTitle: "Al-Rayyan Project", 
+                projectLocation: "Jeddah/Al-Rayyan District",
+                unitsTable: "Units Table",
+                all: "All", 
+                available: "Available", 
+                sold: "Sold", 
+                reserved: "Reserved",
+                booking: "Booking", 
+                location: "Location", 
+                floor: "Floor",
+                availableStatus: "Available", 
+                soldStatus: "Sold", 
+                reservedStatus: "Reserved"
             }
         };
 
@@ -328,8 +367,10 @@ const propertyData = [
             if (navContact) navContact.textContent = t.contact;
 
             // page headings
-            const subHeaderH1 = document.querySelector('.sub-header h1');
-            if (subHeaderH1) subHeaderH1.textContent = t.pageTitle;
+            const projectTitle = document.getElementById('projectTitle');
+            if (projectTitle) projectTitle.textContent = t.pageTitle;
+            const projectLocation = document.getElementById('projectLocation');
+            if (projectLocation) projectLocation.textContent = t.projectLocation;
             const headerH1 = document.querySelector('header h1');
             if (headerH1) headerH1.textContent = t.unitsTable;
 
