@@ -23,7 +23,7 @@ nav {
 @media (max-width: 700px) {
     nav {
         background-color: transparent !important;
-        padding: 1rem;
+        padding: 3rem;
     }
 }
 
@@ -1120,9 +1120,9 @@ footer a {
 
 /* Contact Section */
 .location{
-    width: 80%;
-    margin: auto;
-    padding: 10px ;
+    /* width: 80%;
+    /* margin: auto; 
+    padding: 10px ; */
 }
 .location iframe{
     width: 100%;

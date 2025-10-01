@@ -7,6 +7,7 @@
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
         <link rel="icon" href="imgs/logo2.png" type="images/png"/>
+        <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts for Arabic typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="style.css">
@@ -29,13 +30,13 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
     <section class="sub-header">
-        <a href="index.html" class="logo-link"><img src="imgs/logo.white.png"></a>
+        <a href="index.html" class="logo-link"><img src="imgs/icon-white--preview.png" style="width: 180px;"></a>
         <nav>
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.html" id="nav-home">الرئيسية</a></li>
-                    <li><a href="About.html" id="nav-about">من نحن</a></li>
+                    <li><a href="index.html" id="nav-about">من نحن</a></li>
                     <li><a href="projects.html" id="nav-projects">المشاريع</a></li>
                     <li><a href="contact.html" id="nav-contact">تواصل معنا</a></li>
                 </ul>
@@ -142,6 +143,65 @@
         </div>
     </main>
 
+    <footer class="bg-zinc-50 text-zinc-700 py-12">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+            <!-- Important Links Column -->
+            <div class="w-full">
+                <h3 class="text-lg font-semibold" id="importantLinksTitle">روابط هامة</h3>
+                <div class="w-20 h-0.5 bg-amber-600 my-4"></div>
+                <ul class="space-y-3">
+                    <li><a href="#" class="hover:text-amber-600 transition-colors" id="privacyLink">سياسة الخصوصية</a></li>
+                    <li><a href="#" class="hover:text-amber-600 transition-colors" id="termsLink">الشروط والأحكام</a></li>
+                    <li><a href="index.html" class="hover:text-amber-600 transition-colors" id="homeLink">الرئيسية</a></li>
+                    <li><a href="projects.html" class="hover:text-amber-600 transition-colors" id="previousProjectsLink">المشاريع السابقة</a></li>
+                    <li><a href="#" class="hover:text-amber-600 transition-colors" id="careersLink">التوظيف</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Us Column -->
+            <div class="w-full">
+                <h3 class="text-lg font-semibold" id="contactUsTitle">اتصل بنا</h3>
+                <div class="w-20 h-0.5 bg-amber-600 my-4"></div>
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3 space-x-reverse">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-zinc-500"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <a href="mailto:ash@arren.sa" class="hover:text-amber-600 transition-colors" dir="ltr">ash@arren.sa</a>
+                    </div>
+                    <div class="flex items-center space-x-3 space-x-reverse">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-zinc-500"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <a href="tel:+966550901995" class="hover:text-amber-600 transition-colors" dir="ltr">+966 55 090 1995</a>
+                    </div>
+                </div>
+                <div class="w-full h-px bg-zinc-300 my-6"></div>
+                <div class="space-y-2">
+                    <p class="font-semibold" id="falLicenseTitle">رخصة فال</p>
+                    <p class="text-zinc-600" id="licenseNumber">رقم الرخصة: 1200025160</p>
+                </div>
+            </div>
+            
+            <!-- Follow Us Column -->
+            <div class="w-full">
+                <h3 class="text-lg font-semibold" id="followUsTitle">تابعنا</h3>
+                <div class="w-20 h-0.5 bg-amber-600 my-4"></div>
+                <div class="flex items-center space-x-4 space-x-reverse">
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/arren_alasad/" class="w-10 h-10 rounded-full border border-zinc-400 flex items-center justify-center text-zinc-600 hover:bg-amber-600 hover:text-white hover:border-amber-600 transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+                    </a>
+                    <!-- TikTok -->
+                    <a href="https://www.tiktok.com/@areen_alasad?_t=ZS-8yeUsdXxn5s&_r=1" class="w-10 h-10 rounded-full border border-zinc-400 flex items-center justify-center text-zinc-600 hover:bg-amber-600 hover:text-white hover:border-amber-600 transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16" stroke="currentColor">
+                            <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
      <footer>
       <div class="footer-content">
         <span id="copyrightText">Copyright © 2025 All Rights Reserved - LION'S DEN REAL ESTATE</span>
@@ -165,16 +225,29 @@
                 'qassim': 'القصيم',
                 'bosta': 'البوستة',
                 'learn-more': 'إعرف أكثر',
-                'project1-title': 'الريان',
+                'project1-title': 'مشروع عرين 02',
                 'project1-desc': 'مميزات المشروع أرض زاوية تطل على شارعين، نظام حماية وأمن، مواقف خاصة، غرف سائقين. مميزات الموقع موقع استراتيجي ومميز في جدة – حي الريان، ويعتبر إحدى أهدأ أحياء المدينة، ويمتاز بسهولة الوصول إليه وتوافر كافة الخدمات التجارية. خيار مثالي حيث إنه نافذ على أهم الطرق الرئيسية في جدة طريق الحرمين، ويبعد 10 دقائق فقط عن مطار الملك عبد العزيز الدولي.',
-                'project2-title': 'الصفا',
+                'project2-title': 'مشروع وايت ليون ريزيدنس',
                 'project2-desc': 'يقع المشروع في قلب مدينة جدة بحي الصفا، ويُعد من المشاريع متعددة الاستخدامات التي تجمع بين الطابع السكني والتجاري والإداري، بتصميم عصري يلبي احتياجات الحياة الحديثة والاستثمار الذكي.',
                 'project3-title': 'فلل UPSIDE LIVING بتصاميم داخلية من غوستافو هورم',
                 'project3-desc': 'يعتبر مشروع "شمس الرياض" أول مجتمع سكني على مساحة تزيد عن 5 مليون متر مربع. الأول من نوعه في المملكة العربية السعودية، والذي يقدم "مدينة" متكاملة ضمن مدينة الرياض...',
                 'project4-title': 'شمس الرياض',
                 'project4-desc': 'من المساكن الأعلى من نوعها في العالم، مشروع رائد لمجمع دار الأركان، وبأسلوب هوى دار الأزياء الإيطالية الأكثر شهرة، ليقدم لكم فلل هي الأولى من نوعها في العالم بتصاميم داخلية أنيقة من فيرساتشي.',
                 'shams-riyadh': 'شمس الرياض',
-                'sold-out': 'تباع بالكامل'
+                'sold-out': 'تباع بالكامل',
+                
+                // Footer translations
+                'importantLinksTitle': 'روابط هامة',
+                'privacyLink': 'سياسة الخصوصية',
+                'termsLink': 'الشروط والأحكام',
+                'homeLink': 'الرئيسية',
+                'previousProjectsLink': 'المشاريع السابقة',
+                'careersLink': 'التوظيف',
+                'contactUsTitle': 'اتصل بنا',
+                'falLicenseTitle': 'رخصة فال',
+                'licenseNumber': 'رقم الرخصة: 1200025160',
+                'followUsTitle': 'تابعنا',
+                'copyrightText': 'جميع الحقوق محفوظة لعرين الأسد الأبيض العقارية © 2025'
             },
             en: {
                 'nav-home': 'Home',
@@ -190,16 +263,29 @@
                 'qassim': 'Qassim',
                 'bosta': 'Bosta',
                 'learn-more': 'Learn More',
-                'project1-title': 'Al Rayyan',
-                'project1-desc': 'Project FeaturesCorner plot (facing two streets)Security and protection system Private parking spaces Drivers’ rooms Location Feature A strategic and prime location in Jeddah – Al-Rayan District, considered one of the quietest neighborhoods in the city. It is easily accessible and surrounded by all essential commercial services. An ideal choice, as it has direct access to one of Jeddah’s main roads, Al-Haramain Road, and is only 10 minutes away from King Abdulaziz International Airport.',
-                'project2-title': 'Al-Safa',
+                'project1-title': 'Al-Lair 02 Project',
+                'project1-desc': 'Project FeaturesCorner plot (facing two streets)Security and protection system Private parking spaces Drivers rooms Location Feature A strategic and prime location in Jeddah – Al-Rayan District, considered one of the quietest neighborhoods in the city. It is easily accessible and surrounded by all essential commercial services. An ideal choice, as it has direct access to one of Jeddahs main roads, Al-Haramain Road, and is only 10 minutes away from King Abdulaziz International Airport.',
+                'project2-title': 'Al-White Lion Residence Project',
                 'project2-desc': 'The project is located in the heart of Jeddah, in Al-Safa District, and is considered a mixed-use development that combines residential, commercial, and administrative spaces, featuring a modern design that meets the needs of contemporary living and smart investment.',
                 'project3-title': 'UPSIDE LIVING Villas with Interior Design by Gustavo Horm',
                 'project3-desc': 'The "Shams Al Riyadh" project is considered the first residential community on an area of more than 5 million square meters. The first of its kind in Saudi Arabia, which offers a complete "city" within the city of Riyadh...',
                 'project4-title': 'Shams Al Riyadh',
                 'project4-desc': 'Among the highest homes of their kind in the world, a pioneering project of Dar Al Arkan Group, and in the style of the most famous Italian fashion house, to present to you villas that are the first of their kind in the world with elegant interior designs from Versace.',
                 'shams-riyadh': 'Shams Al Riyadh',
-                'sold-out': 'Sold Out'
+                'sold-out': 'Sold Out',
+                
+                // Footer translations
+                'importantLinksTitle': 'Important Links',
+                'privacyLink': 'Privacy Policy',
+                'termsLink': 'Terms and Conditions',
+                'homeLink': 'Home',
+                'previousProjectsLink': 'Previous Projects',
+                'careersLink': 'Careers',
+                'contactUsTitle': 'Contact Us',
+                'falLicenseTitle': 'FAL License',
+                'licenseNumber': 'License Number: 1200025160',
+                'followUsTitle': 'Follow Us',
+                'copyrightText': 'Copyright © 2025 All Rights Reserved - LION\'S DEN REAL ESTATE'
             }
         };
 
@@ -221,87 +307,84 @@
                 document.getElementById('langToggleBtn2').textContent = 'عربي';
             }
 
-            // Update all text content
+            // Update navigation links
+            document.getElementById('nav-home').textContent = translations[lang]['nav-home'];
+            document.getElementById('nav-about').textContent = translations[lang]['nav-about'];
+            document.getElementById('nav-projects').textContent = translations[lang]['nav-projects'];
+            document.getElementById('nav-contact').textContent = translations[lang]['nav-contact'];
+            
+            // Update page title
+            document.getElementById('page-title').textContent = translations[lang]['page-title'];
+            
+            // Update all elements with data-key attributes (project cards and filter buttons)
             Object.keys(translations[lang]).forEach(key => {
-                const elements = document.querySelectorAll(`[data-key="${key}"], #${key}`);
+                const elements = document.querySelectorAll(`[data-key="${key}"]`);
                 elements.forEach(element => {
                     element.textContent = translations[lang][key];
                 });
             });
-
-            // Save language preference
-            localStorage.setItem('language', lang);
+            
+            // Update footer elements with IDs
+            document.getElementById('importantLinksTitle').textContent = translations[lang]['importantLinksTitle'];
+            document.getElementById('privacyLink').textContent = translations[lang]['privacyLink'];
+            document.getElementById('termsLink').textContent = translations[lang]['termsLink'];
+            document.getElementById('homeLink').textContent = translations[lang]['homeLink'];
+            document.getElementById('previousProjectsLink').textContent = translations[lang]['previousProjectsLink'];
+            document.getElementById('careersLink').textContent = translations[lang]['careersLink'];
+            document.getElementById('contactUsTitle').textContent = translations[lang]['contactUsTitle'];
+            document.getElementById('falLicenseTitle').textContent = translations[lang]['falLicenseTitle'];
+            document.getElementById('licenseNumber').textContent = translations[lang]['licenseNumber'];
+            document.getElementById('followUsTitle').textContent = translations[lang]['followUsTitle'];
+            document.getElementById('copyrightText').textContent = translations[lang]['copyrightText'];
         }
 
-        // Mobile menu functions
-        function showMenu() {
-            document.getElementById('navLinks').classList.add('open');
-        }
+        // Initial language set
+        // Load saved language
+        const savedLang = localStorage.getItem('language') || 'ar';
+        setLanguage(savedLang);
 
-        function hideMenu() {
-            document.getElementById('navLinks').classList.remove('open');
-        }
+        // Add event listeners to language toggle buttons
+        document.getElementById('langToggleBtn').addEventListener('click', function() {
+            const newLang = currentLang === 'ar' ? 'en' : 'ar';
+            setLanguage(newLang);
+            localStorage.setItem('language', newLang);
+        });
 
-        document.addEventListener('DOMContentLoaded', function () {
-            // Language toggle functionality
-            const langToggleBtn = document.getElementById('langToggleBtn');
-            const langToggleBtn2 = document.getElementById('langToggleBtn2');
+        document.getElementById('langToggleBtn2').addEventListener('click', function() {
+            const newLang = currentLang === 'ar' ? 'en' : 'ar';
+            setLanguage(newLang);
+            localStorage.setItem('language', newLang);
+        });
 
-            langToggleBtn.addEventListener('click', () => {
-                setLanguage(currentLang === 'ar' ? 'en' : 'ar');
-            });
-
-            langToggleBtn2.addEventListener('click', () => {
-                setLanguage(currentLang === 'ar' ? 'en' : 'ar');
-            });
-
-            // Load saved language
-            const savedLang = localStorage.getItem('language') || 'en'; // <-- default is now English
-            setLanguage(savedLang);
-
-            // Filter functionality
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const projectCards = document.querySelectorAll('.project-card');
-
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function (e) {
-                    e.preventDefault();
-
-                    // Update active button style
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
-
-                    // Get the data-key for the selected filter
-                    const filterKey = this.getAttribute('data-key');
-                    const filterCity = translations[currentLang][filterKey];
-
-                    projectCards.forEach(card => {
-                        // Handle the separator line separately
-                        if (card.tagName === 'HR') {
-                            card.style.display = (filterKey === 'all') ? 'block' : 'none';
-                            return;
-                        }
-
-                        // Get both city names from card
-                        const cardCityAr = card.getAttribute('data-city-ar');
-                        const cardCityEn = card.getAttribute('data-city-en');
-
-                        // Show/hide cards based on filter and current language
-                        if (
-                            filterKey === 'all' ||
-                            (currentLang === 'ar' && cardCityAr === filterCity) ||
-                            (currentLang === 'en' && cardCityEn === filterCity)
-                        ) {
+        // Filter functionality
+        document.getElementById('filter-nav').addEventListener('click', function(e) {
+            if (e.target.classList.contains('filter-btn')) {
+                const selectedFilter = e.target.getAttribute('data-key');
+                
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Add active class to the clicked button
+                e.target.classList.add('active');
+                
+                // Show all projects if "all" is selected, otherwise filter by city
+                if (selectedFilter === 'all') {
+                    document.querySelectorAll('.project-card').forEach(card => {
+                        card.style.display = 'block';
+                    });
+                } else {
+                    document.querySelectorAll('.project-card').forEach(card => {
+                        card.style.display = 'none';
+                        if (card.getAttribute('data-city-ar') === selectedFilter || card.getAttribute('data-city-en') === selectedFilter) {
                             card.style.display = 'block';
-                        } else {
-                            card.style.display = 'none';
                         }
                     });
-                });
-            });
+                }
+            }
         });
     </script>
-
 </body>
 </html>
 
