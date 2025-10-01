@@ -15,8 +15,119 @@ nav {
     display: flex;
     padding: 2% 6%;
     justify-content: space-between;
+    align-items: center; /* Vertically center all items */
+    background-color: rgba(52, 58, 64, 0.8);
+    min-height: 80px; /* Consistent height */
+}
+
+/* Logo styling */
+nav img {
+    width: 180px;
+    display: block; /* Remove inline spacing */
+    vertical-align: middle;
+}
+
+/* Navigation links container */
+.nav-links {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center;
+}
+
+.nav-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Center list items */
+    gap: 2rem; /* Equal spacing between links */
+}
+
+.nav-links ul li {
+    display: inline-block;
+    margin: 0; /* Remove default margins */
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    line-height: 1; /* Consistent line height */
+}
+
+/* Language and theme buttons container */
+.language-switcher,
+.nav-controls {
+    display: flex;
+    align-items: center; /* Center buttons vertically */
+    gap: 0.5rem; /* Spacing between buttons */
+}
+
+.lang-btn,
+.theme-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: rgba(138, 127, 124, 0.8);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+    display: flex;
     align-items: center;
-    background-color: rgba(52, 58, 64, 0.8); /* Gray background for desktop */
+    justify-content: center;
+    min-height: 36px; /* Consistent button height */
+    line-height: 1;
+}
+
+.lang-btn:hover,
+.theme-btn:hover {
+    background-color: rgba(119, 84, 59, 0.9);
+}
+
+/* Hamburger menu icon */
+.hamburger-menu {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.5rem;
+    line-height: 1;
+}
+
+/* Remove gray background on mobile */
+@media (max-width: 700px) {
+    nav {
+        background-color: transparent !important;
+        padding: 1rem;
+        min-height: 60px;
+    }
+    
+    .language-switcher {
+        display: none; /* Hide desktop buttons */
+    }
+    
+    .nav-controls {
+        display: flex; /* Show mobile controls */
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .hamburger-menu {
+        display: block;
+    }
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(64, 68, 71, 0.473); /* Gray background for desktop */
 }
 
 /* Remove gray background on mobile */

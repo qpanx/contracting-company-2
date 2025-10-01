@@ -15,8 +15,33 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <style>
     body {
-        font-family: 'Tajawal', sans-serif;
+        font-family: 'Cairo', sans-serif;
         background-color: #FCFBF8;
+        font-weight: 700; /* Make all text bold */
+    }
+    
+    /* Alternative: apply to all elements */
+    * {
+        font-weight: 700 !important;
+    }
+    
+    /* Make hero subtitle bigger */
+    #heroSubtitle {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 1.6;
+    }
+    
+    @media (max-width: 768px) {
+        #heroSubtitle {
+            font-size: 1.2rem;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        #heroSubtitle {
+            font-size: 1rem;
+        }
     }
     
     /* Smooth scroll behavior */
@@ -130,7 +155,7 @@
 </head>
 <body>
     <section class="header" class="bg-gray-100">
-        <a href="index.html" class="logo-link"><img src="imgs/icon-white--preview.png" style="width: 180px;"></a>
+        <a href="index.html" class="logo-link"><img src="imgs/icon-white--preview.png" style="width: 250px;"></a>
         <nav>
             <div class="nav-links" id="navLinks" >
                 <i class="fa fa-times" onclick="hideMenu()"></i>
@@ -157,14 +182,10 @@
 
 
         <div class="text-box">
-            <!-- <h1 class="bilingual-title" style="text-align:center;">
-  <span class="ar-title" style="display:block; font-family:'Cairo',sans-serif; font-size:2.1rem;">عرين الأسد الأبيض العقارية</span>
-  <span class="en-title" style="display:block; font-family:'Cairo',sans-serif; font-size:2.1rem; margin-top:0.3em;">LION'S DEN REAL ESTATE</span>
-</h1> -->
             <div class="subtitle-en"></div>
-            <p>Comfort .. security .. and a bright future.</p>
+            <p id="heroSubtitle">Comfort .. security .. and a bright future.</p>
             <a href="" class="hero-btn">Visit Us To Know More</a>
-                    </div>
+        </div>
     </section>
 
     <!-- WhatsApp button positioned to scroll with page -->
@@ -452,7 +473,7 @@ const translations = {
         
         // Hero section
         heroTitle: "عرين الأسد الأبيض العقارية",
-        heroSubtitle: "راحة .. أمان .. ومستقبل مشرق",
+        heroSubtitle: "راحة .. أمان .. لمستقبل مشرق",
         heroButton: "تعرف علينا أكثر",
         
         // Featured Properties
@@ -521,7 +542,7 @@ function setLanguage(lang) {
     document.getElementById('nav-contact').textContent = t.contact;
     
     // Update hero section
-    document.querySelector('.text-box p').textContent = t.heroSubtitle;
+    document.getElementById('heroSubtitle').textContent = t.heroSubtitle;
     document.querySelector('.text-box .hero-btn').textContent = t.heroButton;
     
     // Update featured properties section
