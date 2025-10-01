@@ -16,7 +16,25 @@
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <style>
-        
+        /* Make page title bigger */
+    #page-title {
+        font-size: 4rem !important;
+        font-weight: 900;
+        margin-bottom: 1rem;
+    }
+    
+    @media (max-width: 768px) {
+        #page-title {
+            font-size: 2.5rem !important;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        #page-title {
+            font-size: 2rem !important;
+        }
+    }
+
     body {
         font-family: 'Cairo', sans-serif;
         background-color: #FCFBF8;
