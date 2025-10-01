@@ -19,6 +19,16 @@
         background-color: #FCFBF8;
     }
     
+    /* Smooth scroll behavior */
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    /* Offset for fixed header */
+    #about {
+        scroll-margin-top: 80px; /* Adjust based on your header height */
+    }
+    
     .active-filter {
         background-color: #8A7F7C !important;
         color: white !important;
@@ -119,14 +129,14 @@
 </style>
 </head>
 <body>
-    <section class="header">
-        <a href="index.html" class="logo-link"><img src="imgs/logo.white.png"></a>
+    <section class="header" class="bg-gray-100">
+        <a href="index.html" class="logo-link"><img src="imgs/icon-white--preview.png" style="width: 180px;"></a>
         <nav>
-            <div class="nav-links" id="navLinks">
+            <div class="nav-links" id="navLinks" >
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.html" id="nav-home">Home</a></li>
-                    <li><a href="About.html" id="nav-about">About</a></li>
+                    <li><a href="#about" id="nav-about">About</a></li>
                     <li><a href="projects.html" id="nav-projects">Projects</a></li>
                     <li><a href="contact.html" id="nav-contact">Contact</a></li>
                 </ul>
@@ -147,10 +157,10 @@
 
 
         <div class="text-box">
-            <h1 class="bilingual-title" style="text-align:center;">
+            <!-- <h1 class="bilingual-title" style="text-align:center;">
   <span class="ar-title" style="display:block; font-family:'Cairo',sans-serif; font-size:2.1rem;">عرين الأسد الأبيض العقارية</span>
   <span class="en-title" style="display:block; font-family:'Cairo',sans-serif; font-size:2.1rem; margin-top:0.3em;">LION'S DEN REAL ESTATE</span>
-</h1>
+</h1> -->
             <div class="subtitle-en"></div>
             <p>Comfort .. security .. and a bright future.</p>
             <a href="" class="hero-btn">Visit Us To Know More</a>
@@ -162,6 +172,109 @@
         <i class="fab fa-whatsapp"></i>
     </a>
     </section>
+
+
+     <section class="footer" id="about">
+        <!-- Partner logos section -->
+
+        <h4 id="footerTitle" >About US</h4>
+        <p id="footerDescription">
+            Welcome to Lion's Den Real Estate, where strength meets strategy in the world of property. Our name is our promise: to be your powerful and protective guide through the complexities of the real estate market. We were founded on a vision to lead with integrity and deliver exceptional results, understanding that a property is more than a transaction—it's a cornerstone for your future. Our expert team is dedicated to fiercely protecting your interests, whether you are buying your dream home or securing a high-value investment. At Lion's Den, we don't just find properties; we secure your legacy.
+        </p>
+
+
+    <!-- New Property Listings Section -->
+    <section class="property-listings">
+    <h1 id="featuredTitle">Featured Properties</h1>
+    <p id="featuredSubtitle">Discover our premium real estate offerings with modern amenities and prime locations</p>
+    
+    <div class="property-grid">
+        <!-- Property Card 1 -->
+        <div class="property-card">
+            <div class="property-image" style="height: 400px;">
+                <img src="imgs/Front-AlRayan/ALRYAAN - SHOOT 4.jpg" alt="Luxury Apartment" style="height: 100%; object-fit: cover;">
+                <div class="heart-icon">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <div class="property-content">
+                <h3 id="property1Name">Al-Rayyan</h3>
+                <p class="price" id="property1Price">Start From 360,000 SAR</p>
+                <!-- <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span id="property1Location">Jeddah - Al Rayyan District</span>
+                </div> -->
+                <div class="property-stats">
+                    <div class="stats-left">
+                        <div class="stat-item">
+                            <i class="fas fa-bed"></i>
+                            <span>2</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-bath"></i>
+                            <span>3</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-ruler-combined"></i>
+                            <span>127 m²</span>
+                        </div>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span id="property1Location">Jeddah - Al Rayyan District</span>
+                        </div>
+                    </div>
+                    <!-- <div class="property-type" id="property1Type">furnished</div> -->
+                </div>
+                <a href="Al-Rayyan.html" class="show-details-btn" id="showDetailsBtn1">Show more details</a>
+            </div>
+        </div>
+
+        <!-- Property Card 2 -->
+        <div class="property-card">
+            <div class="property-image" style="height: 400px;">
+                <img src="imgs/الصفا/SHOT 1 - ALSAFA - 3D - 23 - 7 - 2025 M.jpg" alt="Modern Villa" style="height: 100%; object-fit: cover;">
+                <div class="heart-icon">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <div class="property-content">
+                <h3 id="property2Name">Al-Safa</h3>
+                <p class="price" id="property2Price">$55,000 / Year</p>
+                
+                <div class="property-stats">
+                    <div class="stats-left">
+                        <div class="stat-item">
+                            <i class="fas fa-bed"></i>
+                            <span>1</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-bath"></i>
+                            <span>1</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-ruler-combined"></i>
+                            <span>435 m²</span>
+                        </div>
+                        <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span id="property2Location">Jeddah, Al-Safa district</span>
+                </div>
+                    </div>
+                    <div class="property-type" id="property2Type">furnished</div>
+                </div>
+                <a href="Al-Safa.html" class="show-details-btn" id="showDetailsBtn2">Show more details</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <section class="cta">
+        <h1>Enroll for our projects in Saudi Arabia</h1>
+        <a href="contact.html" class="hero-btn">CONTACT US</a>
+    </section>
+
 
 
     <section class="services">
@@ -182,176 +295,80 @@
             </div>
         </div>
     </section>
-    
-    <!-- <section class="projects">
-        <h1>Our Projects</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus cumque officiis culpa placeat, beatae, obcaecati rem commodi ipsam <br>doloremque magni quia maxime veritatis inventore perferendis, repellendus facilis ea sunt saepe.</p>
-        <div class="row">
-            <div class="projects-col">
-                <img src="imgs/Makkah.jpg">
-                <div class="layer">
-                    <h3>Makkah</h3>
-                </div>
-            </div>
-            <div class="projects-col">
-                <img src="imgs/Riyadh1.jpg">
-                <div class="layer">
-                    <h3>Riyadh</h3>
-                </div>
-            </div>
-            <div class="projects-col">
-                <img src="imgs/Jeddah.jpg">
-                <div class="layer">
-                    <h3>Jeddah</h3>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-
-    <!-- New Property Listings Section -->
-    <section class="property-listings">
-        <h1>Featured Properties</h1>
-        <p>Discover our premium real estate offerings with modern amenities and prime locations</p>
-        
-        <div class="property-grid">
-            <!-- Property Card 1 -->
-            <div class="property-card">
-                <div class="property-image">
-                    <img src="imgs/Front-AlRayan/ALRYAAN - SHOOT 4.jpg" alt="Luxury Apartment">
-                    <div class="heart-icon">
-                        <i class="far fa-heart"></i>
-                    </div>
-                </div>
-                <div class="property-content">
-                    <h3 id="property1Name">Al-Rayyan</h3>
-                    <p class="price" id="property1Price">Start From 360,000 SAR</p>
-                    <div class="location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span id="property1Location">Jeddah - Al Rayyan District</span>
-                    </div>
-                    <div class="property-stats">
-                        <div class="stats-left">
-                            <div class="stat-item">
-                                <i class="fas fa-bed"></i>
-                                <span>2</span>
-                            </div>
-                            <div class="stat-item">
-                                <i class="fas fa-bath"></i>
-                                <span>2-3</span>
-                            </div>
-                            <div class="stat-item">
-                                <i class="fas fa-ruler-combined"></i>
-                                <span>95-127 m²</span>
-                            </div>
-                        </div>
-                        <div class="property-type" id="property1Type">furnished</div>
-                    </div>
-                    <a href="Al-Rayyan.html" class="show-details-btn">Show more details</a>
-                </div>
-            </div>
-
-            <!-- Property Card 2 -->
-            <div class="property-card">
-                <div class="property-image">
-                    <img src="imgs/الصفا/SHOT 1 - ALSAFA - 3D - 23 - 7 - 2025 M.jpg" alt="Modern Villa">
-                    <div class="heart-icon">
-                        <i class="far fa-heart"></i>
-                    </div>
-                </div>
-                <div class="property-content">
-                    <h3 id="property2Name">Al-Safa</h3>
-                    <p class="price" id="property2Price">$55,000 / Year</p>
-                    <div class="location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span id="property2Location">Jeddah, Al-Safa district</span>
-                    </div>
-                    <div class="property-stats">
-                        <div class="stats-left">
-                            <div class="stat-item">
-                                <i class="fas fa-bed"></i>
-                                <span>1</span>
-                            </div>
-                            <div class="stat-item">
-                                <i class="fas fa-bath"></i>
-                                <span>1</span>
-                            </div>
-                            <div class="stat-item">
-                                <i class="fas fa-ruler-combined"></i>
-                                <span>435 m²</span>
-                            </div>
-                        </div>
-                        <div class="property-type" id="property2Type">furnished</div>
-                    </div>
-                    <a href="Al-Safa.html" class="show-details-btn">Show more details</a>
-                </div>
-            </div>
-
-            <!-- Property Card 3 -->
-            <!-- <div class="property-card">
-                <div class="property-image">
-                    <img src="imgs/property3.jpg" alt="Family Home">
-                    <div class="heart-icon">
-                        <i class="far fa-heart"></i>
-                    </div>
-                </div>
-                <div class="property-content">
-                    <h3>Family Home in Al-Monsiya</h3>
-                    <p class="price">$60,000 / Year</p>
-                    <div class="location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Private, Riyadh</span>
-                    </div> -->
-                    <!-- <div class="property-stats">
-                        <div class="stats-left">
-                            <div class="stat-item">
-                                <i class="fas fa-bed"></i>
-                                <span>2</span>
-                            </div>
-                            <div class="stat-item">
-                                <i class="fas fa-bath"></i>
-                                <span>2</span>
-                            </div>
-                            <div class="stat-item">
-                                <i class="fas fa-ruler-combined"></i>
-                                <span>250 m²</span>
-                            </div>
-                        </div>
-                        <div class="property-type">Unfurnished</div>
-                    </div>
-                </div>
-            </div> -->
-        </div>
-    </section>
-
-
-
-    <section class="cta">
-        <h1>Enroll for our projects in Saudi Arabia</h1>
-        <a href="contact.html" class="hero-btn">CONTACT US</a>
-    </section>
-
-
-    <section class="footer">
-        <!-- Partner logos section -->
-        <div class="partner-logos">
+<div class="partner-logos">
             <img src="imgs/Spon.png" alt="FAL and REGA - Real Estate General Authority Logos" class="partner-logo-combined">
         </div>
         
-        <h4 id="footerTitle">About US</h4>
-        <p id="footerDescription">
-            Welcome to Lion's Den Real Estate, where strength meets strategy in the world of property. Our name is our promise: to be your powerful and protective guide through the complexities of the real estate market. We were founded on a vision to lead with integrity and deliver exceptional results, understanding that a property is more than a transaction—it's a cornerstone for your future. Our expert team is dedicated to fiercely protecting your interests, whether you are buying your dream home or securing a high-value investment. At Lion's Den, we don't just find properties; we secure your legacy.
-        </p>
     <div class="icons">
         <!----<a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
         
         <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
         <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>--->
-        <a href="https://www.instagram.com/arren_alasad/"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@areen_alasad?_t=ZS-8yeUsdXxn5s&_r=1"><i class="fab fa-tiktok"></i></a>
+        <!-- <a href="https://www.instagram.com/arren_alasad/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@areen_alasad?_t=ZS-8yeUsdXxn5s&_r=1"><i class="fab fa-tiktok"></i></a> -->
 
     </div>
     </section>
+
+    <footer class="bg-zinc-50 text-zinc-700 py-12">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+            <!-- Important Links Column -->
+            <div class="w-full">
+                <h3 class="text-lg font-semibold" id="importantLinksTitle">روابط هامة</h3>
+                <div class="w-20 h-0.5 bg-amber-600 my-4"></div>
+                <ul class="space-y-3">
+                    <li><a href="#" class="hover:text-amber-600 transition-colors" id="privacyLink">سياسة الخصوصية</a></li>
+                    <li><a href="#" class="hover:text-amber-600 transition-colors" id="termsLink">الشروط والأحكام</a></li>
+                    <li><a href="index.html" class="hover:text-amber-600 transition-colors" id="homeLink">الرئيسية</a></li>
+                    <li><a href="projects.html" class="hover:text-amber-600 transition-colors" id="previousProjectsLink">المشاريع السابقة</a></li>
+                    <li><a href="#" class="hover:text-amber-600 transition-colors" id="careersLink">التوظيف</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Us Column -->
+            <div class="w-full">
+                <h3 class="text-lg font-semibold" id="contactUsTitle">اتصل بنا</h3>
+                <div class="w-20 h-0.5 bg-amber-600 my-4"></div>
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3 space-x-reverse">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-zinc-500"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <a href="mailto:ash@arren.sa" class="hover:text-amber-600 transition-colors" dir="ltr">ash@arren.sa</a>
+                    </div>
+                    <div class="flex items-center space-x-3 space-x-reverse">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-zinc-500"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <a href="tel:+966550901995" class="hover:text-amber-600 transition-colors" dir="ltr">+966 55 090 1995</a>
+                    </div>
+                </div>
+                <div class="w-full h-px bg-zinc-300 my-6"></div>
+                <div class="space-y-2">
+                    <p class="font-semibold" id="falLicenseTitle">رخصة فال</p>
+                    <p class="text-zinc-600" id="licenseNumber">رقم الرخصة: 1200025160</p>
+                </div>
+            </div>
+            
+            <!-- Follow Us Column -->
+            <div class="w-full">
+                <h3 class="text-lg font-semibold" id="followUsTitle">تابعنا</h3>
+                <div class="w-20 h-0.5 bg-amber-600 my-4"></div>
+                <div class="flex items-center space-x-4 space-x-reverse">
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/arren_alasad/" class="w-10 h-10 rounded-full border border-zinc-400 flex items-center justify-center text-zinc-600 hover:bg-amber-600 hover:text-white hover:border-amber-600 transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+                    </a>
+                    <!-- TikTok -->
+                    <a href="https://www.tiktok.com/@areen_alasad?_t=ZS-8yeUsdXxn5s&_r=1" class="w-10 h-10 rounded-full border border-zinc-400 flex items-center justify-center text-zinc-600 hover:bg-amber-600 hover:text-white hover:border-amber-600 transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16" stroke="currentColor">
+                            <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
 
     <footer>
       <div class="footer-content">
@@ -418,7 +435,21 @@ const translations = {
         property2Name: "Al-Safa",
         property2Price: "$55,000 / Year",
         property2Location: "Jeddah, Al-Safa district",
-        property2Type: "furnished"
+        property2Type: "furnished",
+
+        // Footer links section
+        importantLinksTitle: "Important Links",
+        privacyLink: "Privacy Policy",
+        termsLink: "Terms and Conditions",
+        homeLink: "Home",
+        previousProjectsLink: "Previous Projects",
+        careersLink: "Careers",
+        
+        contactUsTitle: "Contact Us",
+        falLicenseTitle: "FAL License",
+        licenseNumber: "License Number: 1200025160",
+        
+        followUsTitle: "Follow Us"
     },
     ar: {
         // Navigation
@@ -465,7 +496,21 @@ const translations = {
         property2Name: "الصفا",
         property2Price: "55,000$ / سنة",
         property2Location: "جدة، حي الصفا",
-        property2Type: "مفروش"
+        property2Type: "مفروش",
+
+        // Footer links section
+        importantLinksTitle: "روابط هامة",
+        privacyLink: "سياسة الخصوصية",
+        termsLink: "الشروط والأحكام",
+        homeLink: "الرئيسية",
+        previousProjectsLink: "المشاريع السابقة",
+        careersLink: "التوظيف",
+        
+        contactUsTitle: "اتصل بنا",
+        falLicenseTitle: "رخصة فال",
+        licenseNumber: "رقم الرخصة: 1200025160",
+        
+        followUsTitle: "تابعنا"
     }
 };
 
@@ -475,50 +520,41 @@ function setLanguage(lang) {
     currentLang = lang;
     const t = translations[lang];
     
+    console.log('Setting language to:', lang); // Debug log
+    
     // Update navigation links using IDs
     document.getElementById('nav-home').textContent = t.home;
     document.getElementById('nav-about').textContent = t.about;
     document.getElementById('nav-projects').textContent = t.projects;
     document.getElementById('nav-contact').textContent = t.contact;
     
-    // Update bilingual title
-    // if (lang === 'ar') {
-    //     document.querySelector('.ar-title').style.display = 'block';
-    //     document.querySelector('.en-title').style.display = 'none';
-    // } else {
-    //     document.querySelector('.ar-title').style.display = 'none';
-    //     document.querySelector('.en-title').style.display = 'block';
-    // }
-    
     // Update hero section
     document.querySelector('.text-box p').textContent = t.heroSubtitle;
     document.querySelector('.text-box .hero-btn').textContent = t.heroButton;
     
     // Update featured properties section
-    document.querySelector('.property-listings h1').textContent = t.featuredTitle;
-    document.querySelector('.property-listings p').textContent = t.featuredSubtitle;
+    document.getElementById('featuredTitle').textContent = t.featuredTitle;
+    document.getElementById('featuredSubtitle').textContent = t.featuredSubtitle;
     
     // Update "Show more details" buttons
-    const detailButtons = document.querySelectorAll('.show-details-btn');
-    detailButtons.forEach(btn => {
-        btn.textContent = t.showMoreDetails;
-    });
+    document.getElementById('showDetailsBtn1').textContent = t.showMoreDetails;
+    document.getElementById('showDetailsBtn2').textContent = t.showMoreDetails;
     
     // Update services section
     document.getElementById('servicesTitle').textContent = t.servicesTitle;
-document.getElementById('servicesSubtitle').textContent = t.servicesSubtitle;
-document.getElementById('service1Title').textContent = t.service1Title;
-document.getElementById('service1Desc').textContent = t.service1Desc;
-document.getElementById('service2Title').textContent = t.service2Title;
-document.getElementById('service2Desc').textContent = t.service2Desc;
-document.getElementById('service3Title').textContent = t.service3Title;
-document.getElementById('service3Desc').textContent = t.service3Desc;
+    document.getElementById('servicesSubtitle').textContent = t.servicesSubtitle;
+    document.getElementById('service1Title').textContent = t.service1Title;
+    document.getElementById('service1Desc').textContent = t.service1Desc;
+    document.getElementById('service2Title').textContent = t.service2Title;
+    document.getElementById('service2Desc').textContent = t.service2Desc;
+    document.getElementById('service3Title').textContent = t.service3Title;
+    document.getElementById('service3Desc').textContent = t.service3Desc;
     
     // Update property cards
     document.getElementById('property1Name').textContent = t.property1Name;
     document.getElementById('property1Price').textContent = t.property1Price;
     document.getElementById('property1Location').textContent = t.property1Location;
-    document.getElementById('property1Type').textContent = t.property1Type;
+    // document.getElementById('property1Type').textContent = t.property1Type;
     
     document.getElementById('property2Name').textContent = t.property2Name;
     document.getElementById('property2Price').textContent = t.property2Price;
@@ -529,12 +565,29 @@ document.getElementById('service3Desc').textContent = t.service3Desc;
     document.querySelector('.cta h1').textContent = t.ctaTitle;
     document.querySelector('.cta .hero-btn').textContent = t.ctaButton;
     
-    // Update footer
+    // Update footer About section
     document.getElementById('footerTitle').textContent = t.footerTitle;
-document.getElementById('footerDescription').textContent = t.footerDescription;
+    document.getElementById('footerDescription').textContent = t.footerDescription;
+    
+    // Update footer links section
+    console.log('Updating footer...'); // Debug log
+    document.getElementById('importantLinksTitle').textContent = t.importantLinksTitle;
+    document.getElementById('privacyLink').textContent = t.privacyLink;
+    document.getElementById('termsLink').textContent = t.termsLink;
+    document.getElementById('homeLink').textContent = t.homeLink;
+    document.getElementById('previousProjectsLink').textContent = t.previousProjectsLink;
+    document.getElementById('careersLink').textContent = t.careersLink;
+    
+    document.getElementById('contactUsTitle').textContent = t.contactUsTitle;
+    document.getElementById('falLicenseTitle').textContent = t.falLicenseTitle;
+    document.getElementById('licenseNumber').textContent = t.licenseNumber;
+    
+    document.getElementById('followUsTitle').textContent = t.followUsTitle;
     
     // Update copyright
     document.getElementById('copyrightText').textContent = t.copyright;
+    
+    console.log('Footer updated successfully'); // Debug log
     
     // Update page direction and language
     if (lang === 'ar') {
