@@ -16,9 +16,147 @@
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <style>
-        /* Apply the Tajawal font to the whole page */
+        
+    body {
+        font-family: 'Cairo', sans-serif;
+        background-color: #FCFBF8;
+        font-weight: 700; /* Make all text bold */
+    }
+    
+    /* Alternative: apply to all elements */
+    * {
+        font-weight: 700 !important;
+    }
+    
+    /* Make hero subtitle bigger */
+    #heroSubtitle {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 1.6;
+    }
+    
+    @media (max-width: 768px) {
+        #heroSubtitle {
+            font-size: 1.2rem;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        #heroSubtitle {
+            font-size: 1rem;
+        }
+    }
+    
+    /* Smooth scroll behavior */
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    /* Offset for fixed header */
+    #about {
+        scroll-margin-top: 80px; /* Adjust based on your header height */
+    }
+    
+    .active-filter {
+        background-color: #8A7F7C !important;
+        color: white !important;
+    }
+    
+    /* Mobile responsive fixes */
+    @media (max-width: 768px) {
+        .header h1 {
+            font-size: 1.5rem !important;
+            line-height: 1.3;
+            white-space: normal;
+            word-wrap: break-word;
+        }
+        
+        .text-box h1 span {
+            font-size: 1.2rem !important;
+            line-height: 1.2;
+        }
+        
+        .nav-links ul li a {
+            font-size: 0.9rem;
+            padding: 8px 12px;
+            white-space: nowrap;
+        }
+        
+        .lang-btn, .theme-btn {
+            font-size: 0.8rem;
+            padding: 6px 10px;
+        }
+        
+        .hamburger-menu {
+            font-size: 1.3rem;
+        }
+    }
+    
+    @media (max-width: 640px) {
+        .container {
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+        }
+        
+        .text-box h1 span {
+            font-size: 1rem !important;
+            line-height: 1.1;
+        }
+        
+        .nav-links ul li a {
+            font-size: 0.8rem;
+        }
+        
+        .lang-btn, .theme-btn {
+            font-size: 0.7rem;
+            padding: 5px 8px;
+        }
+        
+        .hamburger-menu {
+            font-size: 1.1rem;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .text-box h1 span {
+            font-size: 0.9rem !important;
+            line-height: 1.1;
+            margin-top: 0.2em !important;
+        }
+        
+        .nav-links ul li a {
+            font-size: 0.75rem;
+            padding: 6px 10px;
+        }
+        
+        .lang-btn, .theme-btn {
+            font-size: 0.65rem;
+            padding: 4px 6px;
+            min-width: 40px;
+        }
+        
+        .hamburger-menu {
+            font-size: 1rem;
+        }
+    }
+    
+    /* Prevent text overflow */
+    .nav-links ul li a,
+    .lang-btn,
+    .theme-btn {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    /* Ensure Arabic text doesn't break */
+    .text-box h1 span {
+        word-break: keep-all;
+        overflow-wrap: normal;
+    }
+        /* Apply the Cairo font to the whole page */
         body {
-            font-family: 'Tajawal', sans-serif;
+            font-family: 'Cairo', sans-serif;
             background-color: #FCFBF8;
         }
         /* Style for the active filter button */
@@ -30,7 +168,7 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
     <section class="sub-header">
-        <a href="index.html" class="logo-link"><img src="imgs/icon-white--preview.png" style="width: 180px;"></a>
+        <a href="index.html" class="logo-link"><img src="imgs/icon-white--preview.png" style="width: 250px;"></a>
         <nav>
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
@@ -150,7 +288,7 @@
             <!-- Important Links Column -->
             <div class="w-full">
                 <h3 class="text-lg font-semibold" id="importantLinksTitle">روابط هامة</h3>
-                <div class="w-20 h-0.5 bg-amber-600 my-4"></div>
+                <div class="w-80 h-1 bg-amber-600 my-4"></div>
                 <ul class="space-y-3">
                     <li><a href="#" class="hover:text-amber-600 transition-colors" id="privacyLink">سياسة الخصوصية</a></li>
                     <li><a href="#" class="hover:text-amber-600 transition-colors" id="termsLink">الشروط والأحكام</a></li>
@@ -163,7 +301,7 @@
             <!-- Contact Us Column -->
             <div class="w-full">
                 <h3 class="text-lg font-semibold" id="contactUsTitle">اتصل بنا</h3>
-                <div class="w-20 h-0.5 bg-amber-600 my-4"></div>
+                <div class="w-80 h-1 bg-amber-600 my-4"></div>
                 <div class="space-y-4">
                     <div class="flex items-center space-x-3 space-x-reverse">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-zinc-500"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
@@ -184,7 +322,7 @@
             <!-- Follow Us Column -->
             <div class="w-full">
                 <h3 class="text-lg font-semibold" id="followUsTitle">تابعنا</h3>
-                <div class="w-20 h-0.5 bg-amber-600 my-4"></div>
+                <div class="w-80 h-1 bg-amber-600 my-7"></div>
                 <div class="flex items-center space-x-4 space-x-reverse">
                     <!-- Instagram -->
                     <a href="https://www.instagram.com/arren_alasad/" class="w-10 h-10 rounded-full border border-zinc-400 flex items-center justify-center text-zinc-600 hover:bg-amber-600 hover:text-white hover:border-amber-600 transition-all">
