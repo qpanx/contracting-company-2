@@ -1024,16 +1024,16 @@ footer a {
     margin-bottom: 15px;
 }
 
-.location {
+.locationn {
     display: flex;
     align-items: center;
-    color: #666;
+    color: #77543b;
     margin-bottom: 15px;
     font-size: 14px;
     
 }
 
-.location i {
+.locationn i {
     margin-right: 8px;
     color: #77543b;
 }
@@ -1120,9 +1120,9 @@ footer a {
 
 /* Contact Section */
 .location{
-    /* width: 80%;
-    /* margin: auto; 
-    padding: 10px ; */
+     width: 80%;
+     margin: auto; 
+    padding: 10px ; 
 }
 .location iframe{
     width: 100%;
