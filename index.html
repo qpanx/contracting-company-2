@@ -55,7 +55,7 @@
     }
     
     .active-filter {
-        background-color: #8A7F7C !important;
+        background-color: #77543b !important;
         color: white !important;
     }
     
@@ -73,11 +73,7 @@
             line-height: 1.2;
         }
         
-        .nav-links ul li a {
-            font-size: 0.9rem;
-            padding: 8px 12px;
-            white-space: nowrap;
-        }
+        /* Navigation styles moved to external CSS */
         
         .lang-btn, .theme-btn {
             font-size: 0.8rem;
@@ -100,9 +96,7 @@
             line-height: 1.1;
         }
         
-        .nav-links ul li a {
-            font-size: 0.8rem;
-        }
+        /* Navigation styles moved to external CSS */
         
         .lang-btn, .theme-btn {
             font-size: 0.7rem;
@@ -121,10 +115,7 @@
             margin-top: 0.2em !important;
         }
         
-        .nav-links ul li a {
-            font-size: 0.75rem;
-            padding: 6px 10px;
-        }
+        /* Navigation styles moved to external CSS */
         
         .lang-btn, .theme-btn {
             font-size: 0.65rem;
@@ -137,7 +128,6 @@
         }
     }
     
-    /* Prevent text overflow */
     .nav-links ul li a,
     .lang-btn,
     .theme-btn {
@@ -146,7 +136,6 @@
         text-overflow: ellipsis;
     }
     
-    /* Ensure Arabic text doesn't break */
     .text-box h1 span {
         word-break: keep-all;
         overflow-wrap: normal;
@@ -168,12 +157,12 @@
             </div>
             <!-- Desktop language switcher -->
             <div class="language-switcher">
-                <button class="lang-btn" id="langToggleBtn">عربي</button>
+                <button class="lang-btn" id="langToggleBtn"><i class="fas fa-language"></i></button>
                 <button class="theme-btn" id="themeToggleBtn">🌙</button>
             </div>
             <!-- Mobile nav controls container -->
             <div class="nav-controls">
-                <button class="lang-btn" id="langToggleBtn2">عربي</button>
+                <button class="lang-btn" id="langToggleBtn2"><i class="fas fa-language"></i></button>
                 <button class="theme-btn" id="themeToggleBtn2">🌙</button>
                 <i class="fa fa-bars hamburger-menu" onclick="showMenu()"></i>
             </div>
@@ -203,13 +192,13 @@
         </p>
 
     <!-- New Property Listings Section -->
-    <section class="property-listings">
+    <!-- <section class="property-listings">
     <h1 id="featuredTitle">Featured Properties</h1>
     <p id="featuredSubtitle">Discover our premium real estate offerings with modern amenities and prime locations</p>
     
     <div class="property-grid">
-        <!-- Property Card 1 -->
-        <div class="property-card">
+         Property Card 1 -->
+        <!-- <div class="property-card">
             <div class="property-image" style="height: 400px;">
                 <img src="imgs/Front-AlRayan/ALRYAAN - SHOOT 4.jpg" alt="Luxury Apartment" style="height: 100%; object-fit: cover;">
                 <div class="heart-icon">
@@ -218,12 +207,12 @@
             </div>
             <div class="property-content">
                 <h3 id="property1Name">Al-Rayyan</h3>
-                <p class="price" id="property1Price">Start From 360,000 SAR</p>
+                <p class="price" id="property1Price">Start From 360,000 SAR</p> -->
                 <!-- <div class="location">
                     <i class="fas fa-map-marker-alt"></i>
                     <span id="property1Location">Jeddah - Al Rayyan District</span>
                 </div> -->
-                <div class="property-stats">
+                <!-- <div class="property-stats">
                     <div class="stats-left">
                         <div class="stat-item">
                             <i class="fas fa-bed"></i>
@@ -242,13 +231,13 @@
                             <span id="property1Location">Jeddah - Al Rayyan District</span>
                         </div>
                     </div>
-                    <!-- <div class="property-type" id="property1Type">furnished</div> -->
-                </div>
+                    <<div class="property-type" id="property1Type">furnished</div> -->
+                <!-- </div>
                 <a href="Al-Rayyan.html" class="show-details-btn" id="showDetailsBtn1">Show more details</a>
             </div>
         </div>
 
-        <!-- Property Card 2 -->
+         Property Card 2 
         <div class="property-card">
             <div class="property-image" style="height: 400px;">
                 <img src="imgs/الصفا/SHOT 1 - ALSAFA - 3D - 23 - 7 - 2025 M.jpg" alt="Modern Villa" style="height: 100%; object-fit: cover;">
@@ -285,9 +274,131 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
-    <section class="cta">
+<div class="text-center pt-12 pb-8">
+        <h1 class="inline-block bg-gray-800 text-white text-4xl md:text-5xl font-bold py-4 px-20 rounded-full shadow-lg border-2 border-gray-700">
+            مشاريعنا
+        </h1>
+    </div>
+
+    <div class="container mx-auto p-4 md:p-8 pt-0">
+        <div class="flex flex-col items-center space-y-6">
+
+            <!-- Project Card 1: Areen 02 -->
+            <div class="relative w-full max-w-5xl h-56 md:h-64 rounded-lg overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="واجهة مبنى حديث" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                <div class="relative h-full flex justify-between items-center p-6 md:p-10">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold">مشروع عرين 02</h2>
+                        <p class="text-lg text-gray-300">حي الريان / جدة</p>
+                    </div>
+                    <a href="#" class="flex items-center space-x-3 space-x-reverse text-lg font-semibold transition-transform duration-300 group-hover:-translate-x-2">
+                        <span>للتفاصيل</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" /></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project Card 2: White Lion Residence -->
+            <div class="relative w-full max-w-5xl h-56 md:h-64 rounded-lg overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="غرفة طعام فاخرة" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                <div class="relative h-full flex justify-between items-center p-6 md:p-10">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold">مشروع وايت ليون ريزدنس</h2>
+                        <p class="text-lg text-gray-300">حي الصفا / جدة</p>
+                    </div>
+                    <a href="#" class="flex items-center space-x-3 space-x-reverse text-lg font-semibold transition-transform duration-300 group-hover:-translate-x-2">
+                        <span>للتفاصيل</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" /></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- View All Projects Link -->
+            <div class="pt-8 pb-4">
+                <a href="#" class="flex items-center space-x-4 space-x-reverse group">
+                    <span class="text-xl font-semibold text-gray-300 group-hover:text-white transition-colors">لعرض جميع المشاريع</span>
+                    <div class="flex items-center justify-center h-12 w-12 bg-amber-700 rounded-full transition-transform duration-300 group-hover:scale-110">
+                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" /></svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="py-16">
+        <div class="container mx-auto px-4">
+            <!-- Services Title -->
+            <div class="text-center mb-12">
+                <h2 class="inline-block bg-gray-800 text-white text-4xl md:text-5xl font-bold py-4 px-20 rounded-full shadow-lg">
+                    خدماتنا
+                </h2>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="flex items-center justify-center gap-4 md:gap-8 flex-wrap">
+                <!-- Left Arrow -->
+                <button class="hidden md:block p-3 rounded-full border border-gray-600 hover:bg-gray-700 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l-7 7 7 7" /></svg>
+                </button>
+
+                <!-- Service Cards Container -->
+                <div class="flex items-center justify-center gap-4 md:gap-8 w-full md:w-auto flex-wrap">
+                    <!-- Property Management Card -->
+                    <div class="relative w-64 h-80 rounded-2xl overflow-hidden group cursor-pointer transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1554224155-8d04421cd673?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="إدارة الممتلكات" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
+                            <h3 class="text-3xl font-extrabold text-center px-2">إدارة<br>الممتلكات</h3>
+                        </div>
+                    </div>
+
+                    <!-- Real Estate Brokerage Card (Larger) -->
+                    <div class="relative w-80 h-96 rounded-2xl overflow-hidden group cursor-pointer transform md:scale-110 hover:scale-115 transition-transform duration-300 z-10">
+                        <img src="https://images.unsplash.com/photo-1594488541252-25920658a53e?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="الوساطة العقارية" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
+                            <h3 class="text-5xl font-extrabold text-center px-2">الوساطة<br>العقارية</h3>
+                        </div>
+                    </div>
+
+                    <!-- Real Estate Consulting Card -->
+                    <div class="relative w-64 h-80 rounded-2xl overflow-hidden group cursor-pointer transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="الإستشارات العقارية" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
+                            <h3 class="text-3xl font-extrabold text-center px-2">الإستشارات<br>العقارية</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Arrow -->
+                <button class="hidden md:block p-3 rounded-full border border-gray-600 hover:bg-gray-700 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l7-7-7-7" /></svg>
+                </button>
+            </div>
+
+            <!-- Footer Text -->
+            <div class="text-center mt-12">
+                <p class="text-gray-400 text-lg">
+                    نربط بين المشتري والبائع بأعلى معايير المصداقية، ونضمن لك صفقات ناجحة تعكس قيمة السوق الحقيقية
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="text-center py-16">
+        <a href="#" class="inline-flex items-center gap-4 bg-[#6b584d] text-white text-4xl font-bold py-4 px-16 rounded-full shadow-lg transition-transform duration-300 hover:scale-105">
+            <span>تواصل معنا</span>
+            <!-- Make sure 'logo2.png' is in the same folder as this HTML file. -->
+            <!-- The 'logo-white' class will make the black logo appear white. -->
+            <img src="imgs/logo2.png" alt="شعار" class="w-12 h-12 logo-white">
+        </a>
+    </div>
+
+    <!-- <section class="cta">
         <h1>Enroll for our projects in Saudi Arabia</h1>
         <a href="contact.html" class="hero-btn">CONTACT US</a>
     </section>
@@ -314,14 +425,14 @@
             <img src="imgs/Spon.png" alt="FAL and REGA - Real Estate General Authority Logos" class="partner-logo-combined">
         </div>
         
-    <div class="icons">
+    <div class="icons"> -->
         <!----<a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
         <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
         <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>--->
         <!-- <a href="https://www.instagram.com/arren_alasad/"><i class="fab fa-instagram"></i></a>
         <a href="https://www.tiktok.com/@areen_alasad?_t=ZS-8yeUsdXxn5s&_r=1"><i class="fab fa-tiktok"></i></a> -->
-    </div>
-    </section>
+    <!-- </div>
+    </section> -->
 
     <footer class="bg-zinc-50 text-zinc-700 py-12">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -450,6 +561,16 @@ const translations = {
         property2Location: "Jeddah, Al-Safa district",
         property2Type: "furnished",
 
+        // Projects Showcase
+        projectShowcase1Title: "Areen 02 Project",
+        projectShowcase1Location: "In Al-Rayyan / Jeddah",
+        projectShowcase1Details: "Details",
+        projectShowcase2Title: "White Lion Residence Project",
+        projectShowcase2Location: "In Al-Safa / Jeddah", 
+        projectShowcase2Details: "Details",
+        viewAllProjectsText: "View All Projects",
+        servicesButton: "Our Services",
+
         // Footer links section
         importantLinksTitle: "Important Links",
         privacyLink: "Privacy Policy",
@@ -510,6 +631,16 @@ const translations = {
         property2Price: "55,000$ / سنة",
         property2Location: "جدة، حي الصفا",
         property2Type: "مؤثث",
+
+        // Projects Showcase
+        projectShowcase1Title: "مشروع عرين 02",
+        projectShowcase1Location: "في الريان / جدة",
+        projectShowcase1Details: "للتفاصيل",
+        projectShowcase2Title: "مشروع وايت ليون ريز دنس",
+        projectShowcase2Location: "في الصفا / جدة",
+        projectShowcase2Details: "للتفاصيل",
+        viewAllProjectsText: "لعرض جميع المشاريع",
+        servicesButton: "خدماتنا",
 
         // Footer links section
         importantLinksTitle: "روابط هامة",
@@ -597,6 +728,16 @@ function setLanguage(lang) {
     
     document.getElementById('followUsTitle').textContent = t.followUsTitle;
     
+    // Update Projects Showcase
+    document.getElementById('projectShowcase1Title').textContent = t.projectShowcase1Title;
+    document.getElementById('projectShowcase1Location').textContent = t.projectShowcase1Location;
+    document.getElementById('projectShowcase1Details').textContent = t.projectShowcase1Details;
+    document.getElementById('projectShowcase2Title').textContent = t.projectShowcase2Title;
+    document.getElementById('projectShowcase2Location').textContent = t.projectShowcase2Location;
+    document.getElementById('projectShowcase2Details').textContent = t.projectShowcase2Details;
+    document.getElementById('viewAllProjectsText').textContent = t.viewAllProjectsText;
+    document.getElementById('servicesButton').textContent = t.servicesButton;
+    
     // Update copyright
     document.getElementById('copyrightText').textContent = t.copyright;
     
@@ -607,14 +748,20 @@ function setLanguage(lang) {
         document.body.style.direction = 'rtl';
         document.body.style.textAlign = 'right';
         document.documentElement.lang = 'ar';
-        document.getElementById('langToggleBtn').textContent = 'EN';
-        document.getElementById('langToggleBtn2').textContent = 'EN';
+        document.getElementById('langToggleBtn').innerHTML = '<i class="fas fa-language"></i>';
+        document.getElementById('langToggleBtn2').innerHTML = '<i class="fas fa-language"></i>';
+        // Add tooltip or data attribute to indicate current language
+        document.getElementById('langToggleBtn').title = 'Switch to English';
+        document.getElementById('langToggleBtn2').title = 'Switch to English';
     } else {
         document.body.style.direction = 'ltr';
         document.body.style.textAlign = 'left';
         document.documentElement.lang = 'en';
-        document.getElementById('langToggleBtn').textContent = 'عربي';
-        document.getElementById('langToggleBtn2').textContent = 'عربي';
+        document.getElementById('langToggleBtn').innerHTML = '<i class="fas fa-language"></i>';
+        document.getElementById('langToggleBtn2').innerHTML = '<i class="fas fa-language"></i>';
+        // Add tooltip or data attribute to indicate current language
+        document.getElementById('langToggleBtn').title = 'التبديل إلى العربية';
+        document.getElementById('langToggleBtn2').title = 'التبديل إلى العربية';
     }
     
     // Store language preference
