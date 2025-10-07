@@ -24,7 +24,6 @@ nav {
 nav img {
     width: 180px;
     display: block; /* Remove inline spacing */
-    vertical-align: middle;
 }
 
 /* Navigation links container */
@@ -72,7 +71,7 @@ nav img {
 .theme-btn {
     padding: 0.5rem 1rem;
     border: none;
-    background-color: rgba(138, 127, 124, 0.8);
+    background-color: rgba(1119, 84, 59, 0.8);
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
@@ -456,13 +455,13 @@ body {
         padding: 15px 10px;
         display: block;
         text-align: center;
-        border: 1px solid rgba(255,255,255,0.3);
+        border: 1px solid rgba(119, 84, 59, 0.8);
         border-radius: 5px;
         transition: 0.3s;
     }
     
     .nav-links ul li a:hover {
-        background: rgba(255,255,255,0.1);
+        background: rgba(119, 84, 59, 0.8);
         border-color: #fff;
     }
     
@@ -910,7 +909,6 @@ html, body {
     /* Fix mobile navigation overlap */
     body {
         overflow-x: hidden;
-        /* Keep position: relative for WhatsApp button positioning */
     }
     
     /* Ensure no menu parts are visible when closed */
@@ -921,10 +919,6 @@ html, body {
     .nav-links.open {
         visibility: visible;
     }
-    
-    /* REMOVE RTL positioning changes - keep static */
-    /* Navigation controls stay in same position for both languages */
-    
     /* Add overlay when menu is open */
     .nav-overlay {
         position: fixed;

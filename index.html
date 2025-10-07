@@ -181,7 +181,6 @@
     <a href="https://wa.me/+966550901995" class="whatsapp-button" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
-    </section>
 
      <section class="footer" id="about">
         <!-- Partner logos section -->
@@ -350,17 +349,17 @@
                 <div class="flex items-center justify-center gap-4 md:gap-8 w-full md:w-auto flex-wrap">
                     <!-- Property Management Card -->
                     <div class="relative w-64 h-80 rounded-2xl overflow-hidden group cursor-pointer transform hover:scale-105 transition-transform duration-300">
-                        <img src="https://images.unsplash.com/photo-1554224155-8d04421cd673?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="إدارة الممتلكات" class="w-full h-full object-cover">
+                        <img src="imgs/ادارة.png" alt="إدارة الممتلكات" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
-                            <h3 class="text-3xl font-extrabold text-center px-2">إدارة<br>الممتلكات</h3>
+                            <h3 class="text-3xl font-extrabold text-center px-2 text-white">إدارة<br>الممتلكات</h3>
                         </div>
                     </div>
 
                     <!-- Real Estate Brokerage Card (Larger) -->
                     <div class="relative w-80 h-96 rounded-2xl overflow-hidden group cursor-pointer transform md:scale-110 hover:scale-115 transition-transform duration-300 z-10">
-                        <img src="https://images.unsplash.com/photo-1594488541252-25920658a53e?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="الوساطة العقارية" class="w-full h-full object-cover">
+                        <img src="imgs/وسائط.png" alt="الوساطة العقارية" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
-                            <h3 class="text-5xl font-extrabold text-center px-2">الوساطة<br>العقارية</h3>
+                            <h3 class="text-5xl font-extrabold text-center px-2 text-white">الوساطة<br>العقارية</h3>
                         </div>
                     </div>
 
@@ -368,7 +367,7 @@
                     <div class="relative w-64 h-80 rounded-2xl overflow-hidden group cursor-pointer transform hover:scale-105 transition-transform duration-300">
                         <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="الإستشارات العقارية" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
-                            <h3 class="text-3xl font-extrabold text-center px-2">الإستشارات<br>العقارية</h3>
+                            <h3 class="text-3xl font-extrabold text-center px-2 text-white">الإستشارات<br>العقارية</h3>
                         </div>
                     </div>
                 </div>
@@ -421,11 +420,9 @@
             </div>
         </div>
     </section>-->
-<div class="partner-logos">
-            <img src="imgs/Spon.png" alt="FAL and REGA - Real Estate General Authority Logos" class="partner-logo-combined">
-        </div>
+
         
-    <div class="icons"> 
+    <!-- <div class="icons">  -->
         <!----<a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
         <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
         <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>--->
@@ -467,6 +464,9 @@
                 </div>
                 <div class="w-full h-px bg-zinc-300 my-6"></div>
                 <div class="space-y-2">
+                    <div class="partner-logos">
+            <img src="imgs/Spon.png" alt="FAL and REGA - Real Estate General Authority Logos" class="partner-logo-combined">
+        </div>
                     <p class="font-semibold" id="falLicenseTitle">رخصة فال</p>
                     <p class="text-zinc-600" id="licenseNumber">رقم الرخصة: 1200025160</p>
                 </div>
@@ -710,8 +710,28 @@ function setLanguage(lang) {
     document.querySelector('.cta .hero-btn').textContent = t.ctaButton;
     
     // Update footer About section
-    document.getElementById('footerTitle').textContent = t.footerTitle;
-    document.getElementById('footerDescription').textContent = t.footerDescription;
+    console.log('Updating footer title to:', t.footerTitle); // Debug log
+    const footerTitleElement = document.getElementById('footerTitle');
+    const footerDescElement = document.getElementById('footerDescription');
+    
+    if (footerTitleElement) {
+        footerTitleElement.textContent = t.footerTitle;
+        console.log('Footer title updated successfully');
+    } else {
+        console.log('Footer title element not found!');
+        // Try alternative selectors
+        const altFooterTitle = document.querySelector('h4#footerTitle');
+        if (altFooterTitle) {
+            altFooterTitle.textContent = t.footerTitle;
+            console.log('Footer title updated via alternative selector');
+        }
+    }
+    
+    if (footerDescElement) {
+        footerDescElement.textContent = t.footerDescription;
+    } else {
+        console.log('Footer description element not found!');
+    }
     
     // Update footer links section
     console.log('Updating footer...'); // Debug log
@@ -816,8 +836,12 @@ themeToggleBtn2.addEventListener('click', function() {
 window.addEventListener('DOMContentLoaded', function() {
     const savedLang = localStorage.getItem('selectedLanguage') || 'en';
     const savedTheme = localStorage.getItem('selectedTheme') || 'light';
-    setLanguage(savedLang);
-    setTheme(savedTheme);
+    
+    // Small delay to ensure all elements are loaded
+    setTimeout(() => {
+        setLanguage(savedLang);
+        setTheme(savedTheme);
+    }, 100);
 });
 
 </script>
