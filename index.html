@@ -285,15 +285,15 @@
         <div class="flex flex-col items-center space-y-6">
 
             <!-- Project Card 1: Areen 02 -->
-            <div class="relative w-full max-w-5xl h-56 md:h-64 rounded-lg overflow-hidden group">
-                <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="واجهة مبنى حديث" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            <div class="relative w-full max-w-7xl h-60 md:h-100 rounded-lg overflow-hidden group">
+                <img src="imgs/Alrayan-front.PNG" alt="واجهة مبنى حديث" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                 <div class="absolute inset-0 bg-black bg-opacity-50"></div>
                 <div class="relative h-full flex justify-between items-center p-6 md:p-10">
                     <div>
                         <h2 id="project1Title" class="text-3xl md:text-4xl font-bold">مشروع عرين 02</h2>
                         <p id="project1Location" class="text-lg text-gray-300">حي الريان / جدة</p>
                     </div>
-                    <a href="#" class="flex items-center space-x-3 space-x-reverse text-lg font-semibold transition-transform duration-300 group-hover:-translate-x-2">
+                    <a href="Al-Rayyan.html" class="flex items-center space-x-3 space-x-reverse text-lg font-semibold transition-transform duration-300 group-hover:-translate-x-2">
                         <span id="project1Details">للتفاصيل</span>
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" /></svg>
                     </a>
@@ -301,15 +301,15 @@
             </div>
 
             <!-- Project Card 2: White Lion Residence -->
-            <div class="relative w-full max-w-5xl h-56 md:h-64 rounded-lg overflow-hidden group">
-                <img src="https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="غرفة طعام فاخرة" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            <div class="relative w-full max-w-7xl h-60 md:h-100 rounded-lg overflow-hidden group">
+                <img src="imgs/alsafa-front.jpg" alt="غرفة طعام فاخرة" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                 <div class="absolute inset-0 bg-black bg-opacity-50"></div>
                 <div class="relative h-full flex justify-between items-center p-6 md:p-10">
                     <div>
                         <h2 id="project2Title" class="text-3xl md:text-4xl font-bold">مشروع وايت ليون ريزدنس</h2>
                         <p id="project2Location" class="text-lg text-gray-300">حي الصفا / جدة</p>
                     </div>
-                    <a href="#" class="flex items-center space-x-3 space-x-reverse text-lg font-semibold transition-transform duration-300 group-hover:-translate-x-2">
+                    <a href="Al-Safa.html" class="flex items-center space-x-3 space-x-reverse text-lg font-semibold transition-transform duration-300 group-hover:-translate-x-2">
                         <span id="project2Details">للتفاصيل</span>
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" /></svg>
                     </a>
@@ -330,11 +330,11 @@
 
     <!-- Services Section -->
         <!-- Services Section -->
-    <div class="py-16">
+    <div class="py-16 w-full">
         <div class="container mx-auto px-4">
             <!-- Services Title -->
             <div class="text-center mb-12">
-                <h2 id="servicesTitle" class="inline-block bg-gray-800 text-white text-4xl md:text-5xl font-bold py-4 px-20 rounded-full shadow-lg">
+                <h2 class="inline-block bg-gray-800 text-white text-4xl md:text-5xl font-bold py-4 px-20 rounded-full shadow-lg">
                     خدماتنا
                 </h2>
             </div>
@@ -342,47 +342,46 @@
             <!-- Services Grid -->
             <div class="flex items-center justify-center gap-4 md:gap-8 flex-wrap">
                 <!-- Left Arrow -->
-                <button class="hidden md:block p-3 rounded-full border border-gray-600 hover:bg-gray-700 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l-7 7 7 7" /></svg>
+                <button id="prevBtn" class="p-3 rounded-full border border-gray-600 hover:bg-gray-700 transition-colors">
+                    <svg xmlns="" class="h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l-7 7 7 7" /></svg>
                 </button>
 
                 <!-- Service Cards Container -->
                 <div class="flex items-center justify-center gap-4 md:gap-8 w-full md:w-auto flex-wrap">
-                    <!-- Property Management Card -->
-                    <div class="relative w-64 h-80 rounded-2xl overflow-hidden group cursor-pointer transform hover:scale-105 transition-transform duration-300">
-                        <img src="imgs/ادارة.png" alt="إدارة الممتلكات" class="w-full h-full object-cover">
+                    <!-- Property Management Card (Left) -->
+                    <div id="card-left" class="service-card relative w-64 h-80 rounded-2xl overflow-hidden group cursor-pointer transform hover:scale-105 transition-transform duration-300">
+                        <img id="img-left" src="imgs/ادارة.png" alt="إدارة الممتلكات" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
-                            <h3 id="service1Title" class="text-3xl font-extrabold text-center px-2 text-white">إدارة<br>الممتلكات</h3>
+                            <h3 id="title-left" class="text-3xl font-extrabold text-center px-2 text-white"></h3>
                         </div>
                     </div>
 
-                    <!-- Real Estate Brokerage Card (Larger) -->
-                    <div class="relative w-80 h-96 rounded-2xl overflow-hidden group cursor-pointer transform md:scale-110 hover:scale-115 transition-transform duration-300 z-10">
-                        <img src="imgs/وسائط.png" alt="الوساطة العقارية" class="w-full h-full object-cover">
+                    <!-- Real Estate Brokerage Card (Center) -->
+                    <div id="card-center" class="service-card relative w-80 h-96 rounded-2xl overflow-hidden group cursor-pointer transform md:scale-110 hover:scale-115 transition-transform duration-300 z-10">
+                        <img id="img-center" src="imgs/وسائط.png" alt="الوساطة العقارية" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
-                            <h3 id="service2Title" class="text-5xl font-extrabold text-center px-2 text-white">الوساطة<br>العقارية</h3>
+                            <h3 id="title-center" class="text-5xl font-extrabold text-center px-2 text-white"></h3>
                         </div>
                     </div>
 
-                    <!-- Real Estate Consulting Card -->
-                    <div class="relative w-64 h-80 rounded-2xl overflow-hidden group cursor-pointer transform hover:scale-105 transition-transform duration-300">
-                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="الإستشارات العقارية" class="w-full h-full object-cover">
+                    <!-- Real Estate Consulting Card (Right) -->
+                    <div id="card-right" class="service-card relative w-64 h-80 rounded-2xl overflow-hidden group cursor-pointer transform hover:scale-105 transition-transform duration-300">
+                        <img id="img-right" src="imgs/استشارات.png" alt="الإستشارات العقارية" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
-                            <h3 id="service3Title" class="text-3xl font-extrabold text-center px-2 text-white">الإستشارات<br>العقارية</h3>
+                            <h3 id="title-right" class="text-3xl font-extrabold text-center px-2 text-white"></h3>
                         </div>
                     </div>
                 </div>
 
                 <!-- Right Arrow -->
-                <button class="hidden md:block p-3 rounded-full border border-gray-600 hover:bg-gray-700 transition-colors">
+                <button id="nextBtn" class="p-3 rounded-full border border-gray-600 hover:bg-gray-700 transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l7-7-7-7" /></svg>
                 </button>
             </div>
 
             <!-- Footer Text -->
-            <div class="text-center mt-12">
-                <p id="servicesDescription" class="text-gray-400 text-lg">
-                    نربط بين المشتري والبائع بأعلى معايير المصداقية، ونضمن لك صفقات ناجحة تعكس قيمة السوق الحقيقية
+            <div class="text-center mt-12 h-12">
+                <p id="servicesDescription" class="text-gray-400 text-lg transition-opacity duration-300">
                 </p>
             </div>
         </div>
@@ -394,7 +393,7 @@
             <span id="contactButtonText">تواصل معنا</span>
             <!-- Make sure 'logo2.png' is in the same folder as this HTML file. -->
             <!-- The 'logo-white' class will make the black logo appear white. -->
-            <img src="imgs/logo2.png" alt="شعار" class="w-12 h-12 logo-white">
+            <!-- <img src="imgs/logo2.png" alt="شعار" class="w-12 h-12 logo-white"> -->
         </a>
     </div>
 
@@ -439,7 +438,7 @@
             <!-- Important Links Column -->
             <div class="w-full">
                 <h3 class="text-lg font-semibold" id="importantLinksTitle">روابط هامة</h3>
-                <div class="w-80 h-1 bg-amber-600 my-4"></div>
+                <div class="w-80 h-1 my-4" style="background-color: #77543b;"></div>
                 <ul class="space-y-3">
                     <li><a href="#" class="hover:text-amber-600 transition-colors" id="privacyLink">سياسة الخصوصية</a></li>
                     <li><a href="#" class="hover:text-amber-600 transition-colors" id="termsLink">الشروط والأحكام</a></li>
@@ -452,7 +451,7 @@
             <!-- Contact Us Column -->
             <div class="w-full">
                 <h3 class="text-lg font-semibold" id="contactUsTitle">اتصل بنا</h3>
-                <div class="w-80 h-1 bg-amber-600 my-4"></div>
+                <div class="w-80 h-1 my-4" style="background-color: #77543b;"></div>
                 <div class="space-y-4">
                     <div class="flex items-center space-x-3 space-x-reverse">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-zinc-500"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
@@ -476,7 +475,7 @@
             <!-- Follow Us Column -->
             <div class="w-full">
                 <h3 class="text-lg font-semibold" id="followUsTitle">تابعنا</h3>
-                <div class="w-80 h-1 bg-amber-600 my-7"></div>
+                <div class="w-80 h-1 my-7" style="background-color: #77543b;"></div>
                 <div class="flex items-center space-x-4 space-x-reverse">
                     <!-- Instagram -->
                     <a href="https://www.instagram.com/arren_alasad/" class="w-10 h-10 rounded-full border border-zinc-400 flex items-center justify-center text-zinc-600 hover:bg-amber-600 hover:text-white hover:border-amber-600 transition-all">
@@ -904,6 +903,83 @@ window.addEventListener('DOMContentLoaded', function() {
     }, 100);
 });
 
+ document.addEventListener("DOMContentLoaded", function() {
+            // --- DATA FOR SERVICES ---
+            const servicesData = [
+                {
+                    title: "إدارة<br>الممتلكات",
+                    image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                    description: "نوفر إدارة شاملة لممتلكاتك، مع التركيز على زيادة العائد الاستثماري."
+                },
+                {
+                    title: "الوساطة<br>العقارية",
+                    image: "https://images.unsplash.com/photo-1560518883-ce09059ee41F?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                    description: "نربط بين المشتري والبائع بأعلى معايير المصداقية، ونضمن لك صفقات ناجحة تعكس قيمة السوق الحقيقية."
+                },
+                {
+                    title: "الإستشارات<br>العقارية",
+                    image: "https://images.unsplash.com/photo-1556761175-b413da4b248a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                    description: "نقدم استشارات الخبراء لمساعدتك في اتخاذ قرارات استثمارية عقارية مدروسة."
+                }
+            ];
+
+            // --- ELEMENT SELECTORS ---
+            const prevBtn = document.getElementById("prevBtn");
+            const nextBtn = document.getElementById("nextBtn");
+
+            const imgLeft = document.getElementById('img-left');
+            const titleLeft = document.getElementById('title-left');
+            const imgCenter = document.getElementById('img-center');
+            const titleCenter = document.getElementById('title-center');
+            const imgRight = document.getElementById('img-right');
+            const titleRight = document.getElementById('title-right');
+            
+            const description = document.getElementById("servicesDescription");
+
+            // --- STATE ---
+            let currentCenterIndex = 1; // Start with Brokerage in the center
+
+            // --- FUNCTIONS ---
+            function updateSlider() {
+                // Calculate indices for left, center, and right cards
+                const centerService = servicesData[currentCenterIndex];
+                // The modulo operator (%) handles the wrap-around logic
+                const leftIndex = (currentCenterIndex - 1 + servicesData.length) % servicesData.length;
+                const rightIndex = (currentCenterIndex + 1) % servicesData.length;
+                
+                const leftService = servicesData[leftIndex];
+                const rightService = servicesData[rightIndex];
+
+                // Update center card
+                imgCenter.src = centerService.image;
+                titleCenter.innerHTML = centerService.title;
+
+                // Update left card
+                imgLeft.src = leftService.image;
+                titleLeft.innerHTML = leftService.title;
+
+                // Update right card
+                imgRight.src = rightService.image;
+                titleRight.innerHTML = rightService.title;
+
+                // Update description text
+                description.textContent = centerService.description;
+            }
+
+            // --- EVENT LISTENERS ---
+            nextBtn.addEventListener("click", () => {
+                currentCenterIndex = (currentCenterIndex + 1) % servicesData.length;
+                updateSlider();
+            });
+
+            prevBtn.addEventListener("click", () => {
+                currentCenterIndex = (currentCenterIndex - 1 + servicesData.length) % servicesData.length;
+                updateSlider();
+            });
+
+            // --- INITIALIZE SLIDER ---
+            updateSlider();
+        });
 </script>
 
 
