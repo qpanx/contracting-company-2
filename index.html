@@ -144,8 +144,13 @@
 </head>
 <body>
     <section class="header" class="bg-gray-100">
-        <a href="index.html" class="logo-link"><img src="imgs/icon-white--preview.png" style="width: 250px;"></a>
         <nav>
+            <!-- Left side buttons -->
+            <div class="nav-left-buttons">
+                <button class="lang-btn" id="langToggleBtn"><i class="fas fa-language"></i></button>
+                <button class="theme-btn" id="themeToggleBtn">🌙</button>
+            </div>
+            
             <div class="nav-links" id="navLinks" >
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
@@ -155,11 +160,6 @@
                     <li><a href="contact.html" id="nav-contact">Contact</a></li>
                 </ul>
             </div>
-            <!-- Desktop language switcher -->
-            <div class="language-switcher">
-                <button class="lang-btn" id="langToggleBtn"><i class="fas fa-language"></i></button>
-                <button class="theme-btn" id="themeToggleBtn">🌙</button>
-            </div>
             <!-- Mobile nav controls container -->
             <div class="nav-controls">
                 <button class="lang-btn" id="langToggleBtn2"><i class="fas fa-language"></i></button>
@@ -167,6 +167,8 @@
                 <i class="fa fa-bars hamburger-menu" onclick="showMenu()"></i>
             </div>
         </nav>
+        <a href="index.html" class="logo-link"><img src="imgs/icon-white--preview.png" style="width: 250px;"></a>
+
 
 
 
@@ -175,20 +177,21 @@
             <p id="heroSubtitle">Comfort .. security .. and a bright future.</p>
             <a href="" class="hero-btn">Visit Us To Know More</a>
         </div>
+
+        
+    </section>
+
+    <!-- About Us Section -->
+    <section class="footer" id="about">
+        <h4 id="footerTitle">من نحن</h4>
+        <p id="footerDescription">
+          نحن شركة عقارية برؤية مستقبلية شاملة نسعى لإعادة تشكيل المشهد السكني في المملكة. نؤمن بأن السكن ليس مجرد بناء بل أسلوب حياة متكامل يجمع بين الراحة والجمال، والاستقرار. نعمل على تطوير مشاريع عمرانية حديثة ومتناسقة تعكس طموح الإنسان وتلهمه للعيش برفاهية وجودة أعلى. عملاؤنا هم جوهر إلهامنا وأساس نجاحنا، ومن أجلهم نبتكر ونرتقي بكل تفاصيل أعمالنا.
     </section>
 
     <!-- WhatsApp button positioned to scroll with page -->
     <a href="https://wa.me/+966550901995" class="whatsapp-button" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
-
-     <section class="footer" id="about">
-        <!-- Partner logos section -->
-
-        <h4 id="footerTitle" >من نحن</h4>
-        <p id="footerDescription">
-          مرحبًا بكم في عرين الأسد الأبيض العقارية، حيث تلتقي القوة مع الاستراتيجية في عالم العقار. اسمنا هو وعدنا: أن نكون دليلك القوي والواقي في تعقيدات سوق العقارات. تأسسنا برؤية للقيادة بالنزاهة وتقديم نتائج استثنائية، مدركين أن العقار أكثر من مجرد صفقة—بل هو حجر الأساس لمستقبلك. فريقنا الخبير ملتزم بحماية مصالحك بكل قوة، سواء كنت تشتري منزل أحلامك أو تستثمر في عقار عالي القيمة. في عرين الأسد، لا نبحث فقط عن العقارات؛ بل نؤمن مستقبلك.
-        </p>
 
     <!-- New Property Listings Section -->
     <!-- <section class="property-listings">
@@ -350,7 +353,7 @@
                 <div class="flex items-center justify-center gap-4 md:gap-8 w-full md:w-auto flex-wrap">
                     <!-- Property Management Card (Left) -->
                     <div id="card-left" class="service-card relative w-64 h-80 rounded-2xl overflow-hidden group cursor-pointer transform hover:scale-105 transition-transform duration-300">
-                        <img id="img-left" src="imgs/ادارة.png" alt="إدارة الممتلكات" class="w-full h-full object-cover">
+                        <img id="img-left" src="imgs/ادارة_ الممتلكات.jpeg" alt="إدارة الممتلكات" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
                             <h3 id="title-left" class="text-3xl font-extrabold text-center px-2 text-white"></h3>
                         </div>
@@ -624,11 +627,11 @@ const translations = {
         servicesTitle: "خدماتنا",
         servicesSubtitle: "في عرين الأسد الأبيض العقارية، نؤمن أن العقار ليس مجرد مبنى، بل هو أساس لمستقبل آمن واستثمار ذكي. مهمتنا أن نكون شريكك الأكثر ثقة في رحلتك العقارية، ونقدم لك خبرة واسعة ورؤية دقيقة لتحقيق طموحاتك.",
         service1Title: "الوساطة العقارية",
-        service1Desc: "نقدم شبكة واسعة وخبرة عميقة لضمان إتمام عمليات البيع والشراء بأفضل الأسعار وفي وقت قياسي. فريقنا المحترف معك في كل خطوة.",
+        service1Desc: "نوفر حلول وساطة عقارية راقية تجمع بين الدقة والاحترافية، لنضمن لعملائنا أفضل الصفقات وأعلى عوائد استثمارية.",
         service2Title: "إدارة الممتلكات",
-        service2Desc: "ندير أصولك بكفاءة واحترافية من التأجير والصيانة إلى تحصيل الإيرادات، لنضمن لك راحة البال وعائد استثماري مستمر.",
+        service2Desc: "نقدم إدارة شاملة للممتلكات بأسلوب يعتمد على الجودة والاستدامة لنحافظ على قيمة أصولك وتنميها بعناية واحتراف.",
         service3Title: "الاستشارات العقارية",
-        service3Desc: "نوفر دراسات جدوى شاملة واستشارات استراتيجية للمستثمرين والمطورين، لمساعدتك في اتخاذ قرارات دقيقة وتعظيم إمكانيات استثمارك.",
+        service3Desc: "نمنحك خبرة استشارية مبنية على تحليل معمق للسوق ورؤية استراتيجية تساعدك على اتخاذ قرارات استثمارية واثقة وناجحة.",
         
         // CTA section
         ctaTitle: "انضم إلى مشاريعنا في المملكة العربية السعودية",
@@ -636,7 +639,7 @@ const translations = {
         
         // Footer
         footerTitle: "من نحن",
-        footerDescription: "مرحبًا بكم في عرين الأسد الأبيض العقارية، حيث تلتقي القوة مع الاستراتيجية في عالم العقار. اسمنا هو وعدنا: أن نكون دليلك القوي والواقي في تعقيدات سوق العقارات. تأسسنا برؤية للقيادة بالنزاهة وتقديم نتائج استثنائية، مدركين أن العقار أكثر من مجرد صفقة—بل هو حجر الأساس لمستقبلك. فريقنا الخبير ملتزم بحماية مصالحك بكل قوة، سواء كنت تشتري منزل أحلامك أو تستثمر في عقار عالي القيمة. في عرين الأسد، لا نبحث فقط عن العقارات؛ بل نؤمن مستقبلك.",
+        footerDescription: "نحن شركة عقارية برؤية مستقبلية شاملة نسعى لإعادة تشكيل المشهد السكني في المملكة. نؤمن بأن السكن ليس مجرد بناء بل أسلوب حياة متكامل يجمع بين الراحة والجمال، والاستقرار. نعمل على تطوير مشاريع عمرانية حديثة ومتناسقة تعكس طموح الإنسان وتلهمه للعيش برفاهية وجودة أعلى. عملاؤنا هم جوهر إلهامنا وأساس نجاحنا، ومن أجلهم نبتكر ونرتقي بكل تفاصيل أعمالنا.",
         copyright: "جميع الحقوق محفوظة لعرين الأسد الأبيض العقارية © 2025",
 
         // Property Cards
@@ -894,7 +897,7 @@ themeToggleBtn2.addEventListener('click', function() {
 // Load saved language and theme preference on page load
 window.addEventListener('DOMContentLoaded', function() {
     const savedLang = localStorage.getItem('selectedLanguage') || 'en';
-    const savedTheme = localStorage.getItem('selectedTheme') || 'light';
+    const savedTheme = localStorage.getItem('selectedTheme') || 'dark'; // Changed default to 'dark'
     
     // Small delay to ensure all elements are loaded
     setTimeout(() => {
@@ -908,17 +911,17 @@ window.addEventListener('DOMContentLoaded', function() {
             const servicesData = [
                 {
                     title: "إدارة<br>الممتلكات",
-                    image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                    image: "imgs/ادارة_ الممتلكات.jpeg",
                     description: "نوفر إدارة شاملة لممتلكاتك، مع التركيز على زيادة العائد الاستثماري."
                 },
                 {
                     title: "الوساطة<br>العقارية",
-                    image: "https://images.unsplash.com/photo-1560518883-ce09059ee41F?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                    image: "imgs/وسائط.png",
                     description: "نربط بين المشتري والبائع بأعلى معايير المصداقية، ونضمن لك صفقات ناجحة تعكس قيمة السوق الحقيقية."
                 },
                 {
                     title: "الإستشارات<br>العقارية",
-                    image: "https://images.unsplash.com/photo-1556761175-b413da4b248a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                    image: "imgs/ادارة.png",
                     description: "نقدم استشارات الخبراء لمساعدتك في اتخاذ قرارات استثمارية عقارية مدروسة."
                 }
             ];
