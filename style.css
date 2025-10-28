@@ -18,6 +18,16 @@ nav {
     align-items: center; /* Vertically center all items */
     background-color: rgba(52, 58, 64, 0.8);
     min-height: 80px; /* Consistent height */
+    flex-direction: row !important; /* Force row direction even in RTL */
+    position: relative !important; /* For absolute positioning of buttons */
+}
+
+/* Force nav to maintain LTR layout in RTL mode */
+[dir="rtl"] nav,
+body[dir="rtl"] nav {
+    flex-direction: row !important;
+    direction: ltr !important;
+    position: relative !important;
 }
 
 /* Left side buttons container */
@@ -25,7 +35,21 @@ nav {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin-right: auto; /* Push to the left */
+    position: absolute !important;
+    left: 6% !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 100 !important;
+}
+
+/* Keep buttons on the left even in RTL mode */
+[dir="rtl"] .nav-left-buttons,
+body[dir="rtl"] .nav-left-buttons {
+    position: absolute !important;
+    left: 6% !important;
+    right: auto !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
 }
 
 /* Logo styling */
@@ -42,6 +66,12 @@ nav img {
     align-items: center; /* Center vertically */
     justify-content: flex-start;
     padding-left: 0; /* Remove left padding to move icons further left */
+}
+
+/* Keep nav-links RTL in Arabic */
+[dir="rtl"] .nav-links,
+body[dir="rtl"] .nav-links {
+    direction: rtl !important;
 }
 
 .nav-links ul {
