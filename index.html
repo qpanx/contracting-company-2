@@ -1,175 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LION'S DEN REAL ESTATE</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="imgs/logo2.png" type="images/png"/>
+    <link rel="icon" href="imgs/logo2.png" type="images/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wgh     // Update footer About section,200;0,300;0,    // Update footer About section,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<style>
-    body {
-        font-family: 'Cairo', sans-serif;
-        background-color: #FCFBF8;
-        font-weight: 700; /* Make all text bold */
-    }
-    
-    /* Alternative: apply to all elements */
-    * {
-        font-weight: 700 !important;
-    }
-    
-    /* Make hero subtitle bigger */
-    #heroSubtitle {
-        font-size: 3rem;
-        font-weight: 700;
-        line-height: 1.6;
-    }
-    
-    @media (max-width: 768px) {
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wgh     // Update footer About section,200;0,300;0,    // Update footer About section,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #FCFBF8;
+            font-weight: 700;
+            /* Make all text bold */
+        }
+
+        /* Alternative: apply to all elements */
+        * {
+            font-weight: 700 !important;
+        }
+
+        /* Make hero subtitle bigger */
         #heroSubtitle {
-            font-size: 2rem;
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.6;
         }
-    }
-    
-    @media (max-width: 480px) {
-        #heroSubtitle {
-            font-size: 1.5rem;
+
+        @media (max-width: 768px) {
+            #heroSubtitle {
+                font-size: 2rem;
+            }
         }
-    }
-    
-    /* Smooth scroll behavior */
-    html {
-        scroll-behavior: smooth;
-    }
-    
-    /* Offset for fixed header */
-    #about {
-        scroll-margin-top: 80px; /* Adjust based on your header height */
-    }
-    
-    .active-filter {
-        background-color: #77543b !important;
-        color: white !important;
-    }
-    
-    /* Mobile responsive fixes */
-    @media (max-width: 768px) {
-        .header h1 {
-            font-size: 1.5rem !important;
-            line-height: 1.3;
-            white-space: normal;
-            word-wrap: break-word;
+
+        @media (max-width: 480px) {
+            #heroSubtitle {
+                font-size: 1.5rem;
+            }
         }
-        
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Offset for fixed header */
+        #about {
+            scroll-margin-top: 80px;
+            /* Adjust based on your header height */
+        }
+
+        .active-filter {
+            background-color: #77543b !important;
+            color: white !important;
+        }
+
+        /* Mobile responsive fixes */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.5rem !important;
+                line-height: 1.3;
+                white-space: normal;
+                word-wrap: break-word;
+            }
+
+            .text-box h1 span {
+                font-size: 1.2rem !important;
+                line-height: 1.2;
+            }
+
+            /* Navigation styles moved to external CSS */
+
+            .lang-btn,
+            .theme-btn {
+                font-size: 0.8rem;
+                padding: 6px 10px;
+            }
+
+            .hamburger-menu {
+                font-size: 1.1rem;
+            }
+
+            /* Make all icons smaller on mobile */
+            i,
+            .fa,
+            .fab,
+            .fas,
+            .far,
+            .fa-solid,
+            .fa-brands,
+            .fa-regular {
+                font-size: 1.1rem !important;
+            }
+
+            svg {
+                width: 18px !important;
+                height: 18px !important;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding-left: 0.25rem;
+                padding-right: 0.25rem;
+            }
+
+            .text-box h1 span {
+                font-size: 1rem !important;
+                line-height: 1.1;
+            }
+
+            /* Navigation styles moved to external CSS */
+
+            .lang-btn,
+            .theme-btn {
+                font-size: 0.7rem;
+                padding: 5px 8px;
+            }
+
+            .hamburger-menu {
+                font-size: 1rem;
+            }
+
+            /* Make all icons even smaller on very small screens */
+            i,
+            .fa,
+            .fab,
+            .fas,
+            .far,
+            .fa-solid,
+            .fa-brands,
+            .fa-regular {
+                font-size: 0.95rem !important;
+            }
+
+            svg {
+                width: 15px !important;
+                height: 15px !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .text-box h1 span {
+                font-size: 0.9rem !important;
+                line-height: 1.1;
+                margin-top: 0.2em !important;
+            }
+
+            /* Navigation styles moved to external CSS */
+
+            .lang-btn,
+            .theme-btn {
+                font-size: 0.65rem;
+                padding: 4px 6px;
+                min-width: 40px;
+            }
+
+            .hamburger-menu {
+                font-size: 1rem;
+            }
+        }
+
+        .nav-links ul li a,
+        .lang-btn,
+        .theme-btn {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
         .text-box h1 span {
-            font-size: 1.2rem !important;
-            line-height: 1.2;
+            word-break: keep-all;
+            overflow-wrap: normal;
         }
-        
-        /* Navigation styles moved to external CSS */
-        
-        .lang-btn, .theme-btn {
-            font-size: 0.8rem;
-            padding: 6px 10px;
+
+        /* --- Modal Styles (Shared by Privacy & Terms) --- */
+        #privacyModal,
+        #termsModal {
+            /* Ensure modal text is readable, overriding the global bold */
+            font-weight: 500 !important;
+            color: #333;
         }
-        
-        .hamburger-menu {
-            font-size: 1.3rem;
+
+        #privacyModal p,
+        #privacyModal li,
+        #termsModal p,
+        #termsModal li {
+            font-weight: 500 !important;
         }
-    }
-    
-    @media (max-width: 640px) {
-        .container {
-            padding-left: 0.25rem;
-            padding-right: 0.25rem;
+
+        /* Style for the "cards" inside the modal */
+        .modal-card {
+            background-color: #f9f9f9;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
-        
-        .text-box h1 span {
-            font-size: 1rem !important;
-            line-height: 1.1;
-        }
-        
-        /* Navigation styles moved to external CSS */
-        
-        .lang-btn, .theme-btn {
-            font-size: 0.7rem;
-            padding: 5px 8px;
-        }
-        
-        .hamburger-menu {
+
+        .modal-card-title {
+            font-weight: 700 !important;
+            /* Keep titles bold */
             font-size: 1.1rem;
+            color: #77543b;
+            /* Match your site's theme color */
+            margin-bottom: 0.5rem;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .text-box h1 span {
-            font-size: 0.9rem !important;
-            line-height: 1.1;
-            margin-top: 0.2em !important;
+
+        /* Service Cards Mobile-First Styles */
+        #prevBtn,
+        #nextBtn {
+            display: none;
+            /* Hide arrows on mobile */
         }
-        
-        /* Navigation styles moved to external CSS */
-        
-        .lang-btn, .theme-btn {
-            font-size: 0.65rem;
-            padding: 4px 6px;
-            min-width: 40px;
+
+        #card-left,
+        #card-right {
+            display: none;
+            /* Hide side cards on mobile */
         }
-        
-        .hamburger-menu {
-            font-size: 1rem;
+
+        #card-center {
+            width: 90vw;
+            /* Make the center card take up 90% of the screen width */
+            transform: scale(1);
+            /* Disable the desktop scaling */
         }
-    }
-    
-    .nav-links ul li a,
-    .lang-btn,
-    .theme-btn {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    
-    .text-box h1 span {
-        word-break: keep-all;
-        overflow-wrap: normal;
-    }
 
-    /* --- Modal Styles (Shared by Privacy & Terms) --- */
-    #privacyModal, #termsModal {
-        /* Ensure modal text is readable, overriding the global bold */
-        font-weight: 500 !important; 
-        color: #333;
-    }
+        /* Tablet and Desktop Styles (md: breakpoint, e.g., 768px) */
+        @media (min-width: 768px) {
 
-    #privacyModal p, #privacyModal li,
-    #termsModal p, #termsModal li {
-        font-weight: 500 !important;
-    }
+            #prevBtn,
+            #nextBtn {
+                display: block;
+                /* Show arrows on desktop */
+            }
 
-    /* Style for the "cards" inside the modal */
-    .modal-card {
-        background-color: #f9f9f9;
-        padding: 1rem;
-        border-radius: 8px;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    }
+            #card-left,
+            #card-right {
+                display: block;
+                /* Show side cards on desktop */
+                width: 16rem;
+                /* w-64 */
+            }
 
-    .modal-card-title {
-        font-weight: 700 !important; /* Keep titles bold */
-        font-size: 1.1rem;
-        color: #77543b; /* Match your site's theme color */
-        margin-bottom: 0.5rem;
-    }
+            #card-center {
+                width: 20rem;
+                /* w-80 */
+                transform: scale(1.1);
+                /* Re-apply your desktop scaling */
+            }
+        }
 
-</style>
+        /* Make main section buttons (مشاريعنا, خدماتنا, تواصل معنا) the same size on mobile */
+        @media (max-width: 768px) {
+
+            #ourProjectsTitle,
+            #servicesTitle,
+            #contactButtonText,
+            #contactButton {
+                font-size: 1.5rem !important;
+                padding: 0.5rem 1.5rem !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            #ourProjectsTitle,
+            #servicesTitle,
+            #contactButtonText,
+            #contactButton {
+                font-size: 1.1rem !important;
+                padding: 0.3rem 1rem !important;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <section class="header" class="bg-gray-100">
         <nav>
@@ -178,8 +294,8 @@
                 <button class="lang-btn" id="langToggleBtn">عربي</button>
                 <!-- <button class="theme-btn" id="themeToggleBtn">🌙</button> -->
             </div>
-            
-            <div class="nav-links" id="navLinks" >
+
+            <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.html" id="nav-home">Home</a></li>
@@ -205,14 +321,17 @@
             <p id="heroSubtitle">Comfort .. security .. and a bright future.</p>
         </div>
 
-        
+
     </section>
 
     <!-- About Us Section -->
     <section class="footer" id="about">
         <h4 id="footerTitle">من نحن</h4>
         <p id="footerDescription">
-          نحن شركة عقارية برؤية مستقبلية شاملة نسعى لإعادة تشكيل المشهد السكني في المملكة. نؤمن بأن السكن ليس مجرد بناء بل أسلوب حياة متكامل يجمع بين الراحة والجمال، والاستقرار. نعمل على تطوير مشاريع عمرانية حديثة ومتناسقة تعكس طموح الإنسان وتلهمه للعيش برفاهية وجودة أعلى. عملاؤنا هم جوهر إلهامنا وأساس نجاحنا، ومن أجلهم نبتكر ونرتقي بكل تفاصيل أعمالنا.
+            نحن شركة عقارية برؤية مستقبلية شاملة نسعى لإعادة تشكيل المشهد السكني في المملكة. نؤمن بأن السكن ليس مجرد
+            بناء بل أسلوب حياة متكامل يجمع بين الراحة والجمال، والاستقرار. نعمل على تطوير مشاريع عمرانية حديثة ومتناسقة
+            تعكس طموح الإنسان وتلهمه للعيش برفاهية وجودة أعلى. عملاؤنا هم جوهر إلهامنا وأساس نجاحنا، ومن أجلهم نبتكر
+            ونرتقي بكل تفاصيل أعمالنا.
     </section>
 
     <!-- WhatsApp button positioned to scroll with page -->
@@ -227,7 +346,7 @@
     
     <div class="property-grid">
         Property Card 1 -->
-        <!-- <div class="property-card">
+    <!-- <div class="property-card">
             <div class="property-image" style="height: 400px;">
                 <img src="imgs/Front-AlRayan/ALRYAAN - SHOOT 4.jpg" alt="Luxury Apartment" style="height: 100%; object-fit: cover;">
                 <div class="heart-icon">
@@ -237,11 +356,11 @@
             <div class="property-content">
                 <h3 id="property1Name">Al-Rayyan</h3>
                 <p class="price" id="property1Price">Start From 360,000 SAR</p> -->
-                <!-- <div class="location">
+    <!-- <div class="location">
                     <i class="fas fa-map-marker-alt"></i>
                     <span id="property1Location">Jeddah - Al Rayyan District</span>
                 </div> -->
-                <!-- <div class="property-stats">
+    <!-- <div class="property-stats">
                     <div class="stats-left">
                         <div class="stat-item">
                             <i class="fas fa-bed"></i>
@@ -261,7 +380,7 @@
                         </div>
                     </div>
                     <<div class="property-type" id="property1Type">furnished</div> -->
-                <!-- </div>
+    <!-- </div>
                 <a href="Al-Rayyan.html" class="show-details-btn" id="showDetailsBtn1">Show more details</a>
             </div>
         </div>
@@ -305,8 +424,9 @@
     </div>
 </section> -->
 
-<div class="text-center pt-12 pb-8">
-        <h1 id="ourProjectsTitle" class="inline-block bg-gray-800 text-white text-4xl md:text-5xl font-bold py-4 px-20 rounded-full shadow-lg border-2 border-gray-700">
+    <div class="text-center pt-12 pb-8">
+        <h1 id="ourProjectsTitle"
+            class="inline-block bg-gray-800 text-white text-4xl md:text-5xl font-bold py-4 px-20 rounded-full shadow-lg border-2 border-gray-700">
             مشاريعنا
         </h1>
     </div>
@@ -316,42 +436,61 @@
 
             <!-- Project Card 1: Areen 02 -->
             <div class="relative w-full max-w-7xl h-60 md:h-100 rounded-lg overflow-hidden group">
-                <img src="imgs/Alrayan-front.PNG" alt="واجهة مبنى حديث" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <img src="imgs/Alrayan-front.PNG" alt="واجهة مبنى حديث"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                 <div class="absolute inset-0 bg-black bg-opacity-50"></div>
                 <div class="relative h-full flex justify-between items-center p-6 md:p-10">
                     <div>
                         <h2 id="project1Title" class="text-3xl md:text-4xl font-bold">مشروع عرين 02</h2>
                         <p id="project1Location" class="text-lg text-gray-300">حي الريان / جدة</p>
                     </div>
-                    <a href="Al-Rayyan.html" class="flex items-center space-x-3 space-x-reverse text-lg font-semibold transition-transform duration-300 group-hover:-translate-x-2">
+                    <a href="Al-Rayyan.html"
+                        class="flex items-center space-x-3 space-x-reverse text-lg font-semibold transition-transform duration-300 group-hover:-translate-x-2">
                         <span id="project1Details">للتفاصيل</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+                        </svg>
                     </a>
                 </div>
             </div>
 
             <!-- Project Card 2: White Lion Residence -->
             <div class="relative w-full max-w-7xl h-60 md:h-100 rounded-lg overflow-hidden group">
-                <img src="imgs/alsafa-front.jpg" alt="غرفة طعام فاخرة" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <img src="imgs/alsafa-front.jpg" alt="غرفة طعام فاخرة"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                 <div class="absolute inset-0 bg-black bg-opacity-50"></div>
                 <div class="relative h-full flex justify-between items-center p-6 md:p-10">
                     <div>
                         <h2 id="project2Title" class="text-3xl md:text-4xl font-bold">مشروع وايت ليون ريزدنس</h2>
                         <p id="project2Location" class="text-lg text-gray-300">حي الصفا / جدة</p>
                     </div>
-                    <a href="Al-Safa.html" class="flex items-center space-x-3 space-x-reverse text-lg font-semibold transition-transform duration-300 group-hover:-translate-x-2">
+                    <a href="Al-Safa.html"
+                        class="flex items-center space-x-3 space-x-reverse text-lg font-semibold transition-transform duration-300 group-hover:-translate-x-2">
                         <span id="project2Details">للتفاصيل</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+                        </svg>
                     </a>
                 </div>
             </div>
-            
+
             <!-- View All Projects Link -->
             <div class="pt-8 pb-4">
                 <a href="projects.html" class="flex items-center space-x-4 space-x-reverse group">
-                    <span id="viewAllProjectsLink" class="text-xl font-semibold text-gray-300 group-hover:text-white transition-colors">لعرض جميع المشاريع</span>
-                    <div class="flex items-center justify-center h-12 w-12 bg-amber-700 rounded-full transition-transform duration-300 group-hover:scale-110">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" /></svg>
+                    <span id="viewAllProjectsLink"
+                        class="text-xl font-semibold text-gray-300 group-hover:text-white transition-colors">لعرض جميع
+                        المشاريع</span>
+                    <div class="flex items-center justify-center h-12 w-12 rounded-full transition-transform duration-300 group-hover:scale-110"
+                        style="background-color: #77543b;">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+                        </svg>
                     </div>
                 </a>
             </div>
@@ -359,12 +498,13 @@
     </div>
 
     <!-- Services Section -->
-        <!-- Services Section -->
+    <!-- Services Section -->
     <div class="py-16 w-full">
         <div class="container mx-auto px-4">
             <!-- Services Title -->
             <div class="text-center mb-12">
-                <h2 class="inline-block bg-gray-800 text-white text-4xl md:text-5xl font-bold py-4 px-20 rounded-full shadow-lg">
+                <h2 id="servicesTitle"
+                    class="inline-block bg-gray-800 text-white text-4xl md:text-5xl font-bold py-4 px-20 rounded-full shadow-lg">
                     خدماتنا
                 </h2>
             </div>
@@ -372,31 +512,41 @@
             <!-- Services Grid -->
             <div class="flex items-center justify-center gap-4 md:gap-8 flex-wrap">
                 <!-- Left Arrow -->
-                <button id="prevBtn" class="p-3 rounded-full border border-gray-600 hover:bg-gray-700 transition-colors">
-                    <svg xmlns="" class="h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l-7 7 7 7" /></svg>
+                <button id="prevBtn"
+                    class="p-3 rounded-full border border-gray-600 hover:bg-gray-700 transition-colors hidden md:block">
+                    <svg xmlns="" class="h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l-7 7 7 7" />
+                    </svg>
                 </button>
 
                 <!-- Service Cards Container -->
-                <div class="flex items-center justify-center gap-4 md:gap-8 w-full md:w-auto flex-wrap">
+                <div id="card-container"
+                    class="flex items-center justify-center gap-4 md:gap-8 w-full md:w-auto flex-wrap">
                     <!-- Property Management Card (Left) -->
-                    <div id="card-left" class="service-card relative w-64 h-80 rounded-2xl overflow-hidden group cursor-pointer transform hover:scale-105 transition-transform duration-300">
-                        <img id="img-left" src="imgs/ادارة_ الممتلكات.jpeg" alt="إدارة الممتلكات" class="w-full h-full object-cover">
+                    <div id="card-left"
+                        class="service-card relative w-64 h-80 rounded-2xl overflow-hidden group cursor-pointer transform hover:scale-105 transition-transform duration-300 hidden md:block">
+                        <img id="img-left" src="imgs/ادارة_ الممتلكات.jpeg" alt="إدارة الممتلكات"
+                            class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
                             <h3 id="title-left" class="text-3xl font-extrabold text-center px-2 text-white"></h3>
                         </div>
                     </div>
 
                     <!-- Real Estate Brokerage Card (Center) -->
-                    <div id="card-center" class="service-card relative w-80 h-96 rounded-2xl overflow-hidden group cursor-pointer transform md:scale-110 hover:scale-115 transition-transform duration-300 z-10">
-                        <img id="img-center" src="imgs/وسائط.png" alt="الوساطة العقارية" class="w-full h-full object-cover">
+                    <div id="card-center"
+                        class="service-card relative w-[90vw] md:w-80 h-96 rounded-2xl overflow-hidden group cursor-pointer transform md:scale-110 hover:scale-105 md:hover:scale-115 transition-transform duration-300 z-10">
+                        <img id="img-center" src="imgs/وسائط.png" alt="الوساطة العقارية"
+                            class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
                             <h3 id="title-center" class="text-5xl font-extrabold text-center px-2 text-white"></h3>
                         </div>
                     </div>
 
                     <!-- Real Estate Consulting Card (Right) -->
-                    <div id="card-right" class="service-card relative w-64 h-80 rounded-2xl overflow-hidden group cursor-pointer transform hover:scale-105 transition-transform duration-300">
-                        <img id="img-right" src="imgs/استشارات.png" alt="الإستشارات العقارية" class="w-full h-full object-cover">
+                    <div id="card-right"
+                        class="service-card relative w-64 h-80 rounded-2xl overflow-hidden group cursor-pointer transform hover:scale-105 transition-transform duration-300 hidden md:block">
+                        <img id="img-right" src="imgs/استشارات.png" alt="الإستشارات العقارية"
+                            class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
                             <h3 id="title-right" class="text-3xl font-extrabold text-center px-2 text-white"></h3>
                         </div>
@@ -404,8 +554,12 @@
                 </div>
 
                 <!-- Right Arrow -->
-                <button id="nextBtn" class="p-3 rounded-full border border-gray-600 hover:bg-gray-700 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l7-7-7-7" /></svg>
+                <button id="nextBtn"
+                    class="p-3 rounded-full border border-gray-600 hover:bg-gray-700 transition-colors hidden md:block">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-400" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l7-7-7-7" />
+                    </svg>
                 </button>
             </div>
 
@@ -419,7 +573,8 @@
 
     <!-- Contact Section -->
     <div class="text-center py-16">
-        <a href="#" class="inline-flex items-center gap-4 bg-[#6b584d] text-white text-4xl font-bold py-4 px-16 rounded-full shadow-lg transition-transform duration-300 hover:scale-105">
+        <a href="#" id="contactButton"
+            class="inline-flex items-center gap-4 bg-[#6b584d] text-white text-4xl font-bold py-4 px-16 rounded-full shadow-lg transition-transform duration-300 hover:scale-105">
             <span id="contactButtonText">تواصل معنا</span>
             <!-- Make sure 'logo2.png' is in the same folder as this HTML file. -->
             <!-- The 'logo-white' class will make the black logo appear white. -->
@@ -451,929 +606,934 @@
         </div>
     </section>-->
 
-        
+
     <!-- <div class="icons">  -->
-        <!----<a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+    <!----<a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
         <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
         <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>--->
-        <!-- <a href="https://www.instagram.com/arren_alasad/"><i class="fab fa-instagram"></i></a>
+    <!-- <a href="https://www.instagram.com/arren_alasad/"><i class="fab fa-instagram"></i></a>
         <a href="https://www.tiktok.com/@areen_alasad?_t=ZS-8yeUsdXxn5s&_r=1"><i class="fab fa-tiktok"></i></a> -->
     <!-- </div>
     </section> -->
 
     <footer class="bg-zinc-50 text-zinc-700 py-12">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
 
-            <!-- Important Links Column -->
-            <div class="w-full">
-                <h3 class="text-lg font-semibold" id="importantLinksTitle">روابط هامة</h3>
-                <div class="w-80 h-1 my-4" style="background-color: #77543b;"></div>
-                <ul class="space-y-3">
-                    <li><a href="#" class="hover:text-amber-600 transition-colors" id="privacyLink">سياسة الخصوصية</a></li>
-                    <li><a href="#" class="hover:text-amber-600 transition-colors" id="termsLink">الشروط والأحكام</a></li>
-                    <li><a href="index.html" class="hover:text-amber-600 transition-colors" id="homeLink">الرئيسية</a></li>
-                    <li><a href="projects.html" class="hover:text-amber-600 transition-colors" id="previousProjectsLink">المشاريع السابقة</a></li>
-                    <li><a href="#" class="hover:text-amber-600 transition-colors" id="careersLink">التوظيف</a></li>
-                </ul>
-            </div>
+                <!-- Important Links Column -->
+                <div class="w-full">
+                    <h3 class="text-lg font-semibold" id="importantLinksTitle">روابط هامة</h3>
+                    <div class="w-80 h-1 my-4" style="background-color: #77543b;"></div>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-amber-600 transition-colors" id="privacyLink">سياسة
+                                الخصوصية</a></li>
+                        <li><a href="#" class="hover:text-amber-600 transition-colors" id="termsLink">الشروط
+                                والأحكام</a></li>
+                        <li><a href="index.html" class="hover:text-amber-600 transition-colors"
+                                id="homeLink">الرئيسية</a></li>
+                        <li><a href="projects.html" class="hover:text-amber-600 transition-colors"
+                                id="previousProjectsLink">المشاريع السابقة</a></li>
+                        <li><a href="#" class="hover:text-amber-600 transition-colors" id="careersLink">التوظيف</a></li>
+                    </ul>
+                </div>
 
-            <!-- Contact Us Column -->
-            <div class="w-full">
-                <h3 class="text-lg font-semibold" id="contactUsTitle">اتصل بنا</h3>
-                <div class="w-80 h-1 my-4" style="background-color: #77543b;"></div>
-                <div class="space-y-4">
-                    <div class="flex items-center space-x-3 space-x-reverse">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-zinc-500"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                        <a href="mailto:ash@arren.sa" class="hover:text-amber-600 transition-colors" dir="ltr">ash@arren.sa</a>
+                <!-- Contact Us Column -->
+                <div class="w-full">
+                    <h3 class="text-lg font-semibold" id="contactUsTitle">اتصل بنا</h3>
+                    <div class="w-80 h-1 my-4" style="background-color: #77543b;"></div>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3 space-x-reverse">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-6 h-6 text-zinc-500">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <a href="mailto:ash@arren.sa" class="hover:text-amber-600 transition-colors"
+                                dir="ltr">ash@arren.sa</a>
+                        </div>
+                        <div class="flex items-center space-x-3 space-x-reverse">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-6 h-6 text-zinc-500">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            <a href="tel:+966550901995" class="hover:text-amber-600 transition-colors" dir="ltr">+966 55
+                                090 1995</a>
+                        </div>
                     </div>
-                    <div class="flex items-center space-x-3 space-x-reverse">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-zinc-500"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                        <a href="tel:+966550901995" class="hover:text-amber-600 transition-colors" dir="ltr">+966 55 090 1995</a>
+
+
+                </div>
+
+                <!-- Follow Us Column -->
+                <div class="w-full">
+                    <h3 class="text-lg font-semibold" id="followUsTitle">تابعنا</h3>
+                    <div class="w-80 h-1 my-7" style="background-color: #77543b;"></div>
+                    <div class="flex items-center space-x-4 space-x-reverse">
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/arren_alasad/"
+                            class="w-10 h-10 rounded-full border border-zinc-400 flex items-center justify-center text-zinc-600 hover:bg-amber-600 hover:text-white hover:border-amber-600 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <!-- TikTok -->
+                        <a href="https://www.tiktok.com/@areen_alasad?_t=ZS-8yeUsdXxn5s&_r=1"
+                            class="w-10 h-10 rounded-full border border-zinc-400 flex items-center justify-center text-zinc-600 hover:bg-amber-600 hover:text-white hover:border-amber-600 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-tiktok" viewBox="0 0 16 16" stroke="currentColor">
+                                <path
+                                    d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
-                
-                
             </div>
-            
-            <!-- Follow Us Column -->
-            <div class="w-full">
-                <h3 class="text-lg font-semibold" id="followUsTitle">تابعنا</h3>
-                <div class="w-80 h-1 my-7" style="background-color: #77543b;"></div>
-                <div class="flex items-center space-x-4 space-x-reverse">
-                    <!-- Instagram -->
-                    <a href="https://www.instagram.com/arren_alasad/" class="w-10 h-10 rounded-full border border-zinc-400 flex items-center justify-center text-zinc-600 hover:bg-amber-600 hover:text-white hover:border-amber-600 transition-all">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
-                    </a>
-                    <!-- TikTok -->
-                    <a href="https://www.tiktok.com/@areen_alasad?_t=ZS-8yeUsdXxn5s&_r=1" class="w-10 h-10 rounded-full border border-zinc-400 flex items-center justify-center text-zinc-600 hover:bg-amber-600 hover:text-white hover:border-amber-600 transition-all">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16" stroke="currentColor">
-                            <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
-                        </svg>
-                    </a>
-                </div>
+        </div>
+    </footer>
+
+    <div class="py-6">
+        <div class="container mx-auto px-4 text-center">
+            <div class="partner-logos">
+                <img src="imgs/FAL&REGA.png" alt="FAL and REGA - Real Estate General Authority Logos"
+                    class="partner-logo-combined">
             </div>
+            <p class="font-semibold text-zinc-700 mt-4" id="falLicenseTitle">رخصة فال</p>
+            <p class="text-zinc-600" id="licenseNumber">رقم الرخصة: 1200025160</p>
         </div>
     </div>
-</footer>
-
-<div class="space-y-2">
-                    <div class="partner-logos">
-            <img src="imgs/Spon.png" alt="FAL and REGA - Real Estate General Authority Logos" class="partner-logo-combined">
-        </div>
-                    <p class="font-semibold" id="falLicenseTitle">رخصة فال</p>
-                    <p class="text-zinc-600" id="licenseNumber">رقم الرخصة: 1200025160</p>
-                </div>
 
     <footer>
-      <div class="footer-content">
-        <span id="copyrightText">Copyright © 2025 All Rights Reserved - LION'S DEN REAL ESTATE</span>
-      </div>
+        <div class="footer-content">
+            <span id="copyrightText">Copyright © 2025 All Rights Reserved - LION'S DEN REAL ESTATE</span>
+        </div>
     </footer>
 
 
-<!-- Privacy Policy Modal -->
-<div id="privacyModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 hidden" style="z-index: 1000;">
-    <!-- Modal Content -->
-    <div id="modalContent" class="bg-white rounded-lg shadow-xl w-full max-w-3xl max-h-[90vh] flex flex-col">
-        <!-- Modal Header -->
-        <div class="flex justify-between items-center p-5 border-b">
-            <h2 id="modalTitle" class="text-2xl font-bold text-gray-800">Privacy Policy</h2>
-            <button id="closeModalBtn" class="text-gray-500 hover:text-gray-800 text-3xl font-bold">&times;</button>
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 hidden"
+        style="z-index: 1000;">
+        <!-- Modal Content -->
+        <div id="modalContent" class="bg-white rounded-lg shadow-xl w-full max-w-3xl max-h-[90vh] flex flex-col">
+            <!-- Modal Header -->
+            <div class="flex justify-between items-center p-5 border-b">
+                <h2 id="modalTitle" class="text-2xl font-bold text-gray-800">Privacy Policy</h2>
+                <button id="closeModalBtn" class="text-gray-500 hover:text-gray-800 text-3xl font-bold">&times;</button>
+            </div>
+            <!-- Modal Body (with "cards") -->
+            <div class="p-6 space-y-4 overflow-y-auto" style="font-weight: 500 !important;">
+                <!-- Card 1: Introduction -->
+                <div class="modal-card">
+                    <h3 id="modalIntroTitle" class="modal-card-title">Introduction</h3>
+                    <p id="modalIntroText">At White Lion Den Real Estate, we value your privacy. By using our website,
+                        you agree to the collection and use of your information as outlined below.</p>
+                </div>
+                <!-- Card 2: Information We Collect -->
+                <div class="modal-card">
+                    <h3 id="modalCollectTitle" class="modal-card-title">Information We Collect</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li id="modalCollectLi1">Personal information you provide when registering or contacting us,
+                            such as name, email, phone number, and address.</li>
+                        <li id="modalCollectLi2">Information about your use of the website, like pages visited and
+                            activities on the site.</li>
+                        <li id="modalCollectLi3">Additional data needed to provide our services better or verify your
+                            identity when necessary.</li>
+                    </ul>
+                </div>
+                <!-- Card 3: How We Use Your Information -->
+                <div class="modal-card">
+                    <h3 id="modalUseTitle" class="modal-card-title">How We Use Your Information</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li id="modalUseLi1">To deliver our services and improve user experience.</li>
+                        <li id="modalUseLi2">To support customers and resolve issues.</li>
+                        <li id="modalUseLi3">To send updates and promotional offers (you can opt out anytime).</li>
+                        <li id="modalUseLi4">To comply with laws and protect our rights and the rights of others.</li>
+                    </ul>
+                </div>
+                <!-- Card 4: Sharing Information -->
+                <div class="modal-card">
+                    <h3 id="modalShareTitle" class="modal-card-title">Sharing Information</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li id="modalShareLi1">We may share your information with legal authorities or partners when
+                            necessary.</li>
+                        <li id="modalShareLi2">We are not responsible for information shared when using external links;
+                            check their privacy policies.</li>
+                    </ul>
+                </div>
+                <!-- Card 5: Protecting Your Information -->
+                <div class="modal-card">
+                    <h3 id="modalProtectTitle" class="modal-card-title">Protecting Your Information</h3>
+                    <p id="modalProtectText">We use advanced security measures to protect your information from
+                        unauthorized access or use.</p>
+                </div>
+                <!-- Card 6: Cookies -->
+                <div class="modal-card">
+                    <h3 id="modalCookiesTitle" class="modal-card-title">Cookies</h3>
+                    <p id="modalCookiesText">We use cookies to improve your experience on the website. You can disable
+                        them in your browser without affecting site usage.</p>
+                </div>
+            </div>
         </div>
-        <!-- Modal Body (with "cards") -->
-        <div class="p-6 space-y-4 overflow-y-auto" style="font-weight: 500 !important;">
-            <!-- Card 1: Introduction -->
-            <div class="modal-card">
-                <h3 id="modalIntroTitle" class="modal-card-title">Introduction</h3>
-                <p id="modalIntroText">At White Lion Den Real Estate, we value your privacy. By using our website, you agree to the collection and use of your information as outlined below.</p>
+    </div>
+
+    <!-- Terms and Conditions Modal -->
+    <div id="termsModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 hidden"
+        style="z-index: 1000;">
+        <!-- Modal Content -->
+        <div id="termsModalContent" class="bg-white rounded-lg shadow-xl w-full max-w-3xl max-h-[90vh] flex flex-col">
+            <!-- Modal Header -->
+            <div class="flex justify-between items-center p-5 border-b">
+                <h2 id="termsModalTitle" class="text-2xl font-bold text-gray-800">Terms & Conditions</h2>
+                <button id="closeTermsModalBtn"
+                    class="text-gray-500 hover:text-gray-800 text-3xl font-bold">&times;</button>
             </div>
-            <!-- Card 2: Information We Collect -->
-            <div class="modal-card">
-                <h3 id="modalCollectTitle" class="modal-card-title">Information We Collect</h3>
-                <ul class="list-disc list-inside space-y-1">
-                    <li id="modalCollectLi1">Personal information you provide when registering or contacting us, such as name, email, phone number, and address.</li>
-                    <li id="modalCollectLi2">Information about your use of the website, like pages visited and activities on the site.</li>
-                    <li id="modalCollectLi3">Additional data needed to provide our services better or verify your identity when necessary.</li>
-                </ul>
-            </div>
-            <!-- Card 3: How We Use Your Information -->
-            <div class="modal-card">
-                <h3 id="modalUseTitle" class="modal-card-title">How We Use Your Information</h3>
-                <ul class="list-disc list-inside space-y-1">
-                    <li id="modalUseLi1">To deliver our services and improve user experience.</li>
-                    <li id="modalUseLi2">To support customers and resolve issues.</li>
-                    <li id="modalUseLi3">To send updates and promotional offers (you can opt out anytime).</li>
-                    <li id="modalUseLi4">To comply with laws and protect our rights and the rights of others.</li>
-                </ul>
-            </div>
-            <!-- Card 4: Sharing Information -->
-            <div class="modal-card">
-                <h3 id="modalShareTitle" class="modal-card-title">Sharing Information</h3>
-                <ul class="list-disc list-inside space-y-1">
-                    <li id="modalShareLi1">We may share your information with legal authorities or partners when necessary.</li>
-                    <li id="modalShareLi2">We are not responsible for information shared when using external links; check their privacy policies.</li>
-                </ul>
-            </div>
-            <!-- Card 5: Protecting Your Information -->
-            <div class="modal-card">
-                <h3 id="modalProtectTitle" class="modal-card-title">Protecting Your Information</h3>
-                <p id="modalProtectText">We use advanced security measures to protect your information from unauthorized access or use.</p>
-            </div>
-            <!-- Card 6: Cookies -->
-            <div class="modal-card">
-                <h3 id="modalCookiesTitle" class="modal-card-title">Cookies</h3>
-                <p id="modalCookiesText">We use cookies to improve your experience on the website. You can disable them in your browser without affecting site usage.</p>
+            <!-- Modal Body (with "cards") -->
+            <div class="p-6 space-y-4 overflow-y-auto" style="font-weight: 500 !important;">
+
+                <div class="modal-card">
+                    <h3 id="termsModalIntroTitle" class="modal-card-title">Welcome</h3>
+                    <p id="termsModalIntroText">Welcome to Arren Al-Asad Al-Abyad Real Estate Company's website
+                        (www.arren.sa). Please read these Terms carefully before using our website or services.</p>
+                </div>
+                <div class="modal-card">
+                    <h3 id="termsModalAcceptanceTitle" class="modal-card-title">Acceptance</h3>
+                    <p id="termsModalAcceptanceText">By using this website, you agree to these Terms and to all
+                        applicable laws in Saudi Arabia. If you disagree, please do not use the website.</p>
+                </div>
+                <div class="modal-card">
+                    <h3 id="termsModalOwnershipTitle" class="modal-card-title">Ownership</h3>
+                    <p id="termsModalOwnershipText">All website content—texts, images, logos, and data—belongs
+                        exclusively to the Company and is protected by Saudi intellectual property laws. Copying or
+                        republishing is prohibited without written permission.</p>
+                </div>
+                <div class="modal-card">
+                    <h3 id="termsModalUseTitle" class="modal-card-title">Use of the Website</h3>
+                    <p id="termsModalUseText">The website showcases our properties and services: sales, brokerage,
+                        property management, development, leasing, and design. Users must use the site legally and
+                        appropriately. Misuse or disruption of the website or its systems is prohibited.</p>
+                </div>
+                <div class="modal-card">
+                    <h3 id="termsModalDataTitle" class="modal-card-title">Personal Data</h3>
+                    <p id="termsModalDataText">We collect user information (name, phone, email) through forms. Data is
+                        used solely for communication and service purposes. The Company protects users' privacy and data
+                        security.</p>
+                </div>
+                <div class="modal-card">
+                    <h3 id="termsModalBookingTitle" class="modal-card-title">Booking & Payments</h3>
+                    <p id="termsModalBookingText">Direct bookings or payments are not currently available. A secure
+                        online system will be developed in the future. Future transactions will follow additional terms.
+                    </p>
+                </div>
+                <div class="modal-card">
+                    <h3 id="termsModalLinksTitle" class="modal-card-title">External Links</h3>
+                    <p id="termsModalLinksText">The site may link to external websites. The Company is not responsible
+                        for their content or policies.</p>
+                </div>
+                <div class="modal-card">
+                    <h3 id="termsModalLiabilityTitle" class="modal-card-title">Liability</h3>
+                    <p id="termsModalLiabilityText">We do not guarantee complete accuracy of all information. The
+                        Company is not liable for damages from using the site or relying on its content.</p>
+                </div>
+                <div class="modal-card">
+                    <h3 id="termsModalChangesTitle" class="modal-card-title">Changes to Terms</h3>
+                    <p id="termsModalChangesText">The Company can update these Terms anytime. Continued use of the site
+                        constitutes acceptance of new Terms.</p>
+                </div>
+                <div class="modal-card">
+                    <h3 id="termsModalLawTitle" class="modal-card-title">Governing Law</h3>
+                    <p id="termsModalLawText">These Terms follow Saudi laws, with Jeddah courts as the official
+                        jurisdiction for disputes.</p>
+                </div>
+
             </div>
         </div>
     </div>
-</div>
-
-<!-- Terms and Conditions Modal -->
-<div id="termsModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 hidden" style="z-index: 1000;">
-    <!-- Modal Content -->
-    <div id="termsModalContent" class="bg-white rounded-lg shadow-xl w-full max-w-3xl max-h-[90vh] flex flex-col">
-        <!-- Modal Header -->
-        <div class="flex justify-between items-center p-5 border-b">
-            <h2 id="termsModalTitle" class="text-2xl font-bold text-gray-800">Terms & Conditions</h2>
-            <button id="closeTermsModalBtn" class="text-gray-500 hover:text-gray-800 text-3xl font-bold">&times;</button>
-        </div>
-        <!-- Modal Body (with "cards") -->
-        <div class="p-6 space-y-4 overflow-y-auto" style="font-weight: 500 !important;">
-            
-            <div class="modal-card">
-                <h3 id="termsModalIntroTitle" class="modal-card-title">Welcome</h3>
-                <p id="termsModalIntroText">Welcome to Arren Al-Asad Al-Abyad Real Estate Company's website (www.arren.sa). Please read these Terms carefully before using our website or services.</p>
-            </div>
-            <div class="modal-card">
-                <h3 id="termsModalAcceptanceTitle" class="modal-card-title">Acceptance</h3>
-                <p id="termsModalAcceptanceText">By using this website, you agree to these Terms and to all applicable laws in Saudi Arabia. If you disagree, please do not use the website.</p>
-            </div>
-            <div class="modal-card">
-                <h3 id="termsModalOwnershipTitle" class="modal-card-title">Ownership</h3>
-                <p id="termsModalOwnershipText">All website content—texts, images, logos, and data—belongs exclusively to the Company and is protected by Saudi intellectual property laws. Copying or republishing is prohibited without written permission.</p>
-            </div>
-            <div class="modal-card">
-                <h3 id="termsModalUseTitle" class="modal-card-title">Use of the Website</h3>
-                <p id="termsModalUseText">The website showcases our properties and services: sales, brokerage, property management, development, leasing, and design. Users must use the site legally and appropriately. Misuse or disruption of the website or its systems is prohibited.</p>
-            </div>
-            <div class="modal-card">
-                <h3 id="termsModalDataTitle" class="modal-card-title">Personal Data</h3>
-                <p id="termsModalDataText">We collect user information (name, phone, email) through forms. Data is used solely for communication and service purposes. The Company protects users' privacy and data security.</p>
-            </div>
-            <div class="modal-card">
-                <h3 id="termsModalBookingTitle" class="modal-card-title">Booking & Payments</h3>
-                <p id="termsModalBookingText">Direct bookings or payments are not currently available. A secure online system will be developed in the future. Future transactions will follow additional terms.</p>
-            </div>
-            <div class="modal-card">
-                <h3 id="termsModalLinksTitle" class="modal-card-title">External Links</h3>
-                <p id="termsModalLinksText">The site may link to external websites. The Company is not responsible for their content or policies.</p>
-            </div>
-            <div class="modal-card">
-                <h3 id="termsModalLiabilityTitle" class="modal-card-title">Liability</h3>
-                <p id="termsModalLiabilityText">We do not guarantee complete accuracy of all information. The Company is not liable for damages from using the site or relying on its content.</p>
-            </div>
-            <div class="modal-card">
-                <h3 id="termsModalChangesTitle" class="modal-card-title">Changes to Terms</h3>
-                <p id="termsModalChangesText">The Company can update these Terms anytime. Continued use of the site constitutes acceptance of new Terms.</p>
-            </div>
-            <div class="modal-card">
-                <h3 id="termsModalLawTitle" class="modal-card-title">Governing Law</h3>
-                <p id="termsModalLawText">These Terms follow Saudi laws, with Jeddah courts as the official jurisdiction for disputes.</p>
-            </div>
-
-        </div>
-    </div>
-</div>
 
 
-<script>
-// Apply dark theme immediately to prevent flash
-(function() {
-    const savedTheme = localStorage.getItem('selectedTheme') || 'dark';
-    if (savedTheme === 'dark') {
-        document.body.classList.add('dark-theme');
-    }
-})();
+    <script>
+        // Apply dark theme immediately to prevent flash
+        (function () {
+            const savedTheme = localStorage.getItem('selectedTheme') || 'dark';
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-theme');
+            }
+        })();
 
-var navLinks = document.getElementById("navLinks");
-function showMenu() {
-    navLinks.classList.add('open');
-    document.body.classList.add('menu-open');
-}
-function hideMenu() {
-    navLinks.classList.remove('open');
-    document.body.classList.remove('menu-open');
-}
-
-// Dynamic logo resize on scroll
-window.addEventListener('scroll', function() {
-    const logo = document.querySelector('.logo-link');
-    if (window.scrollY > 100) {
-        logo.classList.add('scrolled');
-    } else {
-        logo.classList.remove('scrolled');
-    }
-});
-
-// Translation object containing all text content
-const translations = {
-    en: {
-        // Navigation
-        home: "Home",
-        about: "About",
-        projects: "Projects",
-        contact: "Contact",
-        
-        // Hero section
-        heroTitle: "LION'S DEN REAL ESTATE",
-        heroSubtitle: "Comfort .. security .. and a bright future.",
-        heroButton: "Visit Us To Know More",
-        
-        // Featured Properties
-        featuredTitle: "Featured Properties",
-        featuredSubtitle: "Discover our premium real estate offerings with modern amenities and prime locations",
-        showMoreDetails: "Show more details",
-        
-        // Services section
-        servicesTitle: "Our Services",
-        servicesSubtitle: "At Lion's Den Real Estate, we believe that property is not just a building, but the foundation of a secure future and a smart investment. Our mission is to be your most trusted partner on your real estate journey, offering extensive experience and keen insight to achieve your ambitions.",
-        service1Title: "Real Estate Brokerage",
-        service1Desc: "We provide an extensive network and deep expertise to ensure your buying and selling transactions are completed at the best prices and in record time. Our professional team is with you every step of the way.",
-        service2Title: "Property Management",
-        service2Desc: "We manage your assets with efficiency and professionalism—from leasing and maintenance to revenue collection—ensuring your peace of mind and a continuous return on investment.",
-        service3Title: "Real Estate Consulting",
-        service3Desc: "We offer comprehensive feasibility studies and strategic consulting for investors and developers, helping you make precise decisions to maximize the potential of your investment",
-        
-        // CTA section
-        ctaTitle: "Enroll for our projects in Saudi Arabia",
-        ctaButton: "CONTACT US",
-        
-        // Footer
-        footerTitle: "About US",
-        footerDescription: "Welcome to Lion's Den Real Estate, where strength meets strategy in the world of property. Our name is our promise: to be your powerful and protective guide through the complexities of the real estate market. We were founded on a vision to lead with integrity and deliver exceptional results, understanding that a property is more than a transaction—it's a cornerstone for your future. Our expert team is dedicated to fiercely protecting your interests, whether you are buying your dream home or securing a high-value investment. At Lion's Den, we don't just find properties; we secure your legacy.",
-        copyright: "Copyright © 2025 All Rights Reserved - LION'S DEN REAL ESTATE",
-
-        // Property Cards
-        property1Name: "Al-Lair 02 Project",
-        property1Price: "Start From 360,000 SAR",
-        property1Location: "Jeddah - Al Rayyan District",
-        property1Type: "furnished",
-        
-        property2Name: "Al-White Lion Residence Project",
-        property2Price: "$55,000 / Year",
-        property2Location: "Jeddah, Al-Safa district",
-        property2Type: "furnished",
-
-        // Projects Section (New Tailwind Cards)
-        ourProjectsTitle: "Our Projects",
-        project1Title: "Areen 02 Project",
-        project1Location: "Al-Rayyan District / Jeddah",
-        project1Details: "Details",
-        project2Title: "White Lion Residence Project",
-        project2Location: "Al-Safa District / Jeddah",
-        project2Details: "Details",
-        viewAllProjectsLink: "View All Projects",
-
-        // Services Section (New Tailwind Cards)
-        servicesTitle: "Our Services",
-        service1Title: "Property<br>Management",
-        service2Title: "Real Estate<br>Brokerage",
-        service3Title: "Real Estate<br>Consulting",
-        servicesDescription: "We connect buyers and sellers with the highest standards of credibility, ensuring successful deals that reflect true market value",
-        contactButtonText: "Contact Us",
-
-        // Projects Showcase
-        projectShowcase1Title: "Areen 02 Project",
-        projectShowcase1Location: "In Al-Rayyan / Jeddah",
-        projectShowcase1Details: "Details",
-        projectShowcase2Title: "White Lion Residence Project",
-        projectShowcase2Location: "In Al-Safa / Jeddah", 
-        projectShowcase2Details: "Details",
-        viewAllProjectsText: "View All Projects",
-        servicesButton: "Our Services",
-
-        // Footer links section
-        importantLinksTitle: "Important Links",
-        privacyLink: "Privacy Policy",
-        termsLink: "Terms and Conditions",
-        homeLink: "Home",
-        previousProjectsLink: "Previous Projects",
-        careersLink: "Careers",
-        
-        contactUsTitle: "Contact Us",
-        falLicenseTitle: "FAL License",
-        licenseNumber: "License Number: 1200025160",
-        
-        followUsTitle: "Follow Us",
-
-        // --- Privacy Modal ---
-        modalTranslations: {
-            modalTitle: "Privacy Policy",
-            modalIntroTitle: "Introduction",
-            modalIntroText: "At White Lion Den Real Estate, we value your privacy. By using our website, you agree to the collection and use of your information as outlined below.",
-            modalCollectTitle: "Information We Collect",
-            modalCollectLi1: "Personal information you provide when registering or contacting us, such as name, email, phone number, and address.",
-            modalCollectLi2: "Information about your use of the website, like pages visited and activities on the site.",
-            modalCollectLi3: "Additional data needed to provide our services better or verify your identity when necessary.",
-            modalUseTitle: "How We Use Your Information",
-            modalUseLi1: "To deliver our services and improve user experience.",
-            modalUseLi2: "To support customers and resolve issues.",
-            modalUseLi3: "To send updates and promotional offers (you can opt out anytime).",
-            modalUseLi4: "To comply with laws and protect our rights and the rights of others.",
-            modalShareTitle: "Sharing Information",
-            modalShareLi1: "We may share your information with legal authorities or partners when necessary.",
-            modalShareLi2: "We are not responsible for information shared when using external links; check their privacy policies.",
-            modalProtectTitle: "Protecting Your Information",
-            modalProtectText: "We use advanced security measures to protect your information from unauthorized access or use.",
-            modalCookiesTitle: "Cookies",
-            modalCookiesText: "We use cookies to improve your experience on the website. You can disable them in your browser without affecting site usage."
-        },
-
-        // --- Terms Modal ---
-        termsModalTranslations: {
-            modalTitle: "Terms & Conditions",
-            modalIntroTitle: "Welcome",
-            modalIntroText: "Welcome to Arren Al-Asad Al-Abyad Real Estate Company's website (www.arren.sa). Please read these Terms carefully before using our website or services.",
-            modalAcceptanceTitle: "Acceptance",
-            modalAcceptanceText: "By using this website, you agree to these Terms and to all applicable laws in Saudi Arabia. If you disagree, please do not use the website.",
-            modalOwnershipTitle: "Ownership",
-            modalOwnershipText: "All website content—texts, images, logos, and data—belongs exclusively to the Company and is protected by Saudi intellectual property laws. Copying or republishing is prohibited without written permission.",
-            modalUseTitle: "Use of the Website",
-            modalUseText: "The website showcases our properties and services: sales, brokerage, property management, development, leasing, and design. Users must use the site legally and appropriately. Misuse or disruption of the website or its systems is prohibited.",
-            modalDataTitle: "Personal Data",
-            modalDataText: "We collect user information (name, phone, email) through forms. Data is used solely for communication and service purposes. The Company protects users' privacy and data security.",
-            modalBookingTitle: "Booking & Payments",
-            modalBookingText: "Direct bookings or payments are not currently available. A secure online system will be developed in the future. Future transactions will follow additional terms.",
-            modalLinksTitle: "External Links",
-            modalLinksText: "The site may link to external websites. The Company is not responsible for their content or policies.",
-            modalLiabilityTitle: "Liability",
-            modalLiabilityText: "We do not guarantee complete accuracy of all information. The Company is not liable for damages from using the site or relying on its content.",
-            modalChangesTitle: "Changes to Terms",
-            modalChangesText: "The Company can update these Terms anytime. Continued use of the site constitutes acceptance of new Terms.",
-            modalLawTitle: "Governing Law",
-            modalLawText: "These Terms follow Saudi laws, with Jeddah courts as the official jurisdiction for disputes."
-        },
-    },
-    ar: {
-        // Navigation
-        home: "الرئيسية",
-        about: "من نحن",
-        projects: "المشاريع",
-        contact: "تواصل معنا",
-        
-        // Hero section
-        heroTitle: "عرين الأسد الأبيض العقارية",
-        heroSubtitle: "راحة .. أمان .. لمستقبل مشرق",
-        heroButton: "تعرف علينا أكثر",
-        
-        // Featured Properties
-        featuredTitle: "العقارات المميزة",
-        featuredSubtitle: "اكتشف عروضنا العقارية المتميزة مع وسائل الراحة الحديثة والمواقع المتميزة",
-        showMoreDetails: "عرض المزيد من التفاصيل",
-        
-        // Services section
-        servicesTitle: "خدماتنا",
-        servicesSubtitle: "في عرين الأسد الأبيض العقارية، نؤمن أن العقار ليس مجرد مبنى، بل هو أساس لمستقبل آمن واستثمار ذكي. مهمتنا أن نكون شريكك الأكثر ثقة في رحلتك العقارية، ونقدم لك خبرة واسعة ورؤية دقيقة لتحقيق طموحاتك.",
-        service1Title: "الوساطة العقارية",
-        service1Desc: "نوفر حلول وساطة عقارية راقية تجمع بين الدقة والاحترافية، لنضمن لعملائنا أفضل الصفقات وأعلى عوائد استثمارية.",
-        service2Title: "إدارة الممتلكات",
-        service2Desc: "نقدم إدارة شاملة للممتلكات بأسلوب يعتمد على الجودة والاستدامة لنحافظ على قيمة أصولك وتنميها بعناية واحتراف.",
-        service3Title: "الاستشارات العقارية",
-        service3Desc: "نمنحك خبرة استشارية مبنية على تحليل معمق للسوق ورؤية استراتيجية تساعدك على اتخاذ قرارات استثمارية واثقة وناجحة.",
-        
-        // CTA section
-        ctaTitle: "انضم إلى مشاريعنا في المملكة العربية السعودية",
-        ctaButton: "اتصل بنا",
-        
-        // Footer
-        footerTitle: "من نحن",
-        footerDescription: "نحن شركة عقارية برؤية مستقبلية شاملة نسعى لإعادة تشكيل المشهد السكني في المملكة. نؤمن بأن السكن ليس مجرد بناء بل أسلوب حياة متكامل يجمع بين الراحة والجمال، والاستقرار. نعمل على تطوير مشاريع عمرانية حديثة ومتناسقة تعكس طموح الإنسان وتلهمه للعيش برفاهية وجودة أعلى. عملاؤنا هم جوهر إلهامنا وأساس نجاحنا، ومن أجلهم نبتكر ونرتقي بكل تفاصيل أعمالنا.",
-        copyright: "جميع الحقوق محفوظة لعرين الأسد الأبيض العقارية © 2025",
-
-        // Property Cards
-        property1Name: "مشروع عرين 02",
-        property1Price: "يبدأ من 360,000 ريال سعودي",
-        property1Location: "جدة - حي الريان",
-        property1Type: "مفروش",
-        
-        property2Name: "مشروع وايت ليون ريزيدنس",
-        property2Price: "55,000$ / سنة",
-        property2Location: "جدة، حي الصفا",
-        property2Type: "مؤثث",
-
-        // Projects Section (New Tailwind Cards)
-        ourProjectsTitle: "مشاريعنا",
-        project1Title: "مشروع عرين 02",
-        project1Location: "حي الريان / جدة",
-        project1Details: "للتفاصيل",
-        project2Title: "مشروع وايت ليون ريزدنس",
-        project2Location: "حي الصفا / جدة",
-        project2Details: "للتفاصيل",
-        viewAllProjectsLink: "لعرض جميع المشاريع",
-
-        // Services Section (New Tailwind Cards)
-        servicesTitle: "خدماتنا",
-        service1Title: "إدارة<br>الممتلكات",
-        service2Title: "الوساطة<br>العقارية",
-        service3Title: "الإستشارات<br>العقارية",
-        servicesDescription: "نربط بين المشتري والبائع بأعلى معايير المصداقية، ونضمن لك صفقات ناجحة تعكس قيمة السوق الحقيقية",
-        contactButtonText: "تواصل معنا",
-
-        // Projects Showcase
-        projectShowcase1Title: "مشروع عرين 02",
-        projectShowcase1Location: "في الريان / جدة",
-        projectShowcase1Details: "للتفاصيل",
-        projectShowcase2Title: "مشروع وايت ليون ريز دنس",
-        projectShowcase2Location: "في الصفا / جدة",
-        projectShowcase2Details: "للتفاصيل",
-        viewAllProjectsText: "لعرض جميع المشاريع",
-        servicesButton: "خدماتنا",
-
-        // Footer links section
-        importantLinksTitle: "روابط هامة",
-        privacyLink: "سياسة الخصوصية",
-        termsLink: "الشروط والأحكام",
-        homeLink: "الرئيسية",
-        previousProjectsLink: "المشاريع السابقة",
-        careersLink: "التوظيف",
-        
-        contactUsTitle: "اتصل بنا",
-        falLicenseTitle: "رخصة فال",
-        licenseNumber: "رقم الرخصة: 1200025160",
-        
-        followUsTitle: "تابعنا",
-
-        // --- Privacy Modal ---
-        modalTranslations: {
-            modalTitle: "سياسة الخصوصية",
-            modalIntroTitle: "مقدمة",
-            modalIntroText: "في عرين الأسد الأبيض العقارية، نقدر خصوصيتك. باستخدامك لموقعنا، فإنك توافق على جمع واستخدام معلوماتك كما هو موضح أدناه.",
-            modalCollectTitle: "المعلومات التي نجمعها",
-            modalCollectLi1: "المعلومات الشخصية التي تقدمها عند التسجيل أو الاتصال بنا، مثل الاسم والبريد الإلكتروني ورقم الهاتف والعنوان.",
-            modalCollectLi2: "معلومات حول استخدامك للموقع، مثل الصفحات التي تمت زيارتها والأنشطة على الموقع.",
-            modalCollectLi3: "بيانات إضافية مطلوبة لتقديم خدماتنا بشكل أفضل أو للتحقق من هويتك عند الضرورة.",
-            modalUseTitle: "كيف نستخدم معلوماتك",
-            modalUseLi1: "لتقديم خدماتنا وتحسين تجربة المستخدم.",
-            modalUseLi2: "لدعم العملاء وحل المشكلات.",
-            modalUseLi3: "لإرسال تحديثات وعروض ترويجية (يمكنك إلغاء الاشتراك في أي وقت).",
-            modalUseLi4: "للامتثال للقوانين وحماية حقوقنا وحقوق الآخرين.",
-            modalShareTitle: "مشاركة المعلومات",
-            modalShareLi1: "قد نشارك معلوماتك مع السلطات القانونية أو الشركاء عند الضرورة.",
-            modalShareLi2: "لسنا مسؤولين عن المعلومات التي تتم مشاركتها عند استخدام روابط خارجية؛ يرجى مراجعة سياسات الخصوصية الخاصة بهم.",
-            modalProtectTitle: "حماية معلوماتك",
-            modalProtectText: "نستخدم إجراءات أمنية متقدمة لحماية معلوماتك من الوصول أو الاستخدام غير المصرح به.",
-            modalCookiesTitle: "ملفات تعريف الارتباط (الكوكيز)",
-            modalCookiesText: "نستخدم ملفات تعريف الارتباط لتحسين تجربتك على الموقع. يمكنك تعطيلها في متصفحك دون التأثير على استخدام الموقع."
-        },
-
-        // --- Terms Modal ---
-        termsModalTranslations: {
-            modalTitle: "الشروط والأحكام",
-            modalIntroTitle: "مرحبًا بكم",
-            modalIntroText: "مرحبًا بكم في الموقع الإلكتروني لشركة عرين الأسد الأبيض العقارية (www.arren.sa). يرجى قراءة هذه الشروط بعناية قبل استخدام موقعنا أو خدماتنا.",
-            modalAcceptanceTitle: "القبول",
-            modalAcceptanceText: "باستخدام هذا الموقع، فإنك توافق على هذه الشروط وعلى جميع القوانين المعمول بها في المملكة العربية السعودية. إذا كنت لا توافق، يرجى عدم استخدام الموقع.",
-            modalOwnershipTitle: "الملكية",
-            modalOwnershipText: "جميع محتويات الموقع - النصوص، الصور، الشعارات، والبيانات - مملوكة حصريًا للشركة ومحمية بموجب قوانين الملكية الفكرية السعودية. يُحظر النسخ أو إعادة النشر دون إذن كتابي.",
-            modalUseTitle: "استخدام الموقع",
-            modalUseText: "يعرض الموقع عقاراتنا وخدماتنا: البيع، الوساطة، إدارة الممتلكات، التطوير، التأجير، والتصميم. يجب على المستخدمين استخدام الموقع بشكل قانوني ومناسب. يُحظر إساءة استخدام أو تعطيل الموقع أو أنظمته.",
-            modalDataTitle: "البيانات الشخصية",
-            modalDataText: "نقوم بجمع معلومات المستخدم (الاسم، الهاتف، البريد الإلكتروني) من خلال النماذج. تُستخدم البيانات فقط لأغراض التواصل والخدمة. تحمي الشركة خصوصية المستخدمين وأمن بياناتهم.",
-            modalBookingTitle: "الحجز والمدفوعات",
-            modalBookingText: "الحجوزات المباشرة أو الدفع غير متاحة حاليًا. سيتم تطوير نظام آمن عبر الإنترنت في المستقبل. ستتبع المعاملات المستقبلية شروطًا إضافية.",
-            modalLinksTitle: "الروابط الخارجية",
-            modalLinksText: "قد يحتوي الموقع على روابط لمواقع خارجية. الشركة ليست مسؤولة عن محتواها أو سياساتها.",
-            modalLiabilityTitle: "المسؤولية",
-            modalLiabilityText: "نحن لا نضمن الدقة الكاملة لجميع المعلومات. الشركة ليست مسؤولة عن الأضرار الناتجة عن استخدام الموقع أو الاعتماد على محتواه.",
-            modalChangesTitle: "تغيير الشروط",
-            modalChangesText: "يمكن للشركة تحديث هذه الشروط في أي وقت. الاستمرار في استخدام الموقع يشكل قبولًا للشروط الجديدة.",
-            modalLawTitle: "القانون الحاكم",
-            modalLawText: "تتبع هذه الشروط القوانين السعودية، وتكون محاكم جدة هي جهة الاختصاص الرسمية للنزاعات."
-        },
-    }
-};
-
-let currentLang = 'en';
-
-function setLanguage(lang) {
-    currentLang = lang;
-    const t = translations[lang];
-    const modalT = t.modalTranslations; // Get the privacy modal translations
-    const termsT = t.termsModalTranslations; // Get the terms modal translations
-    
-    console.log('Setting language to:', lang); // Debug log
-    
-    // Update navigation links using IDs
-    document.getElementById('nav-home').textContent = t.home;
-    document.getElementById('nav-about').textContent = t.about;
-    document.getElementById('nav-projects').textContent = t.projects;
-    document.getElementById('nav-contact').textContent = t.contact;
-    
-    // Update hero section
-    const heroSubtitle = document.getElementById('heroSubtitle');
-    if (heroSubtitle) heroSubtitle.textContent = t.heroSubtitle;
-    
-    const heroBtn = document.querySelector('.text-box .hero-btn');
-    if (heroBtn) heroBtn.textContent = t.heroButton;
-    
-    // Update Projects Section (New Tailwind Cards)
-    const ourProjectsTitle = document.getElementById('ourProjectsTitle');
-    if (ourProjectsTitle) ourProjectsTitle.textContent = t.ourProjectsTitle;
-    
-    const project1Title = document.getElementById('project1Title');
-    if (project1Title) project1Title.textContent = t.project1Title;
-    
-    const project1Location = document.getElementById('project1Location');
-    if (project1Location) project1Location.textContent = t.project1Location;
-    
-    const project1Details = document.getElementById('project1Details');
-    if (project1Details) project1Details.textContent = t.project1Details;
-    
-    const project2Title = document.getElementById('project2Title');
-    if (project2Title) project2Title.textContent = t.project2Title;
-    
-    const project2Location = document.getElementById('project2Location');
-    if (project2Location) project2Location.textContent = t.project2Location;
-    
-    const project2Details = document.getElementById('project2Details');
-    if (project2Details) project2Details.textContent = t.project2Details;
-    
-    const viewAllProjectsLink = document.getElementById('viewAllProjectsLink');
-    if (viewAllProjectsLink) viewAllProjectsLink.textContent = t.viewAllProjectsLink;
-    
-    // Update Services Section (New Tailwind Cards)
-    const servicesTitle = document.getElementById('servicesTitle');
-    if (servicesTitle) servicesTitle.innerHTML = t.servicesTitle;
-    
-    // NOTE: The service card titles (title-left, title-center, title-right)
-    // are now updated by the slider, not by the language switcher directly.
-    
-    const servicesDescription = document.getElementById('servicesDescription');
-    if (servicesDescription) servicesDescription.textContent = t.servicesDescription;
-    
-    const contactButtonText = document.getElementById('contactButtonText');
-    if (contactButtonText) contactButtonText.textContent = t.contactButtonText;
-    
-    // Update footer About section
-    console.log('Updating footer title to:', t.footerTitle); // Debug log
-    const footerTitleElement = document.getElementById('footerTitle');
-    const footerDescElement = document.getElementById('footerDescription');
-    
-    if (footerTitleElement) {
-        footerTitleElement.textContent = t.footerTitle;
-        console.log('Footer title updated successfully');
-    } else {
-        console.log('Footer title element not found!');
-        // Try alternative selectors
-        const altFooterTitle = document.querySelector('h4#footerTitle');
-        if (altFooterTitle) {
-            altFooterTitle.textContent = t.footerTitle;
-            console.log('Footer title updated via alternative selector');
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.classList.add('open');
+            document.body.classList.add('menu-open');
         }
-    }
-    
-    if (footerDescElement) {
-        footerDescElement.textContent = t.footerDescription;
-    } else {
-        console.log('Footer description element not found!');
-    }
-    
-    // Update footer links section
-    console.log('Updating footer...'); // Debug log
-    
-    const importantLinksTitle = document.getElementById('importantLinksTitle');
-    if (importantLinksTitle) importantLinksTitle.textContent = t.importantLinksTitle;
-    
-    const privacyLink = document.getElementById('privacyLink');
-    if (privacyLink) privacyLink.textContent = t.privacyLink;
-    
-    const termsLink = document.getElementById('termsLink');
-    if (termsLink) termsLink.textContent = t.termsLink;
-    
-    const homeLink = document.getElementById('homeLink');
-    if (homeLink) homeLink.textContent = t.homeLink;
-    
-    const previousProjectsLink = document.getElementById('previousProjectsLink');
-    if (previousProjectsLink) previousProjectsLink.textContent = t.previousProjectsLink;
-    
-    const careersLink = document.getElementById('careersLink');
-    if (careersLink) careersLink.textContent = t.careersLink;
-    
-    const contactUsTitle = document.getElementById('contactUsTitle');
-    if (contactUsTitle) contactUsTitle.textContent = t.contactUsTitle;
-    
-    const falLicenseTitle = document.getElementById('falLicenseTitle');
-    if (falLicenseTitle) falLicenseTitle.textContent = t.falLicenseTitle;
-    
-    const licenseNumber = document.getElementById('licenseNumber');
-    if (licenseNumber) licenseNumber.textContent = t.licenseNumber;
-    
-    const followUsTitle = document.getElementById('followUsTitle');
-    if (followUsTitle) followUsTitle.textContent = t.followUsTitle;
-    
-    // Update Privacy Modal Content
-    if (modalT) {
-        document.getElementById('modalTitle').textContent = modalT.modalTitle;
-        document.getElementById('modalIntroTitle').textContent = modalT.modalIntroTitle;
-        document.getElementById('modalIntroText').textContent = modalT.modalIntroText;
-        document.getElementById('modalCollectTitle').textContent = modalT.modalCollectTitle;
-        document.getElementById('modalCollectLi1').textContent = modalT.modalCollectLi1;
-        document.getElementById('modalCollectLi2').textContent = modalT.modalCollectLi2;
-        document.getElementById('modalCollectLi3').textContent = modalT.modalCollectLi3;
-        document.getElementById('modalUseTitle').textContent = modalT.modalUseTitle;
-        document.getElementById('modalUseLi1').textContent = modalT.modalUseLi1;
-        document.getElementById('modalUseLi2').textContent = modalT.modalUseLi2;
-        document.getElementById('modalUseLi3').textContent = modalT.modalUseLi3;
-        document.getElementById('modalUseLi4').textContent = modalT.modalUseLi4;
-        document.getElementById('modalShareTitle').textContent = modalT.modalShareTitle;
-        document.getElementById('modalShareLi1').textContent = modalT.modalShareLi1;
-        document.getElementById('modalShareLi2').textContent = modalT.modalShareLi2;
-        document.getElementById('modalProtectTitle').textContent = modalT.modalProtectTitle;
-        document.getElementById('modalProtectText').textContent = modalT.modalProtectText;
-        document.getElementById('modalCookiesTitle').textContent = modalT.modalCookiesTitle;
-        document.getElementById('modalCookiesText').textContent = modalT.modalCookiesText;
-    }
-
-    // Update Terms Modal Content
-    if (termsT) {
-        document.getElementById('termsModalTitle').textContent = termsT.modalTitle;
-        document.getElementById('termsModalIntroTitle').textContent = termsT.modalIntroTitle;
-        document.getElementById('termsModalIntroText').textContent = termsT.modalIntroText;
-        document.getElementById('termsModalAcceptanceTitle').textContent = termsT.modalAcceptanceTitle;
-        document.getElementById('termsModalAcceptanceText').textContent = termsT.modalAcceptanceText;
-        document.getElementById('termsModalOwnershipTitle').textContent = termsT.modalOwnershipTitle;
-        document.getElementById('termsModalOwnershipText').textContent = termsT.modalOwnershipText;
-        document.getElementById('termsModalUseTitle').textContent = termsT.modalUseTitle;
-        document.getElementById('termsModalUseText').textContent = termsT.modalUseText;
-        document.getElementById('termsModalDataTitle').textContent = termsT.modalDataTitle;
-        document.getElementById('termsModalDataText').textContent = termsT.modalDataText;
-        document.getElementById('termsModalBookingTitle').textContent = termsT.modalBookingTitle;
-        document.getElementById('termsModalBookingText').textContent = termsT.modalBookingText;
-        document.getElementById('termsModalLinksTitle').textContent = termsT.modalLinksTitle;
-        document.getElementById('termsModalLinksText').textContent = termsT.modalLinksText;
-        document.getElementById('termsModalLiabilityTitle').textContent = termsT.modalLiabilityTitle;
-        document.getElementById('termsModalLiabilityText').textContent = termsT.modalLiabilityText;
-        document.getElementById('termsModalChangesTitle').textContent = termsT.modalChangesTitle;
-        document.getElementById('termsModalChangesText').textContent = termsT.modalChangesText;
-        document.getElementById('termsModalLawTitle').textContent = termsT.modalLawTitle;
-        document.getElementById('termsModalLawText').textContent = termsT.modalLawText;
-    }
-    
-    // Update copyright
-    const copyrightText = document.getElementById('copyrightText');
-    if (copyrightText) copyrightText.textContent = t.copyright;
-    
-    console.log('Footer updated successfully'); // Debug log
-    
-    // Update page direction and language
-    if (lang === 'ar') {
-        document.body.style.direction = 'rtl';
-        document.body.style.textAlign = 'right';
-        document.documentElement.lang = 'ar';
-        document.getElementById('langToggleBtn').textContent = 'EN';
-        document.getElementById('langToggleBtn2').textContent = 'EN';
-        // Add tooltip or data attribute to indicate current language
-        document.getElementById('langToggleBtn').title = 'Switch to English';
-        document.getElementById('langToggleBtn2').title = 'Switch to English';
-    } else {
-        document.body.style.direction = 'ltr';
-        document.body.style.textAlign = 'left';
-        document.documentElement.lang = 'en';
-        document.getElementById('langToggleBtn').textContent = 'عربي';
-        document.getElementById('langToggleBtn2').textContent = 'عربي';
-        // Add tooltip or data attribute to indicate current language
-        document.getElementById('langToggleBtn').title = 'التبديل إلى العربية';
-        document.getElementById('langToggleBtn2').title = 'التبديل إلى العربية';
-    }
-    
-    // Store language preference
-    localStorage.setItem('selectedLanguage', lang);
-}
-
-// Theme toggle functionality
-let currentTheme = 'dark';
-
-function setTheme(theme) {
-    currentTheme = theme;
-    
-    if (theme === 'dark') {
-        document.body.classList.add('dark-theme');
-        const btn1 = document.getElementById('themeToggleBtn');
-        const btn2 = document.getElementById('themeToggleBtn2');
-        if (btn1) btn1.textContent = '☀️';
-        if (btn2) btn2.textContent = '☀️';
-    } else {
-        document.body.classList.remove('dark-theme');
-        const btn1 = document.getElementById('themeToggleBtn');
-        const btn2 = document.getElementById('themeToggleBtn2');
-        if (btn1) btn1.textContent = '🌙';
-        if (btn2) btn2.textContent = '🌙';
-    }
-    
-    // Store theme preference
-    localStorage.setItem('selectedTheme', theme);
-}
-
-// Event listeners for language toggle buttons
-const langToggleBtn = document.getElementById('langToggleBtn');
-const langToggleBtn2 = document.getElementById('langToggleBtn2');
-
-langToggleBtn.addEventListener('click', function() {
-    setLanguage(currentLang === 'en' ? 'ar' : 'en');
-});
-
-langToggleBtn2.addEventListener('click', function() {
-    setLanguage(currentLang === 'en' ? 'ar' : 'en');
-});
-
-// Event listeners for theme toggle buttons
-const themeToggleBtn = document.getElementById('themeToggleBtn');
-const themeToggleBtn2 = document.getElementById('themeToggleBtn2');
-
-themeToggleBtn.addEventListener('click', function() {
-    setTheme(currentTheme === 'light' ? 'dark' : 'light');
-});
-
-themeToggleBtn2.addEventListener('click', function() {
-    setTheme(currentTheme === 'light' ? 'dark' : 'light');
-});
-
-// Load saved language and theme preference on page load
-window.addEventListener('DOMContentLoaded', function() {
-    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
-    const savedTheme = localStorage.getItem('selectedTheme') || 'dark'; // Changed default to 'dark'
-    
-    // Small delay to ensure all elements are loaded
-    setTimeout(() => {
-        setLanguage(savedLang);
-        setTheme(savedTheme);
-    }, 100);
-
-    // --- DATA FOR SERVICES ---
-    const servicesData = [
-        {
-            title_en: "Property<br>Management",
-            title_ar: "إدارة<br>الممتلكات",
-            image: "imgs/ادارة_ الممتلكات.jpeg",
-            description_en: "We provide comprehensive management for your properties, focusing on maximizing investment returns.",
-            description_ar: "نوفر إدارة شاملة لممتلكاتك، مع التركيز على زيادة العائد الاستثماري."
-        },
-        {
-            title_en: "Real Estate<br>Brokerage",
-            title_ar: "الوساطة<br>العقارية",
-            image: "imgs/وسائط.png",
-            description_en: "We connect buyers and sellers with the highest standards of credibility, ensuring successful deals that reflect true market value.",
-            description_ar: "نربط بين المشتري والبائع بأعلى معايير المصداقية، ونضمن لك صفقات ناجحة تعكس قيمة السوق الحقيقية."
-        },
-        {
-            title_en: "Real Estate<br>Consulting",
-            title_ar: "الإستشارات<br>العقارية",
-            image: "imgs/ادارة.png",
-            description_en: "We offer expert advice to help you make informed real estate investment decisions.",
-            description_ar: "نقدم استشارات الخبراء لمساعدتك في اتخاذ قرارات استثمارية عقارية مدروسة."
+        function hideMenu() {
+            navLinks.classList.remove('open');
+            document.body.classList.remove('menu-open');
         }
-    ];
 
-    // --- ELEMENT SELECTORS ---
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
-
-    const imgLeft = document.getElementById('img-left');
-    const titleLeft = document.getElementById('title-left');
-    const imgCenter = document.getElementById('img-center');
-    const titleCenter = document.getElementById('title-center');
-    const imgRight = document.getElementById('img-right');
-    const titleRight = document.getElementById('title-right');
-    
-    const description = document.getElementById("servicesDescription");
-
-    // --- STATE ---
-    let currentCenterIndex = 1; // Start with Brokerage in the center
-
-    // --- FUNCTIONS ---
-    function updateSlider() {
-        // Calculate indices for left, center, and right cards
-        const centerService = servicesData[currentCenterIndex];
-        // The modulo operator (%) handles the wrap-around logic
-        const leftIndex = (currentCenterIndex - 1 + servicesData.length) % servicesData.length;
-        const rightIndex = (currentCenterIndex + 1) % servicesData.length;
-        
-        const leftService = servicesData[leftIndex];
-        const rightService = servicesData[rightIndex];
-
-        // Get title and description based on currentLang
-        const langKey = currentLang === 'ar' ? 'ar' : 'en';
-        const titleKey = `title_${langKey}`;
-        const descKey = `description_${langKey}`;
-
-
-        // Update center card
-        imgCenter.src = centerService.image;
-        titleCenter.innerHTML = centerService[titleKey];
-
-        // Update left card
-        imgLeft.src = leftService.image;
-        titleLeft.innerHTML = leftService[titleKey];
-
-        // Update right card
-        imgRight.src = rightService.image;
-        titleRight.innerHTML = rightService[titleKey];
-
-        // Update description text
-        description.textContent = centerService[descKey];
-        
-        // Also update the static description in the main translations
-        // so it matches the centered item
-        translations.en.servicesDescription = centerService.description_en;
-        translations.ar.servicesDescription = centerService.description_ar;
-    }
-
-    // --- EVENT LISTENERS ---
-    nextBtn.addEventListener("click", () => {
-        currentCenterIndex = (currentCenterIndex + 1) % servicesData.length;
-        updateSlider();
-    });
-
-    prevBtn.addEventListener("click", () => {
-        currentCenterIndex = (currentCenterIndex - 1 + servicesData.length) % servicesData.length;
-        updateSlider();
-    });
-
-    // --- Re-run updateSlider when language changes ---
-    // We need to override the setLanguage function to
-    // also trigger the slider update.
-    const originalSetLanguage = setLanguage;
-    setLanguage = (lang) => {
-        originalSetLanguage(lang);
-        updateSlider(); // Call updateSlider after language changes
-    }
-
-
-    // --- INITIALIZE SLIDER ---
-    updateSlider();
-
-
-    // --- PRIVACY MODAL EVENT LISTENERS ---
-    const privacyModal = document.getElementById('privacyModal');
-    const closeModalBtn = document.getElementById('closeModalBtn');
-    const privacyLink = document.getElementById('privacyLink');
-
-    // Open the modal
-    if (privacyLink) {
-        privacyLink.addEventListener('click', function(e) {
-            e.preventDefault(); // Stop the link from jumping to '#'
-            if (privacyModal) privacyModal.classList.remove('hidden');
-        });
-    }
-    // Close the modal (using the 'x' button)
-    if (closeModalBtn) {
-        closeModalBtn.addEventListener('click', function() {
-            if (privacyModal) privacyModal.classList.add('hidden');
-        });
-    }
-    // Close the modal (by clicking on the background)
-    if (privacyModal) {
-        privacyModal.addEventListener('click', function(e) {
-            // Check if the click is on the modal background itself, not the content
-            if (e.target === privacyModal) {
-                privacyModal.classList.add('hidden');
+        // Dynamic logo resize on scroll
+        window.addEventListener('scroll', function () {
+            const logo = document.querySelector('.logo-link');
+            if (window.scrollY > 100) {
+                logo.classList.add('scrolled');
+            } else {
+                logo.classList.remove('scrolled');
             }
         });
-    }
 
-    // --- TERMS MODAL EVENT LISTENERS ---
-    const termsModal = document.getElementById('termsModal');
-    const closeTermsModalBtn = document.getElementById('closeTermsModalBtn');
-    const termsLink = document.getElementById('termsLink');
+        // Translation object containing all text content
+        const translations = {
+            en: {
+                // Navigation
+                home: "Home",
+                about: "About",
+                projects: "Projects",
+                contact: "Contact",
 
-    // Open the modal
-    if (termsLink) {
-        termsLink.addEventListener('click', function(e) {
-            e.preventDefault(); // Stop the link from jumping to '#'
-            if (termsModal) termsModal.classList.remove('hidden');
-        });
-    }
-    // Close the modal (using the 'x' button)
-    if (closeTermsModalBtn) {
-        closeTermsModalBtn.addEventListener('click', function() {
-            if (termsModal) termsModal.classList.add('hidden');
-        });
-    }
-    // Close the modal (by clicking on the background)
-    if (termsModal) {
-        termsModal.addEventListener('click', function(e) {
-            // Check if the click is on the modal background itself, not the content
-            if (e.target === termsModal) {
-                termsModal.classList.add('hidden');
+                // Hero section
+                heroTitle: "LION'S DEN REAL ESTATE",
+                heroSubtitle: "Comfort .. security .. and a bright future.",
+                heroButton: "Visit Us To Know More",
+
+                // Featured Properties
+                featuredTitle: "Featured Properties",
+                featuredSubtitle: "Discover our premium real estate offerings with modern amenities and prime locations",
+                showMoreDetails: "Show more details",
+
+                // Services section
+                servicesTitle: "Our Services",
+                servicesSubtitle: "At Lion's Den Real Estate, we believe that property is not just a building, but the foundation of a secure future and a smart investment. Our mission is to be your most trusted partner on your real estate journey, offering extensive experience and keen insight to achieve your ambitions.",
+                service1Title: "Real Estate Brokerage",
+                service1Desc: "We provide an extensive network and deep expertise to ensure your buying and selling transactions are completed at the best prices and in record time. Our professional team is with you every step of the way.",
+                service2Title: "Property Management",
+                service2Desc: "We manage your assets with efficiency and professionalism—from leasing and maintenance to revenue collection—ensuring your peace of mind and a continuous return on investment.",
+                service3Title: "Real Estate Consulting",
+                service3Desc: "We offer comprehensive feasibility studies and strategic consulting for investors and developers, helping you make precise decisions to maximize the potential of your investment",
+
+                // CTA section
+                ctaTitle: "Enroll for our projects in Saudi Arabia",
+                ctaButton: "CONTACT US",
+
+                // Footer
+                footerTitle: "About US",
+                footerDescription: "Welcome to Lion's Den Real Estate, where strength meets strategy in the world of property. Our name is our promise: to be your powerful and protective guide through the complexities of the real estate market. We were founded on a vision to lead with integrity and deliver exceptional results, understanding that a property is more than a transaction—it's a cornerstone for your future. Our expert team is dedicated to fiercely protecting your interests, whether you are buying your dream home or securing a high-value investment. At Lion's Den, we don't just find properties; we secure your legacy.",
+                copyright: "Copyright © 2025 All Rights Reserved - LION'S DEN REAL ESTATE",
+
+                // Property Cards
+                property1Name: "Al-Lair 02 Project",
+                property1Price: "Start From 360,000 SAR",
+                property1Location: "Jeddah - Al Rayyan District",
+                property1Type: "furnished",
+
+                property2Name: "Al-White Lion Residence Project",
+                property2Price: "$55,000 / Year",
+                property2Location: "Jeddah, Al-Safa district",
+                property2Type: "furnished",
+
+                // Projects Section (New Tailwind Cards)
+                ourProjectsTitle: "Our Projects",
+                project1Title: "Areen 02 Project",
+                project1Location: "Al-Rayyan District / Jeddah",
+                project1Details: "Details",
+                project2Title: "White Lion Residence Project",
+                project2Location: "Al-Safa District / Jeddah",
+                project2Details: "Details",
+                viewAllProjectsLink: "View All Projects",
+
+                // Services Section (New Tailwind Cards)
+                servicesTitle: "Our Services",
+                service1Title: "Property<br>Management",
+                service2Title: "Real Estate<br>Brokerage",
+                service3Title: "Real Estate<br>Consulting",
+                servicesDescription: "We connect buyers and sellers with the highest standards of credibility, ensuring successful deals that reflect true market value",
+                contactButtonText: "Contact Us",
+
+                // Projects Showcase
+                projectShowcase1Title: "Areen 02 Project",
+                projectShowcase1Location: "In Al-Rayyan / Jeddah",
+                projectShowcase1Details: "Details",
+                projectShowcase2Title: "White Lion Residence Project",
+                projectShowcase2Location: "In Al-Safa / Jeddah",
+                projectShowcase2Details: "Details",
+                viewAllProjectsText: "View All Projects",
+                servicesButton: "Our Services",
+
+                // Footer links section
+                importantLinksTitle: "Important Links",
+                privacyLink: "Privacy Policy",
+                termsLink: "Terms and Conditions",
+                homeLink: "Home",
+                previousProjectsLink: "Previous Projects",
+                careersLink: "Careers",
+
+                contactUsTitle: "Contact Us",
+                falLicenseTitle: "FAL License",
+                licenseNumber: "License Number: 1200025160",
+
+                followUsTitle: "Follow Us",
+
+                // --- Privacy Modal ---
+                modalTranslations: {
+                    modalTitle: "Privacy Policy",
+                    modalIntroTitle: "Introduction",
+                    modalIntroText: "At White Lion Den Real Estate, we value your privacy. By using our website, you agree to the collection and use of your information as outlined below.",
+                    modalCollectTitle: "Information We Collect",
+                    modalCollectLi1: "Personal information you provide when registering or contacting us, such as name, email, phone number, and address.",
+                    modalCollectLi2: "Information about your use of the website, like pages visited and activities on the site.",
+                    modalCollectLi3: "Additional data needed to provide our services better or verify your identity when necessary.",
+                    modalUseTitle: "How We Use Your Information",
+                    modalUseLi1: "To deliver our services and improve user experience.",
+                    modalUseLi2: "To support customers and resolve issues.",
+                    modalUseLi3: "To send updates and promotional offers (you can opt out anytime).",
+                    modalUseLi4: "To comply with laws and protect our rights and the rights of others.",
+                    modalShareTitle: "Sharing Information",
+                    modalShareLi1: "We may share your information with legal authorities or partners when necessary.",
+                    modalShareLi2: "We are not responsible for information shared when using external links; check their privacy policies.",
+                    modalProtectTitle: "Protecting Your Information",
+                    modalProtectText: "We use advanced security measures to protect your information from unauthorized access or use.",
+                    modalCookiesTitle: "Cookies",
+                    modalCookiesText: "We use cookies to improve your experience on the website. You can disable them in your browser without affecting site usage."
+                },
+
+                // --- Terms Modal ---
+                termsModalTranslations: {
+                    modalTitle: "Terms & Conditions",
+                    modalIntroTitle: "Welcome",
+                    modalIntroText: "Welcome to Arren Al-Asad Al-Abyad Real Estate Company's website (www.arren.sa). Please read these Terms carefully before using our website or services.",
+                    modalAcceptanceTitle: "Acceptance",
+                    modalAcceptanceText: "By using this website, you agree to these Terms and to all applicable laws in Saudi Arabia. If you disagree, please do not use the website.",
+                    modalOwnershipTitle: "Ownership",
+                    modalOwnershipText: "All website content—texts, images, logos, and data—belongs exclusively to the Company and is protected by Saudi intellectual property laws. Copying or republishing is prohibited without written permission.",
+                    modalUseTitle: "Use of the Website",
+                    modalUseText: "The website showcases our properties and services: sales, brokerage, property management, development, leasing, and design. Users must use the site legally and appropriately. Misuse or disruption of the website or its systems is prohibited.",
+                    modalDataTitle: "Personal Data",
+                    modalDataText: "We collect user information (name, phone, email) through forms. Data is used solely for communication and service purposes. The Company protects users' privacy and data security.",
+                    modalBookingTitle: "Booking & Payments",
+                    modalBookingText: "Direct bookings or payments are not currently available. A secure online system will be developed in the future. Future transactions will follow additional terms.",
+                    modalLinksTitle: "External Links",
+                    modalLinksText: "The site may link to external websites. The Company is not responsible for their content or policies.",
+                    modalLiabilityTitle: "Liability",
+                    modalLiabilityText: "We do not guarantee complete accuracy of all information. The Company is not liable for damages from using the site or relying on its content.",
+                    modalChangesTitle: "Changes to Terms",
+                    modalChangesText: "The Company can update these Terms anytime. Continued use of the site constitutes acceptance of new Terms.",
+                    modalLawTitle: "Governing Law",
+                    modalLawText: "These Terms follow Saudi laws, with Jeddah courts as the official jurisdiction for disputes."
+                },
+            },
+            ar: {
+                // Navigation
+                home: "الرئيسية",
+                about: "من نحن",
+                projects: "المشاريع",
+                contact: "تواصل معنا",
+
+                // Hero section
+                heroTitle: "عرين الأسد الأبيض العقارية",
+                heroSubtitle: "راحة .. أمان .. لمستقبل مشرق",
+                heroButton: "تعرف علينا أكثر",
+
+                // Featured Properties
+                featuredTitle: "العقارات المميزة",
+                featuredSubtitle: "اكتشف عروضنا العقارية المتميزة مع وسائل الراحة الحديثة والمواقع المتميزة",
+                showMoreDetails: "عرض المزيد من التفاصيل",
+
+                // Services section
+                servicesTitle: "خدماتنا",
+                servicesSubtitle: "في عرين الأسد الأبيض العقارية، نؤمن أن العقار ليس مجرد مبنى، بل هو أساس لمستقبل آمن واستثمار ذكي. مهمتنا أن نكون شريكك الأكثر ثقة في رحلتك العقارية، ونقدم لك خبرة واسعة ورؤية دقيقة لتحقيق طموحاتك.",
+                service1Title: "الوساطة العقارية",
+                service1Desc: "نوفر حلول وساطة عقارية راقية تجمع بين الدقة والاحترافية، لنضمن لعملائنا أفضل الصفقات وأعلى عوائد استثمارية.",
+                service2Title: "إدارة الممتلكات",
+                service2Desc: "نقدم إدارة شاملة للممتلكات بأسلوب يعتمد على الجودة والاستدامة لنحافظ على قيمة أصولك وتنميها بعناية واحتراف.",
+                service3Title: "الاستشارات العقارية",
+                service3Desc: "نمنحك خبرة استشارية مبنية على تحليل معمق للسوق ورؤية استراتيجية تساعدك على اتخاذ قرارات استثمارية واثقة وناجحة.",
+
+                // CTA section
+                ctaTitle: "انضم إلى مشاريعنا في المملكة العربية السعودية",
+                ctaButton: "اتصل بنا",
+
+                // Footer
+                footerTitle: "من نحن",
+                footerDescription: "نحن شركة عقارية برؤية مستقبلية شاملة نسعى لإعادة تشكيل المشهد السكني في المملكة. نؤمن بأن السكن ليس مجرد بناء بل أسلوب حياة متكامل يجمع بين الراحة والجمال، والاستقرار. نعمل على تطوير مشاريع عمرانية حديثة ومتناسقة تعكس طموح الإنسان وتلهمه للعيش برفاهية وجودة أعلى. عملاؤنا هم جوهر إلهامنا وأساس نجاحنا، ومن أجلهم نبتكر ونرتقي بكل تفاصيل أعمالنا.",
+                copyright: "جميع الحقوق محفوظة لعرين الأسد الأبيض العقارية © 2025",
+
+                // Property Cards
+                property1Name: "مشروع عرين 02",
+                property1Price: "يبدأ من 360,000 ريال سعودي",
+                property1Location: "جدة - حي الريان",
+                property1Type: "مفروش",
+
+                property2Name: "مشروع وايت ليون ريزيدنس",
+                property2Price: "55,000$ / سنة",
+                property2Location: "جدة، حي الصفا",
+                property2Type: "مؤثث",
+
+                // Projects Section (New Tailwind Cards)
+                ourProjectsTitle: "مشاريعنا",
+                project1Title: "مشروع عرين 02",
+                project1Location: "حي الريان / جدة",
+                project1Details: "للتفاصيل",
+                project2Title: "مشروع وايت ليون ريزدنس",
+                project2Location: "حي الصفا / جدة",
+                project2Details: "للتفاصيل",
+                viewAllProjectsLink: "لعرض جميع المشاريع",
+
+                // Services Section (New Tailwind Cards)
+                servicesTitle: "خدماتنا",
+                service1Title: "إدارة<br>الممتلكات",
+                service2Title: "الوساطة<br>العقارية",
+                service3Title: "الإستشارات<br>العقارية",
+                servicesDescription: "نربط بين المشتري والبائع بأعلى معايير المصداقية، ونضمن لك صفقات ناجحة تعكس قيمة السوق الحقيقية",
+                contactButtonText: "تواصل معنا",
+
+                // Projects Showcase
+                projectShowcase1Title: "مشروع عرين 02",
+                projectShowcase1Location: "في الريان / جدة",
+                projectShowcase1Details: "للتفاصيل",
+                projectShowcase2Title: "مشروع وايت ليون ريز دنس",
+                projectShowcase2Location: "في الصفا / جدة",
+                projectShowcase2Details: "للتفاصيل",
+                viewAllProjectsText: "لعرض جميع المشاريع",
+                servicesButton: "خدماتنا",
+
+                // Footer links section
+                importantLinksTitle: "روابط هامة",
+                privacyLink: "سياسة الخصوصية",
+                termsLink: "الشروط والأحكام",
+                homeLink: "الرئيسية",
+                previousProjectsLink: "المشاريع السابقة",
+                careersLink: "التوظيف",
+
+                contactUsTitle: "اتصل بنا",
+                falLicenseTitle: "رخصة فال",
+                licenseNumber: "رقم الرخصة: 1200025160",
+
+                followUsTitle: "تابعنا",
+
+                // --- Privacy Modal ---
+                modalTranslations: {
+                    modalTitle: "سياسة الخصوصية",
+                    modalIntroTitle: "مقدمة",
+                    modalIntroText: "في عرين الأسد الأبيض العقارية، نقدر خصوصيتك. باستخدامك لموقعنا، فإنك توافق على جمع واستخدام معلوماتك كما هو موضح أدناه.",
+                    modalCollectTitle: "المعلومات التي نجمعها",
+                    modalCollectLi1: "المعلومات الشخصية التي تقدمها عند التسجيل أو الاتصال بنا، مثل الاسم والبريد الإلكتروني ورقم الهاتف والعنوان.",
+                    modalCollectLi2: "معلومات حول استخدامك للموقع، مثل الصفحات التي تمت زيارتها والأنشطة على الموقع.",
+                    modalCollectLi3: "بيانات إضافية مطلوبة لتقديم خدماتنا بشكل أفضل أو للتحقق من هويتك عند الضرورة.",
+                    modalUseTitle: "كيف نستخدم معلوماتك",
+                    modalUseLi1: "لتقديم خدماتنا وتحسين تجربة المستخدم.",
+                    modalUseLi2: "لدعم العملاء وحل المشكلات.",
+                    modalUseLi3: "لإرسال تحديثات وعروض ترويجية (يمكنك إلغاء الاشتراك في أي وقت).",
+                    modalUseLi4: "للامتثال للقوانين وحماية حقوقنا وحقوق الآخرين.",
+                    modalShareTitle: "مشاركة المعلومات",
+                    modalShareLi1: "قد نشارك معلوماتك مع السلطات القانونية أو الشركاء عند الضرورة.",
+                    modalShareLi2: "لسنا مسؤولين عن المعلومات التي تتم مشاركتها عند استخدام روابط خارجية؛ يرجى مراجعة سياسات الخصوصية الخاصة بهم.",
+                    modalProtectTitle: "حماية معلوماتك",
+                    modalProtectText: "نستخدم إجراءات أمنية متقدمة لحماية معلوماتك من الوصول أو الاستخدام غير المصرح به.",
+                    modalCookiesTitle: "ملفات تعريف الارتباط (الكوكيز)",
+                    modalCookiesText: "نستخدم ملفات تعريف الارتباط لتحسين تجربتك على الموقع. يمكنك تعطيلها في متصفحك دون التأثير على استخدام الموقع."
+                },
+
+                // --- Terms Modal ---
+                termsModalTranslations: {
+                    modalTitle: "الشروط والأحكام",
+                    modalIntroTitle: "مرحبًا بكم",
+                    modalIntroText: "مرحبًا بكم في الموقع الإلكتروني لشركة عرين الأسد الأبيض العقارية (www.arren.sa). يرجى قراءة هذه الشروط بعناية قبل استخدام موقعنا أو خدماتنا.",
+                    modalAcceptanceTitle: "القبول",
+                    modalAcceptanceText: "باستخدام هذا الموقع، فإنك توافق على هذه الشروط وعلى جميع القوانين المعمول بها في المملكة العربية السعودية. إذا كنت لا توافق، يرجى عدم استخدام الموقع.",
+                    modalOwnershipTitle: "الملكية",
+                    modalOwnershipText: "جميع محتويات الموقع - النصوص، الصور، الشعارات، والبيانات - مملوكة حصريًا للشركة ومحمية بموجب قوانين الملكية الفكرية السعودية. يُحظر النسخ أو إعادة النشر دون إذن كتابي.",
+                    modalUseTitle: "استخدام الموقع",
+                    modalUseText: "يعرض الموقع عقاراتنا وخدماتنا: البيع، الوساطة، إدارة الممتلكات، التطوير، التأجير، والتصميم. يجب على المستخدمين استخدام الموقع بشكل قانوني ومناسب. يُحظر إساءة استخدام أو تعطيل الموقع أو أنظمته.",
+                    modalDataTitle: "البيانات الشخصية",
+                    modalDataText: "نقوم بجمع معلومات المستخدم (الاسم، الهاتف، البريد الإلكتروني) من خلال النماذج. تُستخدم البيانات فقط لأغراض التواصل والخدمة. تحمي الشركة خصوصية المستخدمين وأمن بياناتهم.",
+                    modalBookingTitle: "الحجز والمدفوعات",
+                    modalBookingText: "الحجوزات المباشرة أو الدفع غير متاحة حاليًا. سيتم تطوير نظام آمن عبر الإنترنت في المستقبل. ستتبع المعاملات المستقبلية شروطًا إضافية.",
+                    modalLinksTitle: "الروابط الخارجية",
+                    modalLinksText: "قد يحتوي الموقع على روابط لمواقع خارجية. الشركة ليست مسؤولة عن محتواها أو سياساتها.",
+                    modalLiabilityTitle: "المسؤولية",
+                    modalLiabilityText: "نحن لا نضمن الدقة الكاملة لجميع المعلومات. الشركة ليست مسؤولة عن الأضرار الناتجة عن استخدام الموقع أو الاعتماد على محتواه.",
+                    modalChangesTitle: "تغيير الشروط",
+                    modalChangesText: "يمكن للشركة تحديث هذه الشروط في أي وقت. الاستمرار في استخدام الموقع يشكل قبولًا للشروط الجديدة.",
+                    modalLawTitle: "القانون الحاكم",
+                    modalLawText: "تتبع هذه الشروط القوانين السعودية، وتكون محاكم جدة هي جهة الاختصاص الرسمية للنزاعات."
+                },
             }
-        });
-    }
+        };
 
-});
-</script>
+        let currentLang = 'en';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            const t = translations[lang];
+            const modalT = t.modalTranslations; // Get the privacy modal translations
+            const termsT = t.termsModalTranslations; // Get the terms modal translations
+
+            console.log('Setting language to:', lang); // Debug log
+
+            // Update navigation links using IDs
+            document.getElementById('nav-home').textContent = t.home;
+            document.getElementById('nav-about').textContent = t.about;
+            document.getElementById('nav-projects').textContent = t.projects;
+            document.getElementById('nav-contact').textContent = t.contact;
+
+            // Update hero section
+            const heroSubtitle = document.getElementById('heroSubtitle');
+            if (heroSubtitle) heroSubtitle.textContent = t.heroSubtitle;
+
+            const heroBtn = document.querySelector('.text-box .hero-btn');
+            if (heroBtn) heroBtn.textContent = t.heroButton;
+
+            // Update Projects Section (New Tailwind Cards)
+            const ourProjectsTitle = document.getElementById('ourProjectsTitle');
+            if (ourProjectsTitle) ourProjectsTitle.textContent = t.ourProjectsTitle;
+
+            const project1Title = document.getElementById('project1Title');
+            if (project1Title) project1Title.textContent = t.project1Title;
+
+            const project1Location = document.getElementById('project1Location');
+            if (project1Location) project1Location.textContent = t.project1Location;
+
+            const project1Details = document.getElementById('project1Details');
+            if (project1Details) project1Details.textContent = t.project1Details;
+
+            const project2Title = document.getElementById('project2Title');
+            if (project2Title) project2Title.textContent = t.project2Title;
+
+            const project2Location = document.getElementById('project2Location');
+            if (project2Location) project2Location.textContent = t.project2Location;
+
+            const project2Details = document.getElementById('project2Details');
+            if (project2Details) project2Details.textContent = t.project2Details;
+
+            const viewAllProjectsLink = document.getElementById('viewAllProjectsLink');
+            if (viewAllProjectsLink) viewAllProjectsLink.textContent = t.viewAllProjectsLink;
+
+            // Update Services Section (New Tailwind Cards)
+            const servicesTitle = document.getElementById('servicesTitle');
+            if (servicesTitle) servicesTitle.innerHTML = t.servicesTitle;
+
+            // NOTE: The service card titles (title-left, title-center, title-right)
+            // are now updated by the slider, not by the language switcher directly.
+
+            const servicesDescription = document.getElementById('servicesDescription');
+            if (servicesDescription) servicesDescription.textContent = t.servicesDescription;
+
+            const contactButtonText = document.getElementById('contactButtonText');
+            if (contactButtonText) contactButtonText.textContent = t.contactButtonText;
+
+            // Update footer About section
+            console.log('Updating footer title to:', t.footerTitle); // Debug log
+            const footerTitleElement = document.getElementById('footerTitle');
+            const footerDescElement = document.getElementById('footerDescription');
+
+            if (footerTitleElement) {
+                footerTitleElement.textContent = t.footerTitle;
+                console.log('Footer title updated successfully');
+            } else {
+                console.log('Footer title element not found!');
+                // Try alternative selectors
+                const altFooterTitle = document.querySelector('h4#footerTitle');
+                if (altFooterTitle) {
+                    altFooterTitle.textContent = t.footerTitle;
+                    console.log('Footer title updated via alternative selector');
+                }
+            }
+
+            if (footerDescElement) {
+                footerDescElement.textContent = t.footerDescription;
+            } else {
+                console.log('Footer description element not found!');
+            }
+
+            // Update footer links section
+            console.log('Updating footer...'); // Debug log
+
+            const importantLinksTitle = document.getElementById('importantLinksTitle');
+            if (importantLinksTitle) importantLinksTitle.textContent = t.importantLinksTitle;
+
+            const privacyLink = document.getElementById('privacyLink');
+            if (privacyLink) privacyLink.textContent = t.privacyLink;
+
+            const termsLink = document.getElementById('termsLink');
+            if (termsLink) termsLink.textContent = t.termsLink;
+
+            const homeLink = document.getElementById('homeLink');
+            if (homeLink) homeLink.textContent = t.homeLink;
+
+            const previousProjectsLink = document.getElementById('previousProjectsLink');
+            if (previousProjectsLink) previousProjectsLink.textContent = t.previousProjectsLink;
+
+            const careersLink = document.getElementById('careersLink');
+            if (careersLink) careersLink.textContent = t.careersLink;
+
+            const contactUsTitle = document.getElementById('contactUsTitle');
+            if (contactUsTitle) contactUsTitle.textContent = t.contactUsTitle;
+
+            const falLicenseTitle = document.getElementById('falLicenseTitle');
+            if (falLicenseTitle) falLicenseTitle.textContent = t.falLicenseTitle;
+
+            const licenseNumber = document.getElementById('licenseNumber');
+            if (licenseNumber) licenseNumber.textContent = t.licenseNumber;
+
+            const followUsTitle = document.getElementById('followUsTitle');
+            if (followUsTitle) followUsTitle.textContent = t.followUsTitle;
+
+            // Update Privacy Modal Content
+            if (modalT) {
+                document.getElementById('modalTitle').textContent = modalT.modalTitle;
+                document.getElementById('modalIntroTitle').textContent = modalT.modalIntroTitle;
+                document.getElementById('modalIntroText').textContent = modalT.modalIntroText;
+                document.getElementById('modalCollectTitle').textContent = modalT.modalCollectTitle;
+                document.getElementById('modalCollectLi1').textContent = modalT.modalCollectLi1;
+                document.getElementById('modalCollectLi2').textContent = modalT.modalCollectLi2;
+                document.getElementById('modalCollectLi3').textContent = modalT.modalCollectLi3;
+                document.getElementById('modalUseTitle').textContent = modalT.modalUseTitle;
+                document.getElementById('modalUseLi1').textContent = modalT.modalUseLi1;
+                document.getElementById('modalUseLi2').textContent = modalT.modalUseLi2;
+                document.getElementById('modalUseLi3').textContent = modalT.modalUseLi3;
+                document.getElementById('modalUseLi4').textContent = modalT.modalUseLi4;
+                document.getElementById('modalShareTitle').textContent = modalT.modalShareTitle;
+                document.getElementById('modalShareLi1').textContent = modalT.modalShareLi1;
+                document.getElementById('modalShareLi2').textContent = modalT.modalShareLi2;
+                document.getElementById('modalProtectTitle').textContent = modalT.modalProtectTitle;
+                document.getElementById('modalProtectText').textContent = modalT.modalProtectText;
+                document.getElementById('modalCookiesTitle').textContent = modalT.modalCookiesTitle;
+                document.getElementById('modalCookiesText').textContent = modalT.modalCookiesText;
+            }
+
+            // Update Terms Modal Content
+            if (termsT) {
+                document.getElementById('termsModalTitle').textContent = termsT.modalTitle;
+                document.getElementById('termsModalIntroTitle').textContent = termsT.modalIntroTitle;
+                document.getElementById('termsModalIntroText').textContent = termsT.modalIntroText;
+                document.getElementById('termsModalAcceptanceTitle').textContent = termsT.modalAcceptanceTitle;
+                document.getElementById('termsModalAcceptanceText').textContent = termsT.modalAcceptanceText;
+                document.getElementById('termsModalOwnershipTitle').textContent = termsT.modalOwnershipTitle;
+                document.getElementById('termsModalOwnershipText').textContent = termsT.modalOwnershipText;
+                document.getElementById('termsModalUseTitle').textContent = termsT.modalUseTitle;
+                document.getElementById('termsModalUseText').textContent = termsT.modalUseText;
+                document.getElementById('termsModalDataTitle').textContent = termsT.modalDataTitle;
+                document.getElementById('termsModalDataText').textContent = termsT.modalDataText;
+                document.getElementById('termsModalBookingTitle').textContent = termsT.modalBookingTitle;
+                document.getElementById('termsModalBookingText').textContent = termsT.modalBookingText;
+                document.getElementById('termsModalLinksTitle').textContent = termsT.modalLinksTitle;
+                document.getElementById('termsModalLinksText').textContent = termsT.modalLinksText;
+                document.getElementById('termsModalLiabilityTitle').textContent = termsT.modalLiabilityTitle;
+                document.getElementById('termsModalLiabilityText').textContent = termsT.modalLiabilityText;
+                document.getElementById('termsModalChangesTitle').textContent = termsT.modalChangesTitle;
+                document.getElementById('termsModalChangesText').textContent = termsT.modalChangesText;
+                document.getElementById('termsModalLawTitle').textContent = termsT.modalLawTitle;
+                document.getElementById('termsModalLawText').textContent = termsT.modalLawText;
+            }
+
+            // Update copyright
+            const copyrightText = document.getElementById('copyrightText');
+            if (copyrightText) copyrightText.textContent = t.copyright;
+
+            console.log('Footer updated successfully'); // Debug log
+
+            // Update page direction and language
+            if (lang === 'ar') {
+                document.body.style.direction = 'rtl';
+                document.body.style.textAlign = 'right';
+                document.documentElement.lang = 'ar';
+                document.getElementById('langToggleBtn').textContent = 'EN';
+                document.getElementById('langToggleBtn2').textContent = 'EN';
+                // Add tooltip or data attribute to indicate current language
+                document.getElementById('langToggleBtn').title = 'Switch to English';
+                document.getElementById('langToggleBtn2').title = 'Switch to English';
+            } else {
+                document.body.style.direction = 'ltr';
+                document.body.style.textAlign = 'left';
+                document.documentElement.lang = 'en';
+                document.getElementById('langToggleBtn').textContent = 'عربي';
+                document.getElementById('langToggleBtn2').textContent = 'عربي';
+                // Add tooltip or data attribute to indicate current language
+                document.getElementById('langToggleBtn').title = 'التبديل إلى العربية';
+                document.getElementById('langToggleBtn2').title = 'التبديل إلى العربية';
+            }
+
+            // Store language preference
+            localStorage.setItem('selectedLanguage', lang);
+        }
+
+        // Theme toggle functionality
+        let currentTheme = 'dark';
+
+        function setTheme(theme) {
+            currentTheme = theme;
+
+            if (theme === 'dark') {
+                document.body.classList.add('dark-theme');
+                const btn1 = document.getElementById('themeToggleBtn');
+                const btn2 = document.getElementById('themeToggleBtn2');
+                if (btn1) btn1.textContent = '☀️';
+                if (btn2) btn2.textContent = '☀️';
+            } else {
+                document.body.classList.remove('dark-theme');
+                const btn1 = document.getElementById('themeToggleBtn');
+                const btn2 = document.getElementById('themeToggleBtn2');
+                if (btn1) btn1.textContent = '🌙';
+                if (btn2) btn2.textContent = '🌙';
+            }
+
+            // Store theme preference
+            localStorage.setItem('selectedTheme', theme);
+        }
+
+        // Event listeners for language toggle buttons
+        const langToggleBtn = document.getElementById('langToggleBtn');
+        const langToggleBtn2 = document.getElementById('langToggleBtn2');
+
+        langToggleBtn.addEventListener('click', function () {
+            setLanguage(currentLang === 'en' ? 'ar' : 'en');
+        });
+
+        langToggleBtn2.addEventListener('click', function () {
+            setLanguage(currentLang === 'en' ? 'ar' : 'en');
+        });
+
+        // Event listeners for theme toggle buttons
+        const themeToggleBtn = document.getElementById('themeToggleBtn');
+        const themeToggleBtn2 = document.getElementById('themeToggleBtn2');
+
+        themeToggleBtn.addEventListener('click', function () {
+            setTheme(currentTheme === 'light' ? 'dark' : 'light');
+        });
+
+        themeToggleBtn2.addEventListener('click', function () {
+            setTheme(currentTheme === 'light' ? 'dark' : 'light');
+        });
+
+        // Load saved language and theme preference on page load
+        document.addEventListener("DOMContentLoaded", () => {
+            // --- 1. DEFINE YOUR DATA ---
+            // Store all card data in an array. This is easier to manage.
+            const services = [
+                {
+                    title: "إدارة الممتلكات",
+                    imgSrc: "imgs/ادارة_ الممتلكات.jpeg",
+                    description: "وصف تفصيلي لخدمة إدارة الممتلكات."
+                },
+                {
+                    title: "الوساطة العقارية",
+                    imgSrc: "imgs/وسائط.png",
+                    description: "وصف تفصيلي لخدمة الوساطة العقارية."
+                },
+                {
+                    title: "الإستشارات العقارية",
+                    imgSrc: "imgs/استشارات.png",
+                    description: "وصف تفصيلي لخدمة الإستشارات العقارية."
+                },
+                // Add more services here
+                // {
+                //     title: "خدمة رابعة",
+                //     imgSrc: "imgs/service4.png",
+                //     description: "وصف تفصيلي للخدمة الرابعة."
+                // }
+            ];
+
+            let currentIndex = 0; // Start at the first item
+
+            // --- 2. GET ALL HTML ELEMENTS ---
+            const prevBtn = document.getElementById("prevBtn");
+            const nextBtn = document.getElementById("nextBtn");
+
+            const imgLeft = document.getElementById("img-left");
+            const titleLeft = document.getElementById("title-left");
+
+            const imgCenter = document.getElementById("img-center");
+            const titleCenter = document.getElementById("title-center");
+
+            const imgRight = document.getElementById("img-right");
+            const titleRight = document.getElementById("title-right");
+
+            const servicesDescription = document.getElementById("servicesDescription");
+            const cardContainer = document.getElementById("card-container");
+
+            // --- 3. CORE UPDATE FUNCTION ---
+            function updateCarousel() {
+                // Calculate indices for left, center, and right cards
+                // The modulo (%) operator makes the array "wrap around"
+                const n = services.length;
+                const leftIndex = (currentIndex - 1 + n) % n;
+                const centerIndex = currentIndex;
+                const rightIndex = (currentIndex + 1) % n;
+
+                // Update Center Card (Current)
+                imgCenter.src = services[centerIndex].imgSrc;
+                titleCenter.innerText = services[centerIndex].title;
+                servicesDescription.innerText = services[centerIndex].description;
+
+                // Update Left Card
+                imgLeft.src = services[leftIndex].imgSrc;
+                titleLeft.innerText = services[leftIndex].title;
+
+                // Update Right Card
+                imgRight.src = services[rightIndex].imgSrc;
+                titleRight.innerText = services[rightIndex].title;
+
+                // Add fade-in effect for description
+                servicesDescription.style.opacity = 0;
+                setTimeout(() => {
+                    servicesDescription.style.opacity = 1;
+                }, 100); // Small delay to trigger transition
+            }
+
+            // --- 4. NAVIGATION FUNCTIONS ---
+            function showNext() {
+                currentIndex = (currentIndex + 1) % services.length;
+                updateCarousel();
+            }
+
+            function showPrev() {
+                currentIndex = (currentIndex - 1 + services.length) % services.length;
+                updateCarousel();
+            }
+
+            // --- 5. EVENT LISTENERS (CLICKS) ---
+            prevBtn.addEventListener("click", showPrev);
+            nextBtn.addEventListener("click", showNext);
+
+            // --- 6. SWIPE LOGIC (FOR MOBILE) ---
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            // Listen for the start of a touch
+            cardContainer.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true }); // passive: true improves scroll performance
+
+            // Listen for the end of a touch
+            cardContainer.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+
+            function handleSwipe() {
+                const swipeThreshold = 50; // Minimum distance (in pixels) to be considered a swipe
+
+                // Swiped Left
+                if (touchStartX - touchEndX > swipeThreshold) {
+                    showNext();
+                }
+                // Swiped Right
+                else if (touchEndX - touchStartX > swipeThreshold) {
+                    showPrev();
+                }
+            }
+
+            // --- 7. INITIALIZE CAROUSEL ---
+            updateCarousel(); // Load the first item when the page loads
+        });
+    </script>
 
 
 </body>
-</html>
 
+</html>
