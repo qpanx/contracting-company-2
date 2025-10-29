@@ -178,7 +178,19 @@ body[dir="rtl"] .nav-links {
 /* Hide navigation text and show hamburger menu earlier */
 @media (max-width: 800px) {
     .nav-links {
-        display: none;
+        display: block; /* Changed from 'none' to 'block' so it can slide in */
+        position: fixed;
+        right: -270px; /* Hidden off-screen by default */
+        top: 0;
+        height: 100vh;
+        width: 250px;
+        background-color: rgba(52, 58, 64, 0.98);
+        transition: right 0.5s ease-in-out;
+        z-index: 999;
+    }
+    
+    .nav-links.open {
+        right: 0; /* Slide in when open */
     }
     
     .hamburger-menu {
@@ -915,12 +927,23 @@ html, body {
     right: 20px;
     left: auto;
     z-index: 1003;
+    transition: all 0.3s ease;
 }
 
 .logo-link img {
     width: 180px;
     height: auto;
     max-width: 100%;
+    transition: all 0.3s ease;
+}
+
+/* Smaller logo when scrolled */
+.logo-link.scrolled {
+    top: 10px;
+}
+
+.logo-link.scrolled img {
+    width: 120px;
 }
 
 @media (max-width: 700px) {
@@ -933,6 +956,16 @@ html, body {
         z-index: 1003;
         gap: 10px;
         align-items: center;
+    }
+    
+    /* Hide logo when mobile menu is open */
+    .logo-link {
+        transition: opacity 0.3s ease;
+    }
+    
+    body.menu-open .logo-link {
+        opacity: 0;
+        pointer-events: none;
     }
     
     /* Hide desktop language switcher on mobile */

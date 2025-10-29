@@ -34,13 +34,13 @@
     
     @media (max-width: 768px) {
         #heroSubtitle {
-            font-size: 1.2rem;
+            font-size: 2rem;
         }
     }
     
     @media (max-width: 480px) {
         #heroSubtitle {
-            font-size: 1rem;
+            font-size: 1.5rem;
         }
     }
     
@@ -175,8 +175,8 @@
         <nav>
             <!-- Left side buttons -->
             <div class="nav-left-buttons">
-                <button class="lang-btn" id="langToggleBtn"><i class="fas fa-language"></i></button>
-                <button class="theme-btn" id="themeToggleBtn">🌙</button>
+                <button class="lang-btn" id="langToggleBtn">عربي</button>
+                <!-- <button class="theme-btn" id="themeToggleBtn">🌙</button> -->
             </div>
             
             <div class="nav-links" id="navLinks" >
@@ -190,8 +190,8 @@
             </div>
             <!-- Mobile nav controls container -->
             <div class="nav-controls">
-                <button class="lang-btn" id="langToggleBtn2"><i class="fas fa-language"></i></button>
-                <button class="theme-btn" id="themeToggleBtn2">🌙</button>
+                <button class="lang-btn" id="langToggleBtn2">عربي</button>
+                <!-- <button class="theme-btn" id="themeToggleBtn2">🌙</button> -->
                 <i class="fa fa-bars hamburger-menu" onclick="showMenu()"></i>
             </div>
         </nav>
@@ -203,7 +203,6 @@
         <div class="text-box">
             <div class="subtitle-en"></div>
             <p id="heroSubtitle">Comfort .. security .. and a bright future.</p>
-            <a href="" class="hero-btn">Visit Us To Know More</a>
         </div>
 
         
@@ -493,14 +492,8 @@
                         <a href="tel:+966550901995" class="hover:text-amber-600 transition-colors" dir="ltr">+966 55 090 1995</a>
                     </div>
                 </div>
-                <div class="w-full h-px bg-zinc-300 my-6"></div>
-                <div class="space-y-2">
-                    <div class="partner-logos">
-            <img src="imgs/Spon.png" alt="FAL and REGA - Real Estate General Authority Logos" class="partner-logo-combined">
-        </div>
-                    <p class="font-semibold" id="falLicenseTitle">رخصة فال</p>
-                    <p class="text-zinc-600" id="licenseNumber">رقم الرخصة: 1200025160</p>
-                </div>
+                
+                
             </div>
             
             <!-- Follow Us Column -->
@@ -524,6 +517,13 @@
     </div>
 </footer>
 
+<div class="space-y-2">
+                    <div class="partner-logos">
+            <img src="imgs/Spon.png" alt="FAL and REGA - Real Estate General Authority Logos" class="partner-logo-combined">
+        </div>
+                    <p class="font-semibold" id="falLicenseTitle">رخصة فال</p>
+                    <p class="text-zinc-600" id="licenseNumber">رقم الرخصة: 1200025160</p>
+                </div>
 
     <footer>
       <div class="footer-content">
@@ -648,14 +648,33 @@
 
 
 <script>
+// Apply dark theme immediately to prevent flash
+(function() {
+    const savedTheme = localStorage.getItem('selectedTheme') || 'dark';
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+    }
+})();
 
 var navLinks = document.getElementById("navLinks");
 function showMenu() {
     navLinks.classList.add('open');
+    document.body.classList.add('menu-open');
 }
 function hideMenu() {
     navLinks.classList.remove('open');
+    document.body.classList.remove('menu-open');
 }
+
+// Dynamic logo resize on scroll
+window.addEventListener('scroll', function() {
+    const logo = document.querySelector('.logo-link');
+    if (window.scrollY > 100) {
+        logo.classList.add('scrolled');
+    } else {
+        logo.classList.remove('scrolled');
+    }
+});
 
 // Translation object containing all text content
 const translations = {
@@ -1112,8 +1131,8 @@ function setLanguage(lang) {
         document.body.style.direction = 'rtl';
         document.body.style.textAlign = 'right';
         document.documentElement.lang = 'ar';
-        document.getElementById('langToggleBtn').innerHTML = '<i class="fas fa-language"></i>';
-        document.getElementById('langToggleBtn2').innerHTML = '<i class="fas fa-language"></i>';
+        document.getElementById('langToggleBtn').textContent = 'EN';
+        document.getElementById('langToggleBtn2').textContent = 'EN';
         // Add tooltip or data attribute to indicate current language
         document.getElementById('langToggleBtn').title = 'Switch to English';
         document.getElementById('langToggleBtn2').title = 'Switch to English';
@@ -1121,8 +1140,8 @@ function setLanguage(lang) {
         document.body.style.direction = 'ltr';
         document.body.style.textAlign = 'left';
         document.documentElement.lang = 'en';
-        document.getElementById('langToggleBtn').innerHTML = '<i class="fas fa-language"></i>';
-        document.getElementById('langToggleBtn2').innerHTML = '<i class="fas fa-language"></i>';
+        document.getElementById('langToggleBtn').textContent = 'عربي';
+        document.getElementById('langToggleBtn2').textContent = 'عربي';
         // Add tooltip or data attribute to indicate current language
         document.getElementById('langToggleBtn').title = 'التبديل إلى العربية';
         document.getElementById('langToggleBtn2').title = 'التبديل إلى العربية';
@@ -1133,19 +1152,23 @@ function setLanguage(lang) {
 }
 
 // Theme toggle functionality
-let currentTheme = 'light';
+let currentTheme = 'dark';
 
 function setTheme(theme) {
     currentTheme = theme;
     
     if (theme === 'dark') {
         document.body.classList.add('dark-theme');
-        document.getElementById('themeToggleBtn').textContent = '☀️';
-        document.getElementById('themeToggleBtn2').textContent = '☀️';
+        const btn1 = document.getElementById('themeToggleBtn');
+        const btn2 = document.getElementById('themeToggleBtn2');
+        if (btn1) btn1.textContent = '☀️';
+        if (btn2) btn2.textContent = '☀️';
     } else {
         document.body.classList.remove('dark-theme');
-        document.getElementById('themeToggleBtn').textContent = '🌙';
-        document.getElementById('themeToggleBtn2').textContent = '🌙';
+        const btn1 = document.getElementById('themeToggleBtn');
+        const btn2 = document.getElementById('themeToggleBtn2');
+        if (btn1) btn1.textContent = '🌙';
+        if (btn2) btn2.textContent = '🌙';
     }
     
     // Store theme preference
