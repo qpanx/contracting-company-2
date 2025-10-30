@@ -1414,6 +1414,76 @@
             if (imageEl && textEl) {
                 updateSlide(0);
             }
+
+            // ============================================
+            // MODAL FUNCTIONALITY (Privacy & Terms)
+            // ============================================
+
+            // Privacy Modal Elements
+            const privacyModal = document.getElementById('privacyModal');
+            const privacyLink = document.getElementById('privacyLink');
+            const closeModalBtn = document.getElementById('closeModalBtn');
+
+            // Terms Modal Elements
+            const termsModal = document.getElementById('termsModal');
+            const termsLink = document.getElementById('termsLink');
+            const closeTermsModalBtn = document.getElementById('closeTermsModalBtn');
+
+            // Open Privacy Modal
+            if (privacyLink) {
+                privacyLink.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    if (privacyModal) {
+                        privacyModal.classList.remove('hidden');
+                    }
+                });
+            }
+
+            // Close Privacy Modal
+            if (closeModalBtn) {
+                closeModalBtn.addEventListener('click', function () {
+                    if (privacyModal) {
+                        privacyModal.classList.add('hidden');
+                    }
+                });
+            }
+
+            // Close Privacy Modal when clicking outside
+            if (privacyModal) {
+                privacyModal.addEventListener('click', function (e) {
+                    if (e.target === privacyModal) {
+                        privacyModal.classList.add('hidden');
+                    }
+                });
+            }
+
+            // Open Terms Modal
+            if (termsLink) {
+                termsLink.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    if (termsModal) {
+                        termsModal.classList.remove('hidden');
+                    }
+                });
+            }
+
+            // Close Terms Modal
+            if (closeTermsModalBtn) {
+                closeTermsModalBtn.addEventListener('click', function () {
+                    if (termsModal) {
+                        termsModal.classList.add('hidden');
+                    }
+                });
+            }
+
+            // Close Terms Modal when clicking outside
+            if (termsModal) {
+                termsModal.addEventListener('click', function (e) {
+                    if (e.target === termsModal) {
+                        termsModal.classList.add('hidden');
+                    }
+                });
+            }
         });
     </script>
 
