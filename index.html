@@ -12,9 +12,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wgh     // Update footer About section,200;0,300;0,    // Update footer About section,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
@@ -283,6 +280,12 @@
                 padding: 0.3rem 1rem !important;
             }
         }
+
+        /* Slider fade transition */
+        #slider-image,
+        #slider-text {
+            transition: opacity 0.4s ease-in-out;
+        }
     </style>
 </head>
 
@@ -314,8 +317,6 @@
         <a href="index.html" class="logo-link"><img src="imgs/icon-white--preview.png" style="width: 250px;"></a>
 
 
-
-
         <div class="text-box">
             <div class="subtitle-en"></div>
             <p id="heroSubtitle">Comfort .. security .. and a bright future.</p>
@@ -338,91 +339,6 @@
     <a href="https://wa.me/+966550901995" class="whatsapp-button" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
-
-    <!-- New Property Listings Section -->
-    <!-- <section class="property-listings">
-    <h1 id="featuredTitle">Featured Properties</h1>
-    <p id="featuredSubtitle">Discover our premium real estate offerings with modern amenities and prime locations</p>
-    
-    <div class="property-grid">
-        Property Card 1 -->
-    <!-- <div class="property-card">
-            <div class="property-image" style="height: 400px;">
-                <img src="imgs/Front-AlRayan/ALRYAAN - SHOOT 4.jpg" alt="Luxury Apartment" style="height: 100%; object-fit: cover;">
-                <div class="heart-icon">
-                    <i class="far fa-heart"></i>
-                </div>
-            </div>
-            <div class="property-content">
-                <h3 id="property1Name">Al-Rayyan</h3>
-                <p class="price" id="property1Price">Start From 360,000 SAR</p> -->
-    <!-- <div class="location">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span id="property1Location">Jeddah - Al Rayyan District</span>
-                </div> -->
-    <!-- <div class="property-stats">
-                    <div class="stats-left">
-                        <div class="stat-item">
-                            <i class="fas fa-bed"></i>
-                            <span>2</span>
-                        </div>
-                        <div class="stat-item">
-                            <i class="fas fa-bath"></i>
-                            <span>3</span>
-                        </div>
-                        <div class="stat-item">
-                            <i class="fas fa-ruler-combined"></i>
-                            <span>127 m²</span>
-                        </div>
-                        <div class="locationn">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span id="property1Location">Jeddah - Al Rayyan District</span>
-                        </div>
-                    </div>
-                    <<div class="property-type" id="property1Type">furnished</div> -->
-    <!-- </div>
-                <a href="Al-Rayyan.html" class="show-details-btn" id="showDetailsBtn1">Show more details</a>
-            </div>
-        </div>
-
-        Property Card 2 
-        <div class="property-card">
-            <div class="property-image" style="height: 400px;">
-                <img src="imgs/الصفا/SHOT 1 - ALSAFA - 3D - 23 - 7 - 2025 M.jpg" alt="Modern Villa" style="height: 100%; object-fit: cover;">
-                <div class="heart-icon">
-                    <i class="far fa-heart"></i>
-                </div>
-            </div>
-            <div class="property-content">
-                <h3 id="property2Name">Al-Safa</h3>
-                <p class="price" id="property2Price">$55,000 / Year</p>
-                
-                <div class="property-stats">
-                    <div class="stats-left">
-                        <div class="stat-item">
-                            <i class="fas fa-bed"></i>
-                            <span>1</span>
-                        </div>
-                        <div class="stat-item">
-                            <i class="fas fa-bath"></i>
-                            <span>1</span>
-                        </div>
-                        <div class="stat-item">
-                            <i class="fas fa-ruler-combined"></i>
-                            <span>435 m²</span>
-                        </div>
-                        <div class="locationn">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span id="property2Location">Jeddah, Al-Safa district</span>
-                </div>
-                    </div>
-                    <div class="property-type" id="property2Type">furnished</div>
-                </div>
-                <a href="Al-Safa.html" class="show-details-btn" id="showDetailsBtn2">Show more details</a>
-            </div>
-        </div>
-    </div>
-</section> -->
 
     <div class="text-center pt-12 pb-8">
         <h1 id="ourProjectsTitle"
@@ -498,7 +414,6 @@
     </div>
 
     <!-- Services Section -->
-    <!-- Services Section -->
     <div class="py-16 w-full">
         <div class="container mx-auto px-4">
             <!-- Services Title -->
@@ -510,57 +425,41 @@
             </div>
 
             <!-- Services Grid -->
-            <div class="flex items-center justify-center gap-4 md:gap-8 flex-wrap">
-                <!-- Left Arrow -->
-                <button id="prevBtn"
-                    class="p-3 rounded-full border border-gray-600 hover:bg-gray-700 transition-colors hidden md:block">
-                    <svg xmlns="" class="h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l-7 7 7 7" />
-                    </svg>
-                </button>
+            <div class="w-full max-w-lg mx-auto">
 
-                <!-- Service Cards Container -->
-                <div id="card-container"
-                    class="flex items-center justify-center gap-4 md:gap-8 w-full md:w-auto flex-wrap">
-                    <!-- Property Management Card (Left) -->
-                    <div id="card-left"
-                        class="service-card relative w-64 h-80 rounded-2xl overflow-hidden group cursor-pointer transform hover:scale-105 transition-transform duration-300 hidden md:block">
-                        <img id="img-left" src="imgs/ادارة_ الممتلكات.jpeg" alt="إدارة الممتلكات"
-                            class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
-                            <h3 id="title-left" class="text-3xl font-extrabold text-center px-2 text-white"></h3>
-                        </div>
-                    </div>
+                <!-- Image Container with Navigation -->
+                <div class="relative shadow-2xl rounded-lg overflow-hidden">
+                    <!-- Main Image: Clicking it also goes to the next slide -->
+                    <img id="slider-image" src="imgs/وسائط.png" alt="Slider Image"
+                        class="w-full h-auto aspect-[4/3] object-cover cursor-pointer bg-gray-700">
 
-                    <!-- Real Estate Brokerage Card (Center) -->
-                    <div id="card-center"
-                        class="service-card relative w-[90vw] md:w-80 h-96 rounded-2xl overflow-hidden group cursor-pointer transform md:scale-110 hover:scale-105 md:hover:scale-115 transition-transform duration-300 z-10">
-                        <img id="img-center" src="imgs/وسائط.png" alt="الوساطة العقارية"
-                            class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
-                            <h3 id="title-center" class="text-5xl font-extrabold text-center px-2 text-white"></h3>
-                        </div>
-                    </div>
+                    <!-- Previous Button -->
+                    <button id="prev-button"
+                        class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/30 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/50 transition-all duration-300 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
 
-                    <!-- Real Estate Consulting Card (Right) -->
-                    <div id="card-right"
-                        class="service-card relative w-64 h-80 rounded-2xl overflow-hidden group cursor-pointer transform hover:scale-105 transition-transform duration-300 hidden md:block">
-                        <img id="img-right" src="imgs/استشارات.png" alt="الإستشارات العقارية"
-                            class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
-                            <h3 id="title-right" class="text-3xl font-extrabold text-center px-2 text-white"></h3>
-                        </div>
-                    </div>
+                    <!-- Next Button -->
+                    <button id="next-button"
+                        class="absolute top-1/2 right-4 -translate-y-1/2 bg-white/30 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/50 transition-all duration-300 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
                 </div>
 
-                <!-- Right Arrow -->
-                <button id="nextBtn"
-                    class="p-3 rounded-full border border-gray-600 hover:bg-gray-700 transition-colors hidden md:block">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-400" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l7-7-7-7" />
-                    </svg>
-                </button>
+                <!-- Text Container -->
+                <div class="mt-6">
+                    <!-- Text content, dir="rtl" sets the text direction to right-to-left for Arabic -->
+                    <p id="slider-text" class="text-gray-200 text-center text-lg md:text-xl px-4" dir="rtl">
+                        Loading text...
+                    </p>
+                </div>
+
             </div>
 
             <!-- Footer Text -->
@@ -581,40 +480,6 @@
             <!-- <img src="imgs/logo2.png" alt="شعار" class="w-12 h-12 logo-white"> -->
         </a>
     </div>
-
-    <!-- <section class="cta">
-        <h1>Enroll for our projects in Saudi Arabia</h1>
-        <a href="contact.html" class="hero-btn">CONTACT US</a>
-    </section>
-
-    <section class="services">
-        <h1 id="servicesTitle">Our Services</h1>
-        <p id="servicesSubtitle">"At Lion's Den Real Estate, we believe that property is not just a building, but the foundation of a secure future and a smart investment. Our mission is to be your most trusted partner on your real estate journey, offering extensive experience and keen insight to achieve your ambitions."</p>
-        <div class="row">
-            <div class="services-col">
-                <h3 id="service1Title">Real Estate Brokerage</h3>
-                <p id="service1Desc">We provide an extensive network and deep expertise to ensure your buying and selling transactions are completed at the best prices and in record time. Our professional team is with you every step of the way.</p>
-            </div>
-            <div class="services-col">
-                <h3 id="service2Title">Property Management</h3>
-                <p id="service2Desc">We manage your assets with efficiency and professionalism—from leasing and maintenance to revenue collection—ensuring your peace of mind and a continuous return on investment.</p>
-            </div>
-            <div class="services-col">
-                <h3 id="service3Title">Real Estate Consulting</h3>
-                <p id="service3Desc">We offer comprehensive feasibility studies and strategic consulting for investors and developers, helping you make precise decisions to maximize the potential of your investment</p>
-            </div>
-        </div>
-    </section>-->
-
-
-    <!-- <div class="icons">  -->
-    <!----<a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>--->
-    <!-- <a href="https://www.instagram.com/arren_alasad/"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@areen_alasad?_t=ZS-8yeUsdXxn5s&_r=1"><i class="fab fa-tiktok"></i></a> -->
-    <!-- </div>
-    </section> -->
 
     <footer class="bg-zinc-50 text-zinc-700 py-12">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -951,7 +816,7 @@
                 service1Title: "Property<br>Management",
                 service2Title: "Real Estate<br>Brokerage",
                 service3Title: "Real Estate<br>Consulting",
-                servicesDescription: "We connect buyers and sellers with the highest standards of credibility, ensuring successful deals that reflect true market value",
+                servicesDescription: "",
                 contactButtonText: "Contact Us",
 
                 // Projects Showcase
@@ -1088,7 +953,7 @@
                 service1Title: "إدارة<br>الممتلكات",
                 service2Title: "الوساطة<br>العقارية",
                 service3Title: "الإستشارات<br>العقارية",
-                servicesDescription: "نربط بين المشتري والبائع بأعلى معايير المصداقية، ونضمن لك صفقات ناجحة تعكس قيمة السوق الحقيقية",
+                servicesDescription: "",
                 contactButtonText: "تواصل معنا",
 
                 // Projects Showcase
@@ -1360,6 +1225,11 @@
 
             // Store language preference
             localStorage.setItem('selectedLanguage', lang);
+
+            // Update slider text if slider is initialized
+            if (typeof updateSlide === 'function') {
+                updateSlide(currentSlideIndex || 0);
+            }
         }
 
         // Theme toggle functionality
@@ -1386,150 +1256,164 @@
             localStorage.setItem('selectedTheme', theme);
         }
 
-        // Event listeners for language toggle buttons
-        const langToggleBtn = document.getElementById('langToggleBtn');
-        const langToggleBtn2 = document.getElementById('langToggleBtn2');
-
-        langToggleBtn.addEventListener('click', function () {
-            setLanguage(currentLang === 'en' ? 'ar' : 'en');
-        });
-
-        langToggleBtn2.addEventListener('click', function () {
-            setLanguage(currentLang === 'en' ? 'ar' : 'en');
-        });
-
-        // Event listeners for theme toggle buttons
-        const themeToggleBtn = document.getElementById('themeToggleBtn');
-        const themeToggleBtn2 = document.getElementById('themeToggleBtn2');
-
-        themeToggleBtn.addEventListener('click', function () {
-            setTheme(currentTheme === 'light' ? 'dark' : 'light');
-        });
-
-        themeToggleBtn2.addEventListener('click', function () {
-            setTheme(currentTheme === 'light' ? 'dark' : 'light');
-        });
-
         // Load saved language and theme preference on page load
         document.addEventListener("DOMContentLoaded", () => {
-            // --- 1. DEFINE YOUR DATA ---
-            // Store all card data in an array. This is easier to manage.
-            const services = [
-                {
-                    title: "إدارة الممتلكات",
-                    imgSrc: "imgs/ادارة_ الممتلكات.jpeg",
-                    description: "وصف تفصيلي لخدمة إدارة الممتلكات."
-                },
-                {
-                    title: "الوساطة العقارية",
-                    imgSrc: "imgs/وسائط.png",
-                    description: "وصف تفصيلي لخدمة الوساطة العقارية."
-                },
-                {
-                    title: "الإستشارات العقارية",
-                    imgSrc: "imgs/استشارات.png",
-                    description: "وصف تفصيلي لخدمة الإستشارات العقارية."
-                },
-                // Add more services here
-                // {
-                //     title: "خدمة رابعة",
-                //     imgSrc: "imgs/service4.png",
-                //     description: "وصف تفصيلي للخدمة الرابعة."
-                // }
-            ];
+            // Event listeners for language toggle buttons
+            const langToggleBtn = document.getElementById('langToggleBtn');
+            const langToggleBtn2 = document.getElementById('langToggleBtn2');
 
-            let currentIndex = 0; // Start at the first item
-
-            // --- 2. GET ALL HTML ELEMENTS ---
-            const prevBtn = document.getElementById("prevBtn");
-            const nextBtn = document.getElementById("nextBtn");
-
-            const imgLeft = document.getElementById("img-left");
-            const titleLeft = document.getElementById("title-left");
-
-            const imgCenter = document.getElementById("img-center");
-            const titleCenter = document.getElementById("title-center");
-
-            const imgRight = document.getElementById("img-right");
-            const titleRight = document.getElementById("title-right");
-
-            const servicesDescription = document.getElementById("servicesDescription");
-            const cardContainer = document.getElementById("card-container");
-
-            // --- 3. CORE UPDATE FUNCTION ---
-            function updateCarousel() {
-                // Calculate indices for left, center, and right cards
-                // The modulo (%) operator makes the array "wrap around"
-                const n = services.length;
-                const leftIndex = (currentIndex - 1 + n) % n;
-                const centerIndex = currentIndex;
-                const rightIndex = (currentIndex + 1) % n;
-
-                // Update Center Card (Current)
-                imgCenter.src = services[centerIndex].imgSrc;
-                titleCenter.innerText = services[centerIndex].title;
-                servicesDescription.innerText = services[centerIndex].description;
-
-                // Update Left Card
-                imgLeft.src = services[leftIndex].imgSrc;
-                titleLeft.innerText = services[leftIndex].title;
-
-                // Update Right Card
-                imgRight.src = services[rightIndex].imgSrc;
-                titleRight.innerText = services[rightIndex].title;
-
-                // Add fade-in effect for description
-                servicesDescription.style.opacity = 0;
-                setTimeout(() => {
-                    servicesDescription.style.opacity = 1;
-                }, 100); // Small delay to trigger transition
+            if (langToggleBtn) {
+                langToggleBtn.addEventListener('click', function () {
+                    setLanguage(currentLang === 'en' ? 'ar' : 'en');
+                });
             }
 
-            // --- 4. NAVIGATION FUNCTIONS ---
-            function showNext() {
-                currentIndex = (currentIndex + 1) % services.length;
-                updateCarousel();
+            if (langToggleBtn2) {
+                langToggleBtn2.addEventListener('click', function () {
+                    setLanguage(currentLang === 'en' ? 'ar' : 'en');
+                });
             }
 
-            function showPrev() {
-                currentIndex = (currentIndex - 1 + services.length) % services.length;
-                updateCarousel();
+            // Event listeners for theme toggle buttons
+            const themeToggleBtn = document.getElementById('themeToggleBtn');
+            const themeToggleBtn2 = document.getElementById('themeToggleBtn2');
+
+            if (themeToggleBtn) {
+                themeToggleBtn.addEventListener('click', function () {
+                    setTheme(currentTheme === 'light' ? 'dark' : 'light');
+                });
             }
 
-            // --- 5. EVENT LISTENERS (CLICKS) ---
-            prevBtn.addEventListener("click", showPrev);
-            nextBtn.addEventListener("click", showNext);
+            if (themeToggleBtn2) {
+                themeToggleBtn2.addEventListener('click', function () {
+                    setTheme(currentTheme === 'light' ? 'dark' : 'light');
+                });
+            }
+            // ============================================
+            // SLIDER SECTION (Image/Text Slider)
+            // ============================================
 
-            // --- 6. SWIPE LOGIC (FOR MOBILE) ---
-            let touchStartX = 0;
-            let touchEndX = 0;
+            // --- 1. Data for our slider ---
+            // An array of objects, each with an image URL and its matching text
+            const slides = {
+                ar: [
+                    {
+                        image: "imgs/ادارة_ الممتلكات.jpeg",
+                        text: "نقدم إدارة شاملة للممتلكات بأسلوب يعتمد على الجودة والاستدامة لنحافظ على قيمة أصولك وتنميها بعناية واحتراف."
+                    },
+                    {
+                        image: "imgs/وسائط.png",
+                        text: "نوفر حلول وساطة عقارية راقية تجمع بين الدقة والاحترافية، لنضمن لعملائنا أفضل الصفقات وأعلى عوائد استثمارية."
+                    },
+                    {
+                        image: "imgs/ادارة.png",
+                        text: "نمنحك خبرة استشارية مبنية على تحليل معمق للسوق ورؤية استراتيجية تساعدك على اتخاذ قرارات استثمارية واثقة وناجحة."
+                    }
+                ],
+                en: [
+                    {
+                        image: "imgs/ادارة_ الممتلكات.jpeg",
+                        text: "We provide comprehensive property management with a quality and sustainability approach to maintain and grow your assets value with care and professionalism."
+                    },
+                    {
+                        image: "imgs/وسائط.png",
+                        text: "We offer premium real estate brokerage solutions that combine precision and professionalism, ensuring the best deals and highest investment returns for our clients."
+                    },
+                    {
+                        image: "imgs/ادارة.png",
+                        text: "We provide expert consulting based on in-depth market analysis and strategic vision to help you make confident and successful investment decisions."
+                    }
+                ]
+            };
 
-            // Listen for the start of a touch
-            cardContainer.addEventListener('touchstart', (e) => {
-                touchStartX = e.changedTouches[0].screenX;
-            }, { passive: true }); // passive: true improves scroll performance
+            // --- 2. Get HTML elements ---
+            const imageEl = document.getElementById('slider-image');
+            const textEl = document.getElementById('slider-text');
+            const prevSliderBtn = document.getElementById('prev-button');
+            const nextSliderBtn = document.getElementById('next-button');
 
-            // Listen for the end of a touch
-            cardContainer.addEventListener('touchend', (e) => {
-                touchEndX = e.changedTouches[0].screenX;
-                handleSwipe();
+            console.log('Slider elements found:', {
+                imageEl: imageEl,
+                textEl: textEl,
+                prevSliderBtn: prevSliderBtn,
+                nextSliderBtn: nextSliderBtn
             });
 
-            function handleSwipe() {
-                const swipeThreshold = 50; // Minimum distance (in pixels) to be considered a swipe
+            // --- 3. State ---
+            let currentSlideIndex = 0; // This keeps track of which slide we are on
 
-                // Swiped Left
-                if (touchStartX - touchEndX > swipeThreshold) {
-                    showNext();
-                }
-                // Swiped Right
-                else if (touchEndX - touchStartX > swipeThreshold) {
-                    showPrev();
-                }
+            // --- 4. Update Function ---
+            // This function updates the image and text based on the currentSlideIndex
+            function updateSlide(index) {
+                if (!imageEl || !textEl) return; // Safety check
+
+                // Get current language slides
+                const currentSlides = slides[currentLang] || slides.ar;
+
+                // Fade out the elements
+                imageEl.style.opacity = '0';
+                textEl.style.opacity = '0';
+
+                // Wait for the fade-out to finish (400ms) before changing the content
+                setTimeout(() => {
+                    const slide = currentSlides[index];
+                    imageEl.src = slide.image;
+                    textEl.textContent = slide.text;
+
+                    // Fade the elements back in
+                    imageEl.style.opacity = '1';
+                    textEl.style.opacity = '1';
+                }, 400); // This time must match the CSS transition duration
             }
 
-            // --- 7. INITIALIZE CAROUSEL ---
-            updateCarousel(); // Load the first item when the page loads
+            // --- 5. Event Listeners ---
+
+            // Go to the next slide
+            function goToNext() {
+                console.log('Next button clicked! Current index:', currentSlideIndex);
+                const currentSlides = slides[currentLang] || slides.ar;
+                // Increment index, and loop back to 0 if we reach the end
+                currentSlideIndex = (currentSlideIndex + 1) % currentSlides.length;
+                console.log('New index:', currentSlideIndex);
+                updateSlide(currentSlideIndex);
+            }
+
+            // Go to the previous slide
+            function goToPrev() {
+                console.log('Previous button clicked! Current index:', currentSlideIndex);
+                const currentSlides = slides[currentLang] || slides.ar;
+                // Decrement index, and loop to the end if we are at the beginning
+                currentSlideIndex = (currentSlideIndex - 1 + currentSlides.length) % currentSlides.length;
+                console.log('New index:', currentSlideIndex);
+                updateSlide(currentSlideIndex);
+            }
+
+            // Assign functions to buttons
+            console.log('Setting up slider event listeners...');
+            if (nextSliderBtn) {
+                nextSliderBtn.addEventListener('click', goToNext);
+                console.log('Next button listener attached');
+            } else {
+                console.error('nextSliderBtn not found!');
+            }
+            if (prevSliderBtn) {
+                prevSliderBtn.addEventListener('click', goToPrev);
+                console.log('Prev button listener attached');
+            } else {
+                console.error('prevSliderBtn not found!');
+            }
+
+            // Also make the image itself clickable to go to the next slide
+            if (imageEl) {
+                imageEl.addEventListener('click', goToNext);
+                console.log('Image click listener attached');
+            }
+
+            // --- 6. Initial Load ---
+            // Show the first slide when the page loads
+            if (imageEl && textEl) {
+                updateSlide(0);
+            }
         });
     </script>
 

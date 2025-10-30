@@ -1,7 +1,53 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Cairo', 'Poppins', sans-serif;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    position: relative;
+}
+
+/* Standardize all headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Cairo', sans-serif;
+}
+
+/* Standardize all text elements */
+p,
+span,
+a,
+button,
+input,
+textarea,
+select {
+    font-family: 'Cairo', sans-serif;
+}
+
+/* Standardize navigation */
+.nav-links ul li a {
+    font-family: 'Cairo', sans-serif;
+}
+
+/* Standardize buttons */
+.lang-btn,
+.theme-btn,
+.hero-btn,
+.red-btn,
+.show-details-btn {
+    font-family: 'Cairo', sans-serif;
+}
+
+/* Standardize form elements */
+.contact-col input,
+.contact-col textarea {
+    font-family: 'Cairo', sans-serif;
 }
 
 .header {
@@ -434,7 +480,7 @@ nav img {
     cursor: pointer;
     transition: 0.5s;
     border-radius: 5px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Cairo', sans-serif;
 }
 
 .lang-btn:hover {
@@ -1187,7 +1233,7 @@ body {
 }
 
 .bilingual-title .en-title {
-    font-family: 'Poppins', Arial, sans-serif;
+    font-family: 'Cairo', sans-serif;
     font-size: 2.3rem;
     font-weight: 400;
     color: #fff;
@@ -1549,7 +1595,7 @@ footer a {
     border-radius: 5px;
     resize: none;
     font-size: 14px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Cairo', sans-serif;
     margin-bottom: 20px;
     box-sizing: border-box;
 }
