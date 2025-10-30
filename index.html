@@ -283,6 +283,7 @@
 
         /* Slider fade transition */
         #slider-image,
+        #slider-title,
         #slider-text {
             transition: opacity 0.4s ease-in-out;
         }
@@ -454,6 +455,11 @@
 
                 <!-- Text Container -->
                 <div class="mt-6">
+                    <!-- Title -->
+                    <h3 id="slider-title" class="text-white text-center text-2xl md:text-3xl font-bold mb-4 px-4"
+                        dir="rtl">
+                        Loading title...
+                    </h3>
                     <!-- Text content, dir="rtl" sets the text direction to right-to-left for Arabic -->
                     <p id="slider-text" class="text-gray-200 text-center text-lg md:text-xl px-4" dir="rtl">
                         Loading text...
@@ -473,7 +479,7 @@
     <!-- Contact Section -->
     <div class="text-center py-16">
         <a href="#" id="contactButton"
-            class="inline-flex items-center gap-4 bg-[#6b584d] text-white text-4xl font-bold py-4 px-16 rounded-full shadow-lg transition-transform duration-300 hover:scale-105">
+            class="inline-flex items-center gap-4 bg-[#77543b] text-white text-4xl font-bold py-4 px-16 rounded-full shadow-lg transition-transform duration-300 hover:scale-105">
             <span id="contactButtonText">تواصل معنا</span>
             <!-- Make sure 'logo2.png' is in the same folder as this HTML file. -->
             <!-- The 'logo-white' class will make the black logo appear white. -->
@@ -724,12 +730,9 @@
 
 
     <script>
-        // Apply dark theme immediately to prevent flash
+        // Apply dark theme immediately
         (function () {
-            const savedTheme = localStorage.getItem('selectedTheme') || 'dark';
-            if (savedTheme === 'dark') {
-                document.body.classList.add('dark-theme');
-            }
+            document.body.classList.add('dark-theme');
         })();
 
         var navLinks = document.getElementById("navLinks");
@@ -1232,31 +1235,7 @@
             }
         }
 
-        // Theme toggle functionality
-        let currentTheme = 'dark';
-
-        function setTheme(theme) {
-            currentTheme = theme;
-
-            if (theme === 'dark') {
-                document.body.classList.add('dark-theme');
-                const btn1 = document.getElementById('themeToggleBtn');
-                const btn2 = document.getElementById('themeToggleBtn2');
-                if (btn1) btn1.textContent = '☀️';
-                if (btn2) btn2.textContent = '☀️';
-            } else {
-                document.body.classList.remove('dark-theme');
-                const btn1 = document.getElementById('themeToggleBtn');
-                const btn2 = document.getElementById('themeToggleBtn2');
-                if (btn1) btn1.textContent = '🌙';
-                if (btn2) btn2.textContent = '🌙';
-            }
-
-            // Store theme preference
-            localStorage.setItem('selectedTheme', theme);
-        }
-
-        // Load saved language and theme preference on page load
+        // Load saved language preference on page load
         document.addEventListener("DOMContentLoaded", () => {
             // Event listeners for language toggle buttons
             const langToggleBtn = document.getElementById('langToggleBtn');
@@ -1273,22 +1252,6 @@
                     setLanguage(currentLang === 'en' ? 'ar' : 'en');
                 });
             }
-
-            // Event listeners for theme toggle buttons
-            const themeToggleBtn = document.getElementById('themeToggleBtn');
-            const themeToggleBtn2 = document.getElementById('themeToggleBtn2');
-
-            if (themeToggleBtn) {
-                themeToggleBtn.addEventListener('click', function () {
-                    setTheme(currentTheme === 'light' ? 'dark' : 'light');
-                });
-            }
-
-            if (themeToggleBtn2) {
-                themeToggleBtn2.addEventListener('click', function () {
-                    setTheme(currentTheme === 'light' ? 'dark' : 'light');
-                });
-            }
             // ============================================
             // SLIDER SECTION (Image/Text Slider)
             // ============================================
@@ -1298,28 +1261,34 @@
             const slides = {
                 ar: [
                     {
+                        title: "إدارة الممتلكات",
                         image: "imgs/ادارة_ الممتلكات.jpeg",
                         text: "نقدم إدارة شاملة للممتلكات بأسلوب يعتمد على الجودة والاستدامة لنحافظ على قيمة أصولك وتنميها بعناية واحتراف."
                     },
                     {
+                        title: "الوساطة العقارية",
                         image: "imgs/وسائط.png",
                         text: "نوفر حلول وساطة عقارية راقية تجمع بين الدقة والاحترافية، لنضمن لعملائنا أفضل الصفقات وأعلى عوائد استثمارية."
                     },
                     {
+                        title: "الاستشارات العقارية",
                         image: "imgs/ادارة.png",
                         text: "نمنحك خبرة استشارية مبنية على تحليل معمق للسوق ورؤية استراتيجية تساعدك على اتخاذ قرارات استثمارية واثقة وناجحة."
                     }
                 ],
                 en: [
                     {
+                        title: "Property Management",
                         image: "imgs/ادارة_ الممتلكات.jpeg",
                         text: "We provide comprehensive property management with a quality and sustainability approach to maintain and grow your assets value with care and professionalism."
                     },
                     {
+                        title: "Real Estate Brokerage",
                         image: "imgs/وسائط.png",
                         text: "We offer premium real estate brokerage solutions that combine precision and professionalism, ensuring the best deals and highest investment returns for our clients."
                     },
                     {
+                        title: "Real Estate Consulting",
                         image: "imgs/ادارة.png",
                         text: "We provide expert consulting based on in-depth market analysis and strategic vision to help you make confident and successful investment decisions."
                     }
@@ -1328,12 +1297,14 @@
 
             // --- 2. Get HTML elements ---
             const imageEl = document.getElementById('slider-image');
+            const titleEl = document.getElementById('slider-title');
             const textEl = document.getElementById('slider-text');
             const prevSliderBtn = document.getElementById('prev-button');
             const nextSliderBtn = document.getElementById('next-button');
 
             console.log('Slider elements found:', {
                 imageEl: imageEl,
+                titleEl: titleEl,
                 textEl: textEl,
                 prevSliderBtn: prevSliderBtn,
                 nextSliderBtn: nextSliderBtn
@@ -1345,23 +1316,26 @@
             // --- 4. Update Function ---
             // This function updates the image and text based on the currentSlideIndex
             function updateSlide(index) {
-                if (!imageEl || !textEl) return; // Safety check
+                if (!imageEl || !titleEl || !textEl) return; // Safety check
 
                 // Get current language slides
                 const currentSlides = slides[currentLang] || slides.ar;
 
                 // Fade out the elements
                 imageEl.style.opacity = '0';
+                titleEl.style.opacity = '0';
                 textEl.style.opacity = '0';
 
                 // Wait for the fade-out to finish (400ms) before changing the content
                 setTimeout(() => {
                     const slide = currentSlides[index];
                     imageEl.src = slide.image;
+                    titleEl.textContent = slide.title;
                     textEl.textContent = slide.text;
 
                     // Fade the elements back in
                     imageEl.style.opacity = '1';
+                    titleEl.style.opacity = '1';
                     textEl.style.opacity = '1';
                 }, 400); // This time must match the CSS transition duration
             }
@@ -1411,7 +1385,7 @@
 
             // --- 6. Initial Load ---
             // Show the first slide when the page loads
-            if (imageEl && textEl) {
+            if (imageEl && titleEl && textEl) {
                 updateSlide(0);
             }
 
