@@ -431,7 +431,7 @@
                 <!-- Image Container with Navigation -->
                 <div class="relative shadow-2xl rounded-lg overflow-hidden">
                     <!-- Main Image: Clicking it also goes to the next slide -->
-                    <img id="slider-image" src="imgs/وسائط.png" alt="Slider Image"
+                    <img id="slider-image" src="imgs/mangement.PNG" alt="Slider Image"
                         class="w-full h-auto aspect-[4/3] object-cover cursor-pointer bg-gray-700">
 
                     <!-- Previous Button -->
@@ -1033,7 +1033,7 @@
             }
         };
 
-        let currentLang = 'en';
+        let currentLang = 'ar';
 
         function setLanguage(lang) {
             currentLang = lang;
@@ -1237,6 +1237,9 @@
 
         // Load saved language preference on page load
         document.addEventListener("DOMContentLoaded", () => {
+            // Set initial language to Arabic
+            setLanguage('ar');
+
             // Event listeners for language toggle buttons
             const langToggleBtn = document.getElementById('langToggleBtn');
             const langToggleBtn2 = document.getElementById('langToggleBtn2');
@@ -1261,35 +1264,35 @@
             const slides = {
                 ar: [
                     {
-                        title: "إدارة الممتلكات",
-                        image: "imgs/ادارة_ الممتلكات.jpeg",
+                        // title: "إدارة الممتلكات",
+                        image: "imgs/ادارةـممتلكات.png",
                         text: "نقدم إدارة شاملة للممتلكات بأسلوب يعتمد على الجودة والاستدامة لنحافظ على قيمة أصولك وتنميها بعناية واحتراف."
                     },
                     {
-                        title: "الوساطة العقارية",
-                        image: "imgs/وسائط.png",
+                        // title: "الوساطة العقارية",
+                        image: "imgs/عقارية.png",
                         text: "نوفر حلول وساطة عقارية راقية تجمع بين الدقة والاحترافية، لنضمن لعملائنا أفضل الصفقات وأعلى عوائد استثمارية."
                     },
                     {
-                        title: "الاستشارات العقارية",
-                        image: "imgs/ادارة.png",
+                        // title: "الاستشارات العقارية",
+                        image: "imgs/استشارة.png",
                         text: "نمنحك خبرة استشارية مبنية على تحليل معمق للسوق ورؤية استراتيجية تساعدك على اتخاذ قرارات استثمارية واثقة وناجحة."
                     }
                 ],
                 en: [
                     {
-                        title: "Property Management",
-                        image: "imgs/ادارة_ الممتلكات.jpeg",
+                        // title: "Property Management",
+                        image: "imgs/mangement.PNG",
                         text: "We provide comprehensive property management with a quality and sustainability approach to maintain and grow your assets value with care and professionalism."
                     },
                     {
-                        title: "Real Estate Brokerage",
-                        image: "imgs/وسائط.png",
+                        // title: "Real Estate Brokerage",
+                        image: "imgs/Est.PNG",
                         text: "We offer premium real estate brokerage solutions that combine precision and professionalism, ensuring the best deals and highest investment returns for our clients."
                     },
                     {
-                        title: "Real Estate Consulting",
-                        image: "imgs/ادارة.png",
+                        // title: "Real Estate Consulting",
+                        image: "imgs/Real.png",
                         text: "We provide expert consulting based on in-depth market analysis and strategic vision to help you make confident and successful investment decisions."
                     }
                 ]
